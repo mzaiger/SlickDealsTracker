@@ -29,16 +29,16 @@ jobs:
         run: pip install requests
 
       - name: Pull latest deals
-        run: python scripts/pull_slickdeals.py
+        run: python pull_slickdeals.py
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/deals.xml; then
-            echo "No changes to data/deals.xml -- skipping commit."
+          if git diff --quiet -- deals.xml; then
+            echo "No changes to deals.xml -- skipping commit."
           else
-            git add data/deals.xml
+            git add deals.xml
             git commit -m "Update deals.xml [skip ci]"
             git push
           fi
