@@ -40,6 +40,7 @@ REQUEST_TIMEOUT = 20
 
 THUMB_RE = re.compile(r"Thumb Score:\s*\+?(-?\d+)", re.IGNORECASE)
 IMG_RE = re.compile(r'<img[^>]+src="([^"]+)"', re.IGNORECASE)
+THUMB_IMG_URL_RE = re.compile(r'https?://[^\s"\'<>]+\.thumb[^\s"\'<>]*', re.IGNORECASE)
 
 
 def fetch_feed_items():
@@ -71,12 +72,27 @@ def fetch_feed_items():
 def enrich(fields):
     """Add computed rating / thumbnail / pubDateIso to a raw feed item dict."""
     description = fields.get("description", "")
+    content_encoded = fields.get("encoded", "")  # <content:encoded>, namespace stripped
 
     thumb_match = THUMB_RE.search(description)
     fields["rating"] = thumb_match.group(1) if thumb_match else ""
 
-    img_match = IMG_RE.search(description)
-    fields["thumbnail"] = img_match.group(1) if img_match else ""
+    # Prefer the first URL containing ".thumb" inside <content:encoded> -- that's
+    # Slickdeals' dedicated thumbnail-sized image. Fall back to the first <img> in
+    # <description> if content:encoded has no ".thumb" URL (or the tag is missing).
+    thumb_url_match = THUMB_IMG_URL_RE.search(content_encoded)
+    if not thumb_url_match:
+        thumb_url_match = THUMB_IMG_URL_RE.search(description)
+    if thumb_url_match:
+        fields["thumbnail"] = thumb_url_match.group(0)
+    else:
+        img_match = IMG_RE.search(description)
+        fields["thumbnail"] = img_match.group(1) if img_match else ""
+
+    # content:encoded is often the full post body (large) -- we only needed it to
+    # scrape the thumbnail above, so drop it before this item gets persisted to
+    # keep data stored in the xml lean.
+    fields.pop("encoded", None)
 
     pub_raw = fields.get("pubDate", "")
     try:
