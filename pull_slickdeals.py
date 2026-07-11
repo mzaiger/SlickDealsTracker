@@ -34,7 +34,7 @@ from pathlib import Path
 import requests
 
 FEED_URL = "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1"
-DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "deals.xml"
+DATA_PATH = Path(__file__).resolve().parent / "deals.xml"
 MAX_AGE_HOURS = 48
 REQUEST_TIMEOUT = 20
 
