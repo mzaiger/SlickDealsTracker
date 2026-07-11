@@ -74,8 +74,12 @@ def enrich(fields):
     description = fields.get("description", "")
     content_encoded = fields.get("encoded", "")  # <content:encoded>, namespace stripped
 
+# Thumb Score is usually stored in <content:encoded>, not <description>.
+thumb_match = THUMB_RE.search(content_encoded)
+if not thumb_match:
     thumb_match = THUMB_RE.search(description)
-    fields["rating"] = thumb_match.group(1) if thumb_match else ""
+
+fields["rating"] = thumb_match.group(1) if thumb_match else ""
 
     # Prefer the first URL containing ".thumb" inside <content:encoded> -- that's
     # Slickdeals' dedicated thumbnail-sized image. Fall back to the first <img> in
