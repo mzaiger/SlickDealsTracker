@@ -1,0 +1,44 @@
+name: Pull Slickdeals Hot Deals
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+# Prevent overlapping runs from racing on the same file/commit.
+concurrency:
+  group: pull-slickdeals
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Pull latest deals
+        run: python scripts/pull_slickdeals.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/deals.xml; then
+            echo "No changes to data/deals.xml -- skipping commit."
+          else
+            git add data/deals.xml
+            git commit -m "Update deals.xml [skip ci]"
+            git push
+          fi
