@@ -9,13 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:        #14110F;
-    --panel:     #1D1913;
-    --line:      #33291D;
-    --text:      #EDE6DA;
-    --text-dim:  #8A8272;
-    --amber:     #F2A93B;
-    --cool:      #2FB8A6;
+    --bg:        #FFFFFF;
+    --panel:     #F2F7FD;
+    --line:      #D9E5F2;
+    --text:      #10233F;
+    --text-dim:  #64798E;
+    --blue:      #1B63E0;
+    --blue-deep: #0C3F94;
+    --cool:      #2FA8B8;
+    --warm:      #F2A93B;
     --hot:       #E4572E;
     --radius:    10px;
   }
@@ -34,14 +36,23 @@
   body {
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 15% 0%, rgba(242,169,59,0.08), transparent 45%),
-      radial-gradient(circle at 85% 10%, rgba(228,87,46,0.06), transparent 40%);
+      radial-gradient(circle at 12% 0%, rgba(27,99,224,0.07), transparent 45%),
+      radial-gradient(circle at 88% 6%, rgba(27,99,224,0.05), transparent 40%);
   }
 
   header {
-    padding: 40px 24px 24px;
+    padding: 40px 24px 20px;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .eyebrow-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
   .eyebrow {
@@ -49,9 +60,33 @@
     font-size: 12px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--amber);
-    margin: 0 0 10px;
+    color: var(--blue);
+    margin: 0;
   }
+
+  .updated-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .refresh-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--blue);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .refresh-btn:hover { border-color: var(--blue); background: #E9F1FD; }
+  .refresh-btn:disabled { opacity: 0.5; cursor: default; }
 
   h1 {
     font-family: 'Oswald', sans-serif;
@@ -61,6 +96,7 @@
     font-size: clamp(32px, 6vw, 52px);
     line-height: 1;
     margin: 0 0 8px;
+    color: var(--text);
   }
 
   .sub {
@@ -116,8 +152,8 @@
   .tab-btn:hover { color: var(--text); }
 
   .tab-btn.active {
-    background: var(--amber);
-    color: #1A1305;
+    background: var(--blue);
+    color: #FFFFFF;
   }
 
   .sort {
@@ -142,8 +178,8 @@
   }
 
   .sort-btn.active {
-    border-color: var(--amber);
-    color: var(--amber);
+    border-color: var(--blue);
+    color: var(--blue);
   }
 
   .count {
@@ -161,24 +197,26 @@
 
   .card {
     display: block;
-    background: var(--panel);
+    background: #FFFFFF;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    box-shadow: 0 1px 2px rgba(16,35,63,0.04);
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .card:hover {
-    border-color: var(--amber);
+    border-color: var(--blue);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(27,99,224,0.12);
   }
 
   .thumb-wrap {
     position: relative;
     aspect-ratio: 16 / 10;
-    background: #0F0D0A;
+    background: var(--panel);
     overflow: hidden;
   }
 
@@ -209,7 +247,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(20, 17, 15, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(2px);
     border: 1px solid var(--line);
     border-radius: 999px;
@@ -217,6 +255,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     font-weight: 500;
+    color: var(--text);
   }
 
   .body { padding: 14px 16px 16px; }
@@ -246,6 +285,7 @@
     line-height: 1.35;
     font-weight: 500;
     margin: 0 0 10px;
+    color: var(--text);
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -262,7 +302,7 @@
   }
 
   .meta .go {
-    color: var(--amber);
+    color: var(--blue);
   }
 
   .empty {
@@ -282,7 +322,13 @@
 <body>
 
 <header>
-  <p class="eyebrow">Slickdeals · Frontpage · Auto-refreshed every 15 min</p>
+  <div class="eyebrow-row">
+    <p class="eyebrow">Slickdeals · Frontpage · Auto-refreshed every 15 min</p>
+    <div class="updated-row">
+      <span id="lastUpdated">Last updated: —</span>
+      <button class="refresh-btn" id="refreshBtn" type="button">Refresh</button>
+    </div>
+  </div>
   <h1>Hot Deals Board</h1>
   <p class="sub">Deal heat = current thumbs-up score. Click any card to open the Slickdeals post.</p>
 </header>
@@ -312,9 +358,13 @@ const DATA_URL = 'deals.xml';
 let allDeals = [];
 let activeHours = 2;
 let activeSort = 'date';
+let lastGeneratedIso = null;
 
 async function loadDeals() {
-  const res = await fetch(DATA_URL, { cache: 'no-store' });
+  // Cache-bust both the browser cache and any CDN/proxy cache (e.g. GitHub
+  // Pages) by putting a unique query string on every request.
+  const bustUrl = `${DATA_URL}?v=${Date.now()}`;
+  const res = await fetch(bustUrl, { cache: 'no-store' });
   const text = await res.text();
   const xml = new DOMParser().parseFromString(text, 'application/xml');
 
@@ -323,6 +373,9 @@ async function loadDeals() {
     console.error('Failed to parse deals.xml', parseErr.textContent);
     return [];
   }
+
+  lastGeneratedIso = xml.documentElement.getAttribute('generated');
+  updateLastUpdatedLabel();
 
   return Array.from(xml.querySelectorAll('deal')).map(el => {
     const get = tag => (el.querySelector(tag)?.textContent || '').trim();
@@ -345,18 +398,28 @@ function heatClass(rating) {
 
 function heatColor(rating) {
   if (rating >= 50) return 'var(--hot)';
-  if (rating >= 20) return 'var(--amber)';
+  if (rating >= 20) return 'var(--warm)';
   return 'var(--cool)';
 }
 
 function relativeTime(iso) {
   const then = new Date(iso).getTime();
   const diffMin = Math.max(0, Math.round((Date.now() - then) / 60000));
+  if (diffMin < 1) return 'just now';
   if (diffMin < 60) return `${diffMin}m ago`;
   const diffHr = Math.floor(diffMin / 60);
   if (diffHr < 24) return `${diffHr}h ${diffMin % 60}m ago`;
   const diffDay = Math.floor(diffHr / 24);
   return `${diffDay}d ${diffHr % 24}h ago`;
+}
+
+function updateLastUpdatedLabel() {
+  const el = document.getElementById('lastUpdated');
+  if (!lastGeneratedIso) {
+    el.textContent = 'Last updated: unknown';
+    return;
+  }
+  el.textContent = `Last updated: ${relativeTime(lastGeneratedIso)}`;
 }
 
 function render() {
@@ -422,17 +485,31 @@ function setupControls() {
       render();
     });
   });
+
+  const refreshBtn = document.getElementById('refreshBtn');
+  refreshBtn.addEventListener('click', async () => {
+    refreshBtn.disabled = true;
+    refreshBtn.textContent = 'Refreshing…';
+    allDeals = await loadDeals();
+    render();
+    refreshBtn.disabled = false;
+    refreshBtn.textContent = 'Refresh';
+  });
 }
 
 (async function init() {
   setupControls();
   allDeals = await loadDeals();
   render();
+
   // Pick up new commits from the workflow without a manual reload.
   setInterval(async () => {
     allDeals = await loadDeals();
     render();
   }, 5 * 60 * 1000);
+
+  // Keep the "Last updated: Xm ago" label ticking even between fetches.
+  setInterval(updateLastUpdatedLabel, 30 * 1000);
 })();
 </script>
 
