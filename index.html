@@ -260,12 +260,28 @@
 
   .body { padding: 14px 16px 16px; }
 
+  .heat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
   .heat-meter {
+    flex: 1;
     height: 4px;
     border-radius: 2px;
     background: var(--line);
     overflow: hidden;
-    margin-bottom: 12px;
+  }
+
+  .heat-count {
+    flex-shrink: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-dim);
+    white-space: nowrap;
   }
 
   .heat-fill {
@@ -444,8 +460,11 @@ function render() {
     const pct = Math.min(100, Math.max(6, d.rating));
     const hClass = heatClass(d.rating);
     const hColor = heatColor(d.rating);
+    // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
+    // this.parentElement -- replacing the parent would also wipe out the
+    // sibling .rating-pill sitting next to the image.
     const thumbHtml = d.thumbnail
-      ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
+      ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
       : `<div class="thumb-fallback">No Image</div>`;
 
     return `
@@ -455,7 +474,10 @@ function render() {
           <div class="rating-pill">▲ ${d.rating}</div>
         </div>
         <div class="body">
-          <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
+          <div class="heat-row">
+            <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
+            <span class="heat-count">${d.rating} thumbs</span>
+          </div>
           <p class="title">${d.title}</p>
           <div class="meta">
             <span>${relativeTime(d.pubDateIso)}</span>
@@ -463,6 +485,7 @@ function render() {
           </div>
         </div>
       </a>
+
     `;
   }).join('');
 }
