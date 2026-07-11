@@ -1,8 +1,8 @@
 name: Pull Slickdeals Hot Deals
 
 on:
-  schedule:
-    - cron: "*/15 * * * *"
+  repository_dispatch:
+    types: [trigger-deals-pull]
   workflow_dispatch: {}
 
 # Prevent overlapping runs from racing on the same file/commit.
