@@ -367,8 +367,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(2px);
     border: 1px solid var(--line);
@@ -385,9 +385,9 @@
   }
 
   .fav-toggle .fav-star {
-    font-size: 16px;
+    font-size: 32px;
     line-height: 1;
-    color: var(--line);
+    color: var(--text-dim);
     transition: color 0.15s ease, transform 0.15s ease;
     pointer-events: none;
   }
@@ -613,8 +613,8 @@ function cardHtml(d) {
     <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
       <div class="thumb-wrap">
         ${thumbHtml}
-        <label class="fav-toggle" title="Favorite" onclick="event.preventDefault(); event.stopPropagation();">
-          <input type="checkbox" ${isFav ? 'checked' : ''} onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+        <label class="fav-toggle" title="Favorite" onclick="event.stopPropagation();">
+          <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
           <span class="fav-star">★</span>
         </label>
         ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
