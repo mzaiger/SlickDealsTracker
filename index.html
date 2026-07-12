@@ -464,7 +464,7 @@ function render() {
     // this.parentElement -- replacing the parent would also wipe out the
     // sibling .rating-pill sitting next to the image.
     const thumbHtml = d.thumbnail
-      ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
+      ? `<img src="${d.thumbnail}" alt="" loading="lazy" onload="this.parentElement.style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
       : `<div class="thumb-fallback">No Image</div>`;
 
     return `
