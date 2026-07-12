@@ -258,6 +258,35 @@
     color: var(--text);
   }
 
+  .expired-badge {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 35, 63, 0.45);
+    z-index: 2;
+  }
+
+  .expired-badge span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: var(--hot);
+    padding: 6px 18px;
+    border-radius: 6px;
+    transform: rotate(-8deg);
+    box-shadow: 0 4px 14px rgba(228, 87, 46, 0.5);
+  }
+
+  .card.is-expired .thumb-wrap img {
+    filter: grayscale(60%);
+    opacity: 0.6;
+  }
+
   .body { padding: 14px 16px 16px; }
 
   .heat-row {
@@ -402,6 +431,7 @@ async function loadDeals() {
       thumbnail: get('thumbnail'),
       rating: Number.isFinite(rating) ? rating : 0,
       pubDateIso: get('pubDateIso'),
+      expired: get('expired').toLowerCase() === 'true',
     };
   }).filter(d => d.link && d.pubDateIso);
 }
@@ -457,7 +487,7 @@ function render() {
   }
 
   grid.innerHTML = visible.map(d => {
-    const pct = Math.min(100, Math.max(6, d.rating));
+    const pct = Math.min(100, Math.max(6, (d.rating / 500) * 100));
     const hClass = heatClass(d.rating);
     const hColor = heatColor(d.rating);
     // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
@@ -468,9 +498,10 @@ function render() {
       : `<div class="thumb-fallback">No Image</div>`;
 
     return `
-      <a class="card" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
         <div class="thumb-wrap">
           ${thumbHtml}
+          ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
           <div class="rating-pill">▲ ${d.rating}</div>
         </div>
         <div class="body">
