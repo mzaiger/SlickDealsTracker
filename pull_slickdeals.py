@@ -37,6 +37,8 @@ FEED_URL = "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals
 DATA_PATH = Path(__file__).resolve().parent / "deals.xml"
 MAX_AGE_HOURS = 48
 REQUEST_TIMEOUT = 20
+EXPIRED_PHRASE = "Heads up, this deal has expired."
+PAGE_REQUEST_TIMEOUT = 15
 
 THUMB_RE = re.compile(r"Thumb Score:\s*\+?(-?\d+)", re.IGNORECASE)
 IMG_RE = re.compile(r'<img[^>]+src="([^"]+)"', re.IGNORECASE)
@@ -110,7 +112,52 @@ def enrich(fields):
     return fields
 
 
-def item_key(fields):
+def check_expired(link):
+    """Visit a deal's own page and look for Slickdeals' expired-deal notice.
+
+    Returns True/False when the check succeeds, or None if the page couldn't
+    be fetched -- callers should leave the existing expired value untouched
+    in that case rather than guessing.
+    """
+    if not link:
+        return None
+    try:
+        resp = requests.get(
+            link,
+            timeout=PAGE_REQUEST_TIMEOUT,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; slickdeals-tracker/1.0)"},
+        )
+        resp.raise_for_status()
+    except Exception:
+        return None
+    return EXPIRED_PHRASE in resp.text
+
+
+def refresh_expired_flags(deals_dict):
+    """Check expired status for every deal that isn't already flagged expired.
+
+    Once a deal is marked expired it stays expired -- deals don't come back
+    from expired, so there's no need to keep re-fetching those pages on
+    every run. This keeps request volume bounded as the feed grows instead
+    of re-checking the whole 48-hour window every 15 minutes.
+    """
+    checked, newly_expired = 0, 0
+    for fields in deals_dict.values():
+        if fields.get("expired") == "true":
+            continue
+        result = check_expired(fields.get("link"))
+        checked += 1
+        if result is None:
+            # Fetch failed -- leave whatever expired value (or lack of one)
+            # was already stored.
+            continue
+        if result:
+            newly_expired += 1
+        fields["expired"] = "true" if result else "false"
+    return checked, newly_expired
+
+
+
     return fields.get("guid") or fields.get("link")
 
 
@@ -208,12 +255,14 @@ def main():
     existing = load_existing()
     merged, added, updated = merge(existing, raw_items)
     final, dropped = truncate_old(merged)
+    checked, newly_expired = refresh_expired_flags(final)
     write_xml(final)
 
     print(
         f"Fetched {len(raw_items)} feed items | "
         f"added {added} new | refreshed {updated} ratings | "
         f"dropped {dropped} older than {MAX_AGE_HOURS}h | "
+        f"checked {checked} pages for expiration ({newly_expired} newly expired) | "
         f"total stored: {len(final)}"
     )
 
