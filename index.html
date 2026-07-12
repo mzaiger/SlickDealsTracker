@@ -358,6 +358,90 @@
     font-size: 13px;
   }
 
+  /* Favorite toggle (checkbox) on each card */
+  .fav-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .fav-toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .fav-toggle .fav-star {
+    font-size: 16px;
+    line-height: 1;
+    color: var(--line);
+    transition: color 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+  }
+
+  .fav-toggle input:checked ~ .fav-star {
+    color: var(--warm);
+    transform: scale(1.1);
+  }
+
+  /* Favorites bar */
+  .favorites-bar {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px 16px 18px;
+    margin: 8px 0 24px;
+  }
+
+  .favorites-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .favorites-bar-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .clear-btn {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    color: var(--hot);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .clear-btn:hover { border-color: var(--hot); background: #FDEEE9; }
+
+  .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .heat-fill.hot { animation: none; }
     .card { transition: none; }
@@ -379,6 +463,14 @@
 </header>
 
 <main>
+  <div class="favorites-bar" id="favoritesBar" style="display:none;">
+    <div class="favorites-bar-header">
+      <span class="favorites-bar-title">★ Favorites</span>
+      <button class="clear-btn" id="clearFavoritesBtn" type="button">Clear</button>
+    </div>
+    <div class="favorites-grid" id="favoritesGrid"></div>
+  </div>
+
   <div class="controls">
     <div class="tabs" id="tabs">
       <button class="tab-btn" data-hours="2">2 Hours</button>
@@ -404,6 +496,43 @@ let allDeals = [];
 let activeHours = 2;
 let activeSort = 'date';
 let lastGeneratedIso = null;
+
+const FAVORITES_KEY = 'slickdeals_favorites';
+
+function loadFavorites() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
+    return new Set(Array.isArray(raw) ? raw : []);
+  } catch {
+    return new Set();
+  }
+}
+
+let favorites = loadFavorites();
+
+function saveFavorites() {
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(favorites)));
+}
+
+function escapeAttr(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function toggleFavorite(link, isChecked) {
+  if (isChecked) {
+    favorites.add(link);
+  } else {
+    favorites.delete(link);
+  }
+  saveFavorites();
+  render();
+}
+
+function clearFavorites() {
+  favorites.clear();
+  saveFavorites();
+  render();
+}
 
 async function loadDeals() {
   // Cache-bust both the browser cache and any CDN/proxy cache (e.g. GitHub
@@ -468,6 +597,61 @@ function updateLastUpdatedLabel() {
   el.textContent = `Last updated: ${relativeTime(lastGeneratedIso)}`;
 }
 
+function cardHtml(d) {
+  const pct = Math.min(100, Math.max(6, (d.rating / 500) * 100));
+  const hClass = heatClass(d.rating);
+  const hColor = heatColor(d.rating);
+  const isFav = favorites.has(d.link);
+  // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
+  // this.parentElement -- replacing the parent would also wipe out the
+  // sibling .rating-pill sitting next to the image.
+  const thumbHtml = d.thumbnail
+    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onload="this.parentElement.style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
+    : `<div class="thumb-fallback">No Image</div>`;
+
+  return `
+    <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <div class="thumb-wrap">
+        ${thumbHtml}
+        <label class="fav-toggle" title="Favorite" onclick="event.preventDefault(); event.stopPropagation();">
+          <input type="checkbox" ${isFav ? 'checked' : ''} onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+          <span class="fav-star">★</span>
+        </label>
+        ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
+        <div class="rating-pill">▲ ${d.rating}</div>
+      </div>
+      <div class="body">
+        <div class="heat-row">
+          <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
+          <span class="heat-count">${d.rating} thumbs</span>
+        </div>
+        <p class="title">${d.title}</p>
+        <div class="meta">
+          <span>${relativeTime(d.pubDateIso)}</span>
+          <span class="go">View deal ↗</span>
+        </div>
+      </div>
+    </a>
+
+  `;
+}
+
+function renderFavoritesBar() {
+  const bar = document.getElementById('favoritesBar');
+  const grid = document.getElementById('favoritesGrid');
+
+  if (favorites.size === 0) {
+    bar.style.display = 'none';
+    grid.innerHTML = '';
+    return;
+  }
+
+  const favDeals = allDeals.filter(d => favorites.has(d.link));
+
+  bar.style.display = '';
+  grid.innerHTML = favDeals.map(cardHtml).join('');
+}
+
 function render() {
   const cutoff = Date.now() - activeHours * 60 * 60 * 1000;
   let visible = allDeals.filter(d => new Date(d.pubDateIso).getTime() >= cutoff);
@@ -481,44 +665,14 @@ function render() {
   const count = document.getElementById('count');
   count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
 
+  renderFavoritesBar();
+
   if (visible.length === 0) {
     grid.innerHTML = `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
     return;
   }
 
-  grid.innerHTML = visible.map(d => {
-    const pct = Math.min(100, Math.max(6, (d.rating / 500) * 100));
-    const hClass = heatClass(d.rating);
-    const hColor = heatColor(d.rating);
-    // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
-    // this.parentElement -- replacing the parent would also wipe out the
-    // sibling .rating-pill sitting next to the image.
-    const thumbHtml = d.thumbnail
-      ? `<img src="${d.thumbnail}" alt="" loading="lazy" onload="this.parentElement.style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
-      : `<div class="thumb-fallback">No Image</div>`;
-
-    return `
-      <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
-        <div class="thumb-wrap">
-          ${thumbHtml}
-          ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
-          <div class="rating-pill">▲ ${d.rating}</div>
-        </div>
-        <div class="body">
-          <div class="heat-row">
-            <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
-            <span class="heat-count">${d.rating} thumbs</span>
-          </div>
-          <p class="title">${d.title}</p>
-          <div class="meta">
-            <span>${relativeTime(d.pubDateIso)}</span>
-            <span class="go">View deal ↗</span>
-          </div>
-        </div>
-      </a>
-
-    `;
-  }).join('');
+  grid.innerHTML = visible.map(cardHtml).join('');
 }
 
 function setupControls() {
@@ -539,6 +693,8 @@ function setupControls() {
       render();
     });
   });
+
+  document.getElementById('clearFavoritesBtn').addEventListener('click', clearFavorites);
 
   const refreshBtn = document.getElementById('refreshBtn');
   refreshBtn.addEventListener('click', async () => {
