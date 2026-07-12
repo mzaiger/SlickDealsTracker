@@ -158,6 +158,7 @@ def refresh_expired_flags(deals_dict):
 
 
 
+def item_key(fields):
     return fields.get("guid") or fields.get("link")
 
 
