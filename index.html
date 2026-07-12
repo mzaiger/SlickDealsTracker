@@ -250,7 +250,7 @@
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(2px);
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: 899px;
     padding: 8px 20px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 24px;
@@ -348,6 +348,11 @@
 
   .meta .go {
     color: var(--blue);
+  }
+
+  .archived-tag {
+    color: var(--text-dim);
+    font-style: italic;
   }
 
   .empty {
@@ -506,19 +511,35 @@ let lastGeneratedIso = null;
 
 const FAVORITES_KEY = 'slickdeals_favorites';
 
+// favorites maps link -> full deal snapshot (title, thumbnail, rating, etc.)
+// so a favorited deal still renders correctly even after it ages out of
+// deals.xml and is no longer part of allDeals.
 function loadFavorites() {
   try {
-    const raw = JSON.parse(localStorage.getItem(FAVORITES_KEY) || '[]');
-    return new Set(Array.isArray(raw) ? raw : []);
+    const raw = JSON.parse(localStorage.getItem(FAVORITES_KEY) || 'null');
+    const map = new Map();
+    if (Array.isArray(raw)) {
+      // Legacy format from an earlier version: just an array of links, no
+      // snapshot data available yet. It'll self-heal once the deal is seen
+      // again in allDeals (see getFavoriteDeals).
+      raw.forEach(link => { if (typeof link === 'string') map.set(link, { link }); });
+    } else if (raw && typeof raw === 'object') {
+      Object.values(raw).forEach(deal => {
+        if (deal && deal.link) map.set(deal.link, deal);
+      });
+    }
+    return map;
   } catch {
-    return new Set();
+    return new Map();
   }
 }
 
 let favorites = loadFavorites();
 
 function saveFavorites() {
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(Array.from(favorites)));
+  const obj = {};
+  favorites.forEach((deal, link) => { obj[link] = deal; });
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(obj));
 }
 
 function escapeAttr(str) {
@@ -527,7 +548,8 @@ function escapeAttr(str) {
 
 function toggleFavorite(link, isChecked) {
   if (isChecked) {
-    favorites.add(link);
+    const deal = allDeals.find(d => d.link === link);
+    favorites.set(link, deal || { link });
   } else {
     favorites.delete(link);
   }
@@ -539,6 +561,30 @@ function clearFavorites() {
   favorites.clear();
   saveFavorites();
   render();
+}
+
+// Returns { deal, archived } for every favorite: live data (kept fresh in
+// storage) while the deal is still in the feed, or the last saved snapshot
+// once it ages out and disappears from deals.xml.
+function getFavoriteDeals() {
+  const result = [];
+  let changed = false;
+
+  favorites.forEach((storedDeal, link) => {
+    const live = allDeals.find(d => d.link === link);
+    if (live) {
+      if (JSON.stringify(live) !== JSON.stringify(storedDeal)) {
+        favorites.set(link, live);
+        changed = true;
+      }
+      result.push({ deal: live, archived: false });
+    } else {
+      result.push({ deal: storedDeal, archived: true });
+    }
+  });
+
+  if (changed) saveFavorites();
+  return result;
 }
 
 async function loadDeals() {
@@ -604,7 +650,7 @@ function updateLastUpdatedLabel() {
   el.textContent = `Last updated: ${relativeTime(lastGeneratedIso)}`;
 }
 
-function cardHtml(d) {
+function cardHtml(d, opts = {}) {
   const pct = Math.min(100, Math.max(6, (d.rating / 250) * 100));
   const hClass = heatClass(d.rating);
   const hColor = heatColor(d.rating);
@@ -634,7 +680,7 @@ function cardHtml(d) {
         </div>
         <p class="title">${d.title}</p>
         <div class="meta">
-          <span>${relativeTime(d.pubDateIso)}</span>
+          <span>${relativeTime(d.pubDateIso)}${opts.archived ? ' · <span class="archived-tag">saved</span>' : ''}</span>
           <span class="go">View deal ↗</span>
         </div>
       </div>
@@ -643,20 +689,20 @@ function cardHtml(d) {
   `;
 }
 
-function favBoxHtml(favDeals) {
+function favBoxHtml(favEntries) {
   // Box grows one column-track wider per favorite (capped at 3) so a single
   // favorite doesn't reserve a big empty area -- extra favorites beyond that
   // just wrap onto additional rows inside the box, left to right.
-  const span = Math.min(favDeals.length, 3);
+  const span = Math.min(favEntries.length, 3);
 
   return `
     <div class="fav-box" style="grid-column: span ${span};">
       <div class="fav-box-header">
-        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favDeals.length})</span></span>
+        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
         <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
       </div>
       <div class="fav-box-items">
-        ${favDeals.map(cardHtml).join('')}
+        ${favEntries.map(f => cardHtml(f.deal, { archived: f.archived })).join('')}
       </div>
     </div>
   `;
@@ -675,8 +721,8 @@ function render() {
   const count = document.getElementById('count');
   count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
 
-  const favDeals = allDeals.filter(d => favorites.has(d.link));
-  const favBox = favDeals.length > 0 ? favBoxHtml(favDeals) : '';
+  const favEntries = getFavoriteDeals();
+  const favBox = favEntries.length > 0 ? favBoxHtml(favEntries) : '';
 
   if (visible.length === 0) {
     grid.innerHTML = favBox + `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
