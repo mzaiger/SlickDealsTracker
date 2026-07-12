@@ -397,29 +397,38 @@
     transform: scale(1.1);
   }
 
-  /* Favorites bar */
-  .favorites-bar {
+  /* Favorites box — sits as the first item inside the main grid */
+  .fav-box {
+    grid-column: span var(--fav-span, 1);
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    padding: 16px 16px 18px;
-    margin: 8px 0 24px;
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .favorites-bar-header {
+  .fav-box-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12px;
   }
 
-  .favorites-bar-title {
+  .fav-box-title {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     font-size: 13px;
     color: var(--text);
+  }
+
+  .fav-box-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    color: var(--text-dim);
+    margin-left: 4px;
   }
 
   .clear-btn {
@@ -436,10 +445,123 @@
 
   .clear-btn:hover { border-color: var(--hot); background: #FDEEE9; }
 
-  .favorites-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
+  .fav-box-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .fav-mini-card {
+    position: relative;
+    display: block;
+    flex: 1 1 130px;
+    max-width: 160px;
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease;
+  }
+
+  .fav-mini-card:hover { border-color: var(--blue); }
+
+  .fav-mini-thumb {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--panel);
+    overflow: hidden;
+  }
+
+  .fav-mini-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .fav-mini-card.is-expired .fav-mini-thumb img {
+    filter: grayscale(60%);
+    opacity: 0.6;
+  }
+
+  .fav-mini-expired-tag {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    background: var(--hot);
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 9.5px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    z-index: 2;
+  }
+
+  .fav-mini-toggle {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .fav-mini-toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .fav-mini-toggle .fav-star {
+    font-size: 13px;
+    line-height: 1;
+    color: var(--warm);
+    pointer-events: none;
+  }
+
+  .fav-mini-rating {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .fav-mini-title {
+    font-size: 11.5px;
+    line-height: 1.3;
+    margin: 0;
+    padding: 6px 8px 8px;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .fav-box { grid-column: 1 / -1 !important; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -448,6 +570,7 @@
   }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -463,14 +586,6 @@
 </header>
 
 <main>
-  <div class="favorites-bar" id="favoritesBar" style="display:none;">
-    <div class="favorites-bar-header">
-      <span class="favorites-bar-title">★ Favorites</span>
-      <button class="clear-btn" id="clearFavoritesBtn" type="button">Clear</button>
-    </div>
-    <div class="favorites-grid" id="favoritesGrid"></div>
-  </div>
-
   <div class="controls">
     <div class="tabs" id="tabs">
       <button class="tab-btn" data-hours="2">2 Hours</button>
@@ -636,20 +751,44 @@ function cardHtml(d) {
   `;
 }
 
-function renderFavoritesBar() {
-  const bar = document.getElementById('favoritesBar');
-  const grid = document.getElementById('favoritesGrid');
+function favMiniCardHtml(d) {
+  const thumbHtml = d.thumbnail
+    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
+    : `<div class="thumb-fallback">No Image</div>`;
 
-  if (favorites.size === 0) {
-    bar.style.display = 'none';
-    grid.innerHTML = '';
-    return;
-  }
+  return `
+    <a class="fav-mini-card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <div class="fav-mini-thumb">
+        ${thumbHtml}
+        <label class="fav-mini-toggle" title="Remove favorite" onclick="event.stopPropagation();">
+          <input type="checkbox" checked onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+          <span class="fav-star">★</span>
+        </label>
+        <span class="fav-mini-rating">▲ ${d.rating}</span>
+        ${d.expired ? '<span class="fav-mini-expired-tag">Expired</span>' : ''}
+      </div>
+      <p class="fav-mini-title">${d.title}</p>
+    </a>
+  `;
+}
 
-  const favDeals = allDeals.filter(d => favorites.has(d.link));
+function favBoxHtml(favDeals) {
+  // Box grows one column-track wider per favorite (capped at 3) so a single
+  // favorite doesn't reserve a big empty area -- extra favorites beyond that
+  // just wrap onto additional rows inside the box.
+  const span = Math.min(favDeals.length, 3);
 
-  bar.style.display = '';
-  grid.innerHTML = favDeals.map(cardHtml).join('');
+  return `
+    <div class="fav-box" style="--fav-span:${span};">
+      <div class="fav-box-header">
+        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favDeals.length})</span></span>
+        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
+      </div>
+      <div class="fav-box-items">
+        ${favDeals.map(favMiniCardHtml).join('')}
+      </div>
+    </div>
+  `;
 }
 
 function render() {
@@ -665,14 +804,15 @@ function render() {
   const count = document.getElementById('count');
   count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
 
-  renderFavoritesBar();
+  const favDeals = allDeals.filter(d => favorites.has(d.link));
+  const favBox = favDeals.length > 0 ? favBoxHtml(favDeals) : '';
 
   if (visible.length === 0) {
-    grid.innerHTML = `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
+    grid.innerHTML = favBox + `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
     return;
   }
 
-  grid.innerHTML = visible.map(cardHtml).join('');
+  grid.innerHTML = favBox + visible.map(cardHtml).join('');
 }
 
 function setupControls() {
@@ -693,8 +833,6 @@ function setupControls() {
       render();
     });
   });
-
-  document.getElementById('clearFavoritesBtn').addEventListener('click', clearFavorites);
 
   const refreshBtn = document.getElementById('refreshBtn');
   refreshBtn.addEventListener('click', async () => {
