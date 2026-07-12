@@ -598,7 +598,7 @@ function updateLastUpdatedLabel() {
 }
 
 function cardHtml(d) {
-  const pct = Math.min(100, Math.max(6, (d.rating / 500) * 100));
+  const pct = Math.min(100, Math.max(6, (d.rating / 250) * 100));
   const hClass = heatClass(d.rating);
   const hColor = heatColor(d.rating);
   const isFav = favorites.has(d.link);
