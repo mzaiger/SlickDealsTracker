@@ -399,7 +399,6 @@
 
   /* Favorites box — sits as the first item inside the main grid */
   .fav-box {
-    grid-column: span var(--fav-span, 1);
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -445,123 +444,12 @@
 
   .clear-btn:hover { border-color: var(--hot); background: #FDEEE9; }
 
+  /* Same card component as the main grid, just a slightly narrower min-width
+     (~90%) so multiple fit side by side inside the box before wrapping. */
   .fav-box-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .fav-mini-card {
-    position: relative;
-    display: block;
-    background: #FFFFFF;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s ease;
-  }
-
-  .fav-mini-card:hover { border-color: var(--blue); }
-
-  .fav-mini-thumb {
-    position: relative;
-    aspect-ratio: 16 / 10;
-    background: var(--panel);
-    overflow: hidden;
-  }
-
-  .fav-mini-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  .fav-mini-card.is-expired .fav-mini-thumb img {
-    filter: grayscale(60%);
-    opacity: 0.6;
-  }
-
-  .fav-mini-expired-tag {
-    position: absolute;
-    bottom: 6px;
-    left: 6px;
-    background: var(--hot);
-    color: #FFFFFF;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-size: 9.5px;
-    padding: 3px 6px;
-    border-radius: 4px;
-    z-index: 2;
-  }
-
-  .fav-mini-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 46px;
-    height: 46px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(2px);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    cursor: pointer;
-  }
-
-  .fav-mini-toggle input {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .fav-mini-toggle .fav-star {
-    font-size: 23px;
-    line-height: 1;
-    color: var(--warm);
-    pointer-events: none;
-  }
-
-  .fav-mini-rating {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(2px);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 8px 20px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .fav-mini-title {
-    font-size: 14.5px;
-    line-height: 1.35;
-    font-weight: 500;
-    margin: 0;
-    padding: 14px 16px 16px;
-    color: var(--text);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+    gap: 14px;
   }
 
   @media (max-width: 700px) {
@@ -755,41 +643,20 @@ function cardHtml(d) {
   `;
 }
 
-function favMiniCardHtml(d) {
-  const thumbHtml = d.thumbnail
-    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
-    : `<div class="thumb-fallback">No Image</div>`;
-
-  return `
-    <a class="fav-mini-card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
-      <div class="fav-mini-thumb">
-        ${thumbHtml}
-        <label class="fav-mini-toggle" title="Remove favorite" onclick="event.stopPropagation();">
-          <input type="checkbox" checked onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
-          <span class="fav-star">★</span>
-        </label>
-        <span class="fav-mini-rating">▲ ${d.rating}</span>
-        ${d.expired ? '<span class="fav-mini-expired-tag">Expired</span>' : ''}
-      </div>
-      <p class="fav-mini-title">${d.title}</p>
-    </a>
-  `;
-}
-
 function favBoxHtml(favDeals) {
   // Box grows one column-track wider per favorite (capped at 3) so a single
   // favorite doesn't reserve a big empty area -- extra favorites beyond that
-  // just wrap onto additional rows inside the box.
+  // just wrap onto additional rows inside the box, left to right.
   const span = Math.min(favDeals.length, 3);
 
   return `
-    <div class="fav-box" style="--fav-span:${span};">
+    <div class="fav-box" style="grid-column: span ${span};">
       <div class="fav-box-header">
         <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favDeals.length})</span></span>
         <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
       </div>
       <div class="fav-box-items">
-        ${favDeals.map(favMiniCardHtml).join('')}
+        ${favDeals.map(cardHtml).join('')}
       </div>
     </div>
   `;
