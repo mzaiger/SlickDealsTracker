@@ -223,7 +223,7 @@
   .thumb-wrap img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
   }
 
@@ -269,8 +269,8 @@
 
   .heat-meter {
     flex: 1;
-    height: 4px;
-    border-radius: 2px;
+    height: 10px;
+    border-radius: 5px;
     background: var(--line);
     overflow: hidden;
   }
@@ -286,7 +286,7 @@
 
   .heat-fill {
     height: 100%;
-    border-radius: 2px;
+    border-radius: 5px;
   }
 
   .heat-fill.hot { box-shadow: 0 0 8px var(--hot); animation: pulse 1.8s ease-in-out infinite; }
