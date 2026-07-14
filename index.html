@@ -182,6 +182,32 @@
     color: var(--blue);
   }
 
+  .layout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .layout-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .layout-btn.active {
+    border-color: var(--blue);
+    color: var(--blue);
+  }
+
   .count {
     font-family: 'IBM Plex Mono', monospace;
     color: var(--text-dim);
@@ -461,6 +487,184 @@
     .fav-box { grid-column: 1 / -1 !important; }
   }
 
+  /* ---------- Rows layout ---------- */
+  .rows-fav-section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 14px 14px;
+    margin-bottom: 16px;
+  }
+
+  .rows-wrap { overflow-x: auto; }
+
+  .rows-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 760px;
+  }
+
+  .rows-header-row,
+  .row-item {
+    display: grid;
+    grid-template-columns: 52px 64px minmax(160px, 1.3fr) minmax(200px, 2fr) 110px 110px 90px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .rows-header-row {
+    padding: 6px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .row-item {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .row-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 12px rgba(27,99,224,0.10);
+  }
+
+  .row-item.is-expired { opacity: 0.6; }
+
+  .row-thumb-wrap {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--panel);
+    flex-shrink: 0;
+  }
+
+  .row-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .row-thumb-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  .row-fav-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .row-fav-toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .row-fav-toggle .fav-star {
+    font-size: 16px;
+    line-height: 1;
+    color: var(--line);
+    transition: color 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+  }
+
+  .row-fav-toggle input:checked ~ .fav-star {
+    color: var(--warm);
+    transform: scale(1.1);
+  }
+
+  .row-rating {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .row-title {
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .row-desc {
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--text-dim);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .row-url {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--blue);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .row-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .row-expired {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .row-expired.yes {
+    color: var(--hot);
+    background: #FDEEE9;
+  }
+
+  .row-expired.no {
+    color: var(--cool);
+    background: #EAF7F8;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .heat-fill.hot { animation: none; }
     .card { transition: none; }
@@ -490,6 +694,11 @@
       <button class="tab-btn" data-hours="24">24 Hours</button>
       <button class="tab-btn" data-hours="48">48 Hours</button>
     </div>
+    <div class="layout" id="layout">
+      <span>Layout</span>
+      <button class="layout-btn" data-layout="tile">Tile</button>
+      <button class="layout-btn" data-layout="rows">Rows</button>
+    </div>
     <div class="sort">
       <span>Sort</span>
       <button class="sort-btn" data-sort="date">Newest</button>
@@ -507,6 +716,7 @@ const DATA_URL = 'deals.xml';
 let allDeals = [];
 let activeHours = 2;
 let activeSort = 'date';
+let activeLayout = 'tile';
 let lastGeneratedIso = null;
 
 const FAVORITES_KEY = 'slickdeals_favorites';
@@ -611,6 +821,7 @@ async function loadDeals() {
       title: get('title'),
       link: get('link'),
       thumbnail: get('thumbnail'),
+      description: get('description'),
       rating: Number.isFinite(rating) ? rating : 0,
       pubDateIso: get('pubDateIso'),
       expired: get('expired').toLowerCase() === 'true',
@@ -689,6 +900,79 @@ function cardHtml(d, opts = {}) {
   `;
 }
 
+function domainOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function rowHtml(d, opts = {}) {
+  const isFav = favorites.has(d.link);
+  const thumbHtml = d.thumbnail
+    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;row-thumb-fallback&quot;>No Img</div>'">`
+    : `<div class="row-thumb-fallback">No Img</div>`;
+
+  return `
+    <a class="row-item${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <div class="row-thumb-wrap">${thumbHtml}</div>
+      <span class="row-rating">▲ ${d.rating}</span>
+      <span class="row-title">${d.title}</span>
+      <span class="row-desc">${d.description ? d.description : '—'}</span>
+      <span class="row-url">${domainOf(d.link)}</span>
+      <span class="row-date">${relativeTime(d.pubDateIso)}${opts.archived ? ' · saved' : ''}</span>
+      <span class="row-expired ${d.expired ? 'yes' : 'no'}">${d.expired ? 'Expired' : 'Live'}</span>
+      <label class="row-fav-toggle" title="Favorite" onclick="event.stopPropagation();" style="position:absolute; left:-6px; top:-6px;">
+        <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+        <span class="fav-star">★</span>
+      </label>
+    </a>
+  `;
+}
+
+function rowsHeaderHtml() {
+  return `
+    <div class="rows-header-row">
+      <span></span>
+      <span>Rating</span>
+      <span>Title</span>
+      <span>Description</span>
+      <span>URL</span>
+      <span>Pub Date</span>
+      <span>Expired</span>
+    </div>
+  `;
+}
+
+function rowsTableHtml(deals, opts = {}) {
+  return `
+    <div class="rows-wrap">
+      <div class="rows-table">
+        ${rowsHeaderHtml()}
+        ${deals.map(d => rowHtml(d, opts)).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function favRowsSectionHtml(favEntries) {
+  return `
+    <div class="rows-fav-section">
+      <div class="fav-box-header">
+        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
+        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
+      </div>
+      <div class="rows-wrap">
+        <div class="rows-table">
+          ${rowsHeaderHtml()}
+          ${favEntries.map(f => rowHtml(f.deal, { archived: f.archived })).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function favBoxHtml(favEntries) {
   // Box grows one column-track wider per favorite (capped at 3) so a single
   // favorite doesn't reserve a big empty area -- extra favorites beyond that
@@ -722,6 +1006,21 @@ function render() {
   count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
 
   const favEntries = getFavoriteDeals();
+
+  grid.classList.toggle('rows-mode', activeLayout === 'rows');
+
+  if (activeLayout === 'rows') {
+    grid.classList.remove('grid');
+    const favSection = favEntries.length > 0 ? favRowsSectionHtml(favEntries) : '';
+    if (visible.length === 0) {
+      grid.innerHTML = favSection + `<div class="empty">No deals in this window yet. The feed updates every 15 minutes.</div>`;
+      return;
+    }
+    grid.innerHTML = favSection + rowsTableHtml(visible);
+    return;
+  }
+
+  grid.classList.add('grid');
   const favBox = favEntries.length > 0 ? favBoxHtml(favEntries) : '';
 
   if (visible.length === 0) {
@@ -738,6 +1037,15 @@ function setupControls() {
     btn.addEventListener('click', () => {
       activeHours = parseInt(btn.dataset.hours, 10);
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  document.querySelectorAll('.layout-btn').forEach(btn => {
+    if (btn.dataset.layout === activeLayout) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      activeLayout = btn.dataset.layout;
+      document.querySelectorAll('.layout-btn').forEach(b => b.classList.toggle('active', b === btn));
       render();
     });
   });
