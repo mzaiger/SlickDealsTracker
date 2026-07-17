@@ -1,0 +1,44 @@
+name: Pull Slickdeals Expiration Status
+
+on:
+  repository_dispatch:
+    types: [trigger-expiration-pull]
+  workflow_dispatch: {}
+
+# Prevent overlapping runs from racing on the same file/commit.
+concurrency:
+  group: pull-slickexpiration
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Check deal expiration
+        run: python pull_slickexpiration.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add expired.xml
+          if git diff --cached --quiet -- expired.xml; then
+            echo "No changes to expired.xml -- skipping commit."
+          else
+            git commit -m "Update expired.xml [skip ci]"
+            git push
+          fi
