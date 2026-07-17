@@ -2,8 +2,15 @@
 pull_slickdeals.py
 
 Pulls the Slickdeals Frontpage (Hot Deals) RSS feed and merges new items into
-data/deals.xml. Slickdeals has no self-serve public API, so this reads their
+deals.xml. Slickdeals has no self-serve public API, so this reads their
 public RSS feed directly.
+
+This script owns deals.xml only -- it does NOT check whether any deal has
+expired. Expiration checking lives in its own script (pull_slickexpiration.py)
+and its own file (expired.xml), matched to deals.xml by <title> at read time.
+Splitting them keeps this script fast (one feed request per run) while the
+per-deal page-fetching expiration check can run on its own schedule without
+slowing down how quickly new deals show up.
 
 Behavior:
   - Every field present on a feed <item> is captured as-is (title, link,
@@ -15,13 +22,13 @@ Behavior:
                       sorting/filtering in the browser (RFC-822 dates are
                       a pain to parse consistently client-side)
   - Items are keyed by guid (falls back to link if guid is missing). If a
-    key already exists in data/deals.xml, it is NOT duplicated -- only its
+    key already exists in deals.xml, it is NOT duplicated -- only its
     rating/thumbnail are refreshed in place, since thumbs-up counts change
     over time but everything else about a deal doesn't.
   - After merging, any item whose pubDate is older than 48 hours is dropped.
 
 Run standalone:
-    python scripts/pull_slickdeals.py
+    python pull_slickdeals.py
 """
 
 import re
@@ -37,8 +44,6 @@ FEED_URL = "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals
 DATA_PATH = Path(__file__).resolve().parent / "deals.xml"
 MAX_AGE_HOURS = 48
 REQUEST_TIMEOUT = 20
-EXPIRED_PHRASE = "Heads up, this deal has expired."
-PAGE_REQUEST_TIMEOUT = 15
 
 THUMB_RE = re.compile(r"Thumb Score:\s*\+?(-?\d+)", re.IGNORECASE)
 IMG_RE = re.compile(r'<img[^>]+src="([^"]+)"', re.IGNORECASE)
@@ -112,58 +117,12 @@ def enrich(fields):
     return fields
 
 
-def check_expired(link):
-    """Visit a deal's own page and look for Slickdeals' expired-deal notice.
-
-    Returns True/False when the check succeeds, or None if the page couldn't
-    be fetched -- callers should leave the existing expired value untouched
-    in that case rather than guessing.
-    """
-    if not link:
-        return None
-    try:
-        resp = requests.get(
-            link,
-            timeout=PAGE_REQUEST_TIMEOUT,
-            headers={"User-Agent": "Mozilla/5.0 (compatible; slickdeals-tracker/1.0)"},
-        )
-        resp.raise_for_status()
-    except Exception:
-        return None
-    return EXPIRED_PHRASE in resp.text
-
-
-def refresh_expired_flags(deals_dict):
-    """Check expired status for every deal that isn't already flagged expired.
-
-    Once a deal is marked expired it stays expired -- deals don't come back
-    from expired, so there's no need to keep re-fetching those pages on
-    every run. This keeps request volume bounded as the feed grows instead
-    of re-checking the whole 48-hour window every 15 minutes.
-    """
-    checked, newly_expired = 0, 0
-    for fields in deals_dict.values():
-        if fields.get("expired") == "true":
-            continue
-        result = check_expired(fields.get("link"))
-        checked += 1
-        if result is None:
-            # Fetch failed -- leave whatever expired value (or lack of one)
-            # was already stored.
-            continue
-        if result:
-            newly_expired += 1
-        fields["expired"] = "true" if result else "false"
-    return checked, newly_expired
-
-
-
 def item_key(fields):
     return fields.get("guid") or fields.get("link")
 
 
 def load_existing():
-    """Load data/deals.xml into a dict keyed by guid/link. Returns {} if the
+    """Load deals.xml into a dict keyed by guid/link. Returns {} if the
     file doesn't exist yet."""
     if not DATA_PATH.exists():
         return {}
@@ -250,20 +209,18 @@ def main():
         sys.exit(1)
 
     if not raw_items:
-        print("Feed returned no items -- leaving existing data/deals.xml untouched.")
+        print("Feed returned no items -- leaving existing deals.xml untouched.")
         sys.exit(0)
 
     existing = load_existing()
     merged, added, updated = merge(existing, raw_items)
     final, dropped = truncate_old(merged)
-    checked, newly_expired = refresh_expired_flags(final)
     write_xml(final)
 
     print(
         f"Fetched {len(raw_items)} feed items | "
         f"added {added} new | refreshed {updated} ratings | "
         f"dropped {dropped} older than {MAX_AGE_HOURS}h | "
-        f"checked {checked} pages for expiration ({newly_expired} newly expired) | "
         f"total stored: {len(final)}"
     )
 
