@@ -5,7 +5,11 @@ on:
     types: [trigger-expiration-pull]
   workflow_dispatch: {}
 
-# Prevent overlapping runs from racing on the same file/commit.
+# This workflow does one page fetch per unexpired deal, so a run can take a
+# while. cancel-in-progress: false means a new run never interrupts one
+# already in progress -- it queues and waits its turn instead. This is its
+# own concurrency group, separate from pull-slickdeals, so it never blocks
+# (or gets blocked by) the 15-minute deals pull.
 concurrency:
   group: pull-slickexpiration
   cancel-in-progress: false
@@ -40,5 +44,10 @@ jobs:
             echo "No changes to expired.xml -- skipping commit."
           else
             git commit -m "Update expired.xml [skip ci]"
+            # Deals and Expiration run in separate concurrency groups, so
+            # they can push around the same time. Rebase onto whatever the
+            # other one just pushed before trying, so this doesn't get
+            # rejected as a non-fast-forward push.
+            git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)"
             git push
           fi
