@@ -711,7 +711,11 @@
 </main>
 
 <script>
-const DATA_URL = 'deals.xml';
+const DEALS_URL = 'deals.xml';
+// Expiration status lives in its own file, refreshed on its own schedule
+// (checking every deal's own page is much slower than the feed pull), and
+// is joined to deals.xml purely by matching <title> text.
+const EXPIRED_URL = 'expired.xml';
 
 let allDeals = [];
 let activeHours = 2;
@@ -797,11 +801,43 @@ function getFavoriteDeals() {
   return result;
 }
 
+// Loads expired.xml and returns a Map of title -> expired boolean. Missing
+// or unparseable expired.xml just means "treat everything as not expired
+// yet" rather than a hard failure -- deals.xml is the source of truth for
+// which deals exist at all.
+async function loadExpiredMap() {
+  const bustUrl = `${EXPIRED_URL}?v=${Date.now()}`;
+  try {
+    const res = await fetch(bustUrl, { cache: 'no-store' });
+    const text = await res.text();
+    const xml = new DOMParser().parseFromString(text, 'application/xml');
+
+    if (xml.querySelector('parsererror')) {
+      console.error('Failed to parse expired.xml');
+      return new Map();
+    }
+
+    const map = new Map();
+    xml.querySelectorAll('expiration').forEach(el => {
+      const title = (el.querySelector('title')?.textContent || '').trim();
+      const expired = (el.querySelector('expired')?.textContent || '').trim().toLowerCase() === 'true';
+      if (title) map.set(title, expired);
+    });
+    return map;
+  } catch (e) {
+    console.error('Failed to load expired.xml', e);
+    return new Map();
+  }
+}
+
 async function loadDeals() {
   // Cache-bust both the browser cache and any CDN/proxy cache (e.g. GitHub
   // Pages) by putting a unique query string on every request.
-  const bustUrl = `${DATA_URL}?v=${Date.now()}`;
-  const res = await fetch(bustUrl, { cache: 'no-store' });
+  const bustUrl = `${DEALS_URL}?v=${Date.now()}`;
+  const [res, expiredMap] = await Promise.all([
+    fetch(bustUrl, { cache: 'no-store' }),
+    loadExpiredMap(),
+  ]);
   const text = await res.text();
   const xml = new DOMParser().parseFromString(text, 'application/xml');
 
@@ -817,14 +853,15 @@ async function loadDeals() {
   return Array.from(xml.querySelectorAll('deal')).map(el => {
     const get = tag => (el.querySelector(tag)?.textContent || '').trim();
     const rating = parseInt(get('rating'), 10);
+    const title = get('title');
     return {
-      title: get('title'),
+      title,
       link: get('link'),
       thumbnail: get('thumbnail'),
       description: get('description'),
       rating: Number.isFinite(rating) ? rating : 0,
       pubDateIso: get('pubDateIso'),
-      expired: get('expired').toLowerCase() === 'true',
+      expired: expiredMap.get(title) === true,
     };
   }).filter(d => d.link && d.pubDateIso);
 }
