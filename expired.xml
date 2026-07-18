@@ -1,12 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-18T20:58:42.870291+00:00">
+<expirations generated="2026-07-18T21:59:21.576864+00:00">
+  <expiration>
+    <title>Harry's Plus Razor Handle w/ 2x Cartridges &amp; Blade Cover (Various Colors) Free + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>32GB 7" Amazon Kindle Paperwhite Signature Edition Wi-Fi E-Reader $145 or less + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>280-Pc Husky SAE/Metric Mechanics Tool Set w/ Durable Storage Box $99 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>G.H. Bass &amp; Co Men's Polar Full Zip Fleece Jacket $3.90</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>32-Oz 303 Aerospace Automotive UV Protectant Spray for Vinyl, Plastic &amp; Rubber $11.80 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>2.2-Lb Lavazza Whole Bean Coffee Blend (Crema e Aroma, Medium Roast) $12.15 w/ S&amp;S</title>
     <expired>false</expired>
   </expiration>
   <expiration>
     <title>Razer Viper V3 HyperSpeed Wireless Gaming Mouse $26.80</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Select Accounts: 4-Count Colgate 360 Optic White Whitening Toothbrush (Soft) $5.50 w/ S&amp;S</title>
@@ -586,7 +606,7 @@
   </expiration>
   <expiration>
     <title>Kayrth Women's High-Waisted Swim Skirt w/ Zipper Pockets (Various) $13</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Segway Cube 2000 2048Wh 2200W LiFePO4 Power Station $539 + Free S&amp;H</title>
@@ -1139,33 +1159,5 @@
   <expiration>
     <title>DigitPro Digital Tire Pressure Gauge w/ Inflator $11.95</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 0.5oz Differin Acne Treatment Face Gel w/ 0.1% Adapalene $4.45 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: 24-Ct Cetaphil Fast Rescue Acne Pimple Patches $3.70 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Typhur SYNC Wireless Meat Thermometer (Various) from $25 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>70-qt Igloo Trailmate Journey Wheeled Cooler (Carbonite) $218.50 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>55" Samsung The Frame LS03F 4K QLED Smart TV (2025 Model) $700 or less + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pack 12-Oz OLIPOP Prebiotic Soda (Cherry Cola) $12.95 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>34″ Samsung Odyssey G5 3440x1440 165Hz Curved Ultrawide Monitor $270 + Free S&amp;H</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
