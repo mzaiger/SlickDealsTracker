@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-19T01:58:54.152010+00:00">
+<expirations generated="2026-07-19T02:58:14.894754+00:00">
+  <expiration>
+    <title>Micro Center: Raspberry Pi 400 All-in-One Keyboard PC: Quad-Core Cortex-A72, 4GB $50 + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Kohl's Clearance and Closeout Sale: up to 70% Off + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>32-Ct Peet's Coffee Medium Roast Big Bang K-Cup Coffee Pods $10.40 w/ S&amp;S</title>
     <expired>false</expired>
@@ -22,7 +30,7 @@
   </expiration>
   <expiration>
     <title>SILKWORLD Men’s 9" Swim Trunks w/ Compression Liner &amp; Zipper Pockets (Various) $12</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Ryzen 7700X3D + ASRock B650M Pro RS WIFI Board + 16GB G.Skill DDR5 $451 + Free S&amp;H</title>
@@ -426,7 +434,7 @@
   </expiration>
   <expiration>
     <title>Select Accts: 12-Pk 5.5oz Blue Buffalo Tastefuls Flaked Wet Cat Food (Variety Pack) $6.75 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Whitmor Rolling Folding Adjustable Clothing Rack (51-74.5" Wide / 66-71" Tall) $14.90 + Free S&amp;H</title>
@@ -1107,25 +1115,5 @@
   <expiration>
     <title>Melissa &amp; Doug Scoop &amp; Serve Ice Cream Counter $21.30</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>508-Pc LEGO City F1 Display Truck + Audi F1 Race Car (60493) $36 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>15-pk 16-oz Monster Energy Sugar Free Energy Drink (various) from $15.10 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Zakapaws Extra Thick Orthpedic Dog Bed for Large Dogs (48" x 35" x 11") from $30 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Patriot Games: Jack Ryan Book 2 by Tom Clancy (eBook) $2</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>iVANKY 15W 3-in-1 Foldable Wireless Charging Station for Apple Devices $9</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
