@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-19T07:57:28.422465+00:00">
+<expirations generated="2026-07-19T08:57:46.370839+00:00">
+  <expiration>
+    <title>12-Ct Quest Nutrition Crispy Protein Bar (Fruity Cereal Flavor) $15.80</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>8-Ct BEVIGOR Rechargeable AA &amp; AAA Batteries w/ 8 Bay Smart Charger $9.95</title>
     <expired>false</expired>
@@ -278,7 +282,7 @@
   </expiration>
   <expiration>
     <title>TALIX 20000mAh 3-Port 140W USB-C Power Bank $40 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Men's G Gradual Athletic Workout UPF 50+ Fabric T-Shirts (various) $9.85</title>
@@ -1002,26 +1006,6 @@
   </expiration>
   <expiration>
     <title>Dremel 290-02 120-Volt Engraver Rotary Tool w/ Stencils $19.90</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Amazon Accts: 100-Ct Twinings Pure Herbal Tea Bags (Pure Peppermint) $7.10 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Prime Members: JoyRoom Bluetooth 6.0 AUX Car Adapter/Receiver w/ Dual Mics/NC $10.10 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>YOLEO Commercial Adjustable Weight Bench (3-Post, Incline/Flat/Decline, Red) $160 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>The Last Samurai (2003) (Blu-Ray) $4.95 + Free S&amp;H on $35+</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 10-Oz Burt's Bees Waterless Shampoo for Cats $3.55 w/ S&amp;S</title>
     <expired>false</expired>
   </expiration>
 </expirations>
