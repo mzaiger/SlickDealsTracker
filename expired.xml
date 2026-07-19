@@ -1,8 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-19T00:57:40.945266+00:00">
+<expirations generated="2026-07-19T01:58:54.152010+00:00">
+  <expiration>
+    <title>32-Ct Peet's Coffee Medium Roast Big Bang K-Cup Coffee Pods $10.40 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Staples App: PNY NVIDIA GeForce RTX 5070 12GB Graphics Card $522 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Walker's Razor Slim Electronic Muff (Patriot, 2 Styles) from $21</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>21-Pc DeWALT Titanium Nitride Coated Pilot Point Drill Bit Set w/ Case $21</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>720W Cuisinart 14-Cup Custom Brushed Stainless Steel Food Processor (Silver) $179.95 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>SILKWORLD Men’s 9" Swim Trunks w/ Compression Liner &amp; Zipper Pockets (Various) $12</title>
@@ -1110,38 +1126,6 @@
   </expiration>
   <expiration>
     <title>iVANKY 15W 3-in-1 Foldable Wireless Charging Station for Apple Devices $9</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>G Gradual Women's V-Neck UPF 50+ Moisture-Wicking Athletic Shirt (Various) $7</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>SEGA Genesis Cartridge Console Heroes: Sonic The Hedgehog 3 Diorama Playset $5.40</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pk YITHINC Metallic Shimmer Glitter Gel Outline Marker Pens $3.50</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 230-Ct 1200mg Nature Made Omega 3 Fish Oil Supplements Softgels $9.20 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>LC-dolida 3D Bluetooth 5.4 Sleep Mask w/ Headphones $10.50</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>2-Pk HMCITY 120-LED Motion Sensor Outdoor Solar Lights $7</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>26-Oz solawngarden Vintage Glass Hummingbird Feeder w/ Perch (Red) $10.20</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>RYOBI ONE+ 18V Li-Ion 2x 4.0 Ah + 2.0 Ah Batteries w/ Charger + Select Tool $179 + Free S&amp;H</title>
     <expired>false</expired>
   </expiration>
 </expirations>
