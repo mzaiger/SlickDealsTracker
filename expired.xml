@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-20T12:56:36.456248+00:00">
+<expirations generated="2026-07-20T13:57:39.994576+00:00">
+  <expiration>
+    <title>Blink Wired Floodlight Camera (Black or White) $30</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Reconditioned: Shark FlexBreeze Pedestal &amp; Tabletop Fan $55 + Free S&amp;H w/ Prime</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>DeWALT 16" Heavy Duty Wired 3-Speed Benchtop &amp; Hanging Drum Fan $77 + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Ozark Trail Men's Beanie (3 Colors) $1.35</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>12-Pk 12-Oz Hint Sparkling Water (Peach Raspberry) $6.15 w/ S&amp;S</title>
     <expired>false</expired>
@@ -18,7 +34,7 @@
   </expiration>
   <expiration>
     <title>Purdy Marathon Nylon / Polyester Paint Roller Cover (3/4" x 9") $1.10</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Anker 715 Nano II 65W GaN II PPS USB-C Fast Charger $20</title>
@@ -998,10 +1014,6 @@
   </expiration>
   <expiration>
     <title>MicroCenter: PowerColor AMD Radeon RX 9070 Reaper 16GB GDDR6 Graphics Card $560 + Free Pickup</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 8-Pk 56-Ct Pampers Aqua Pure Fragrance-Free Baby Wipes $16.40 w/ S&amp;S</title>
     <expired>false</expired>
   </expiration>
 </expirations>
