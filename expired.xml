@@ -1,5 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-20T13:57:39.994576+00:00">
+<expirations generated="2026-07-20T14:56:48.904530+00:00">
+  <expiration>
+    <title>1L Hamilton Beach Electric Tea Kettle $18.05</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>LUNAR Remastered Collection (Nintendo Switch) $39.95 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>LEATHERMAN Raptor Response Emergency Shears w/ Ring Cutter &amp; Oxygen Tank Wrench $39.95 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Baseus Bowie MC2 Open Ear CloudComfort Clip-On Bluetooth Earbuds $46 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>25" Artigarden C-Shaped End Table w/ Metal Frame (Bright Black) $15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>23.75-Oz Prego Chunky Garden Combo Pasta Sauce $1.85 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Bemis Wood Elongated Toilet Seat (White) $9.45</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>32-Oz 303 Aerospace Automotive UV Protectant Spray for Vinyl, Plastic &amp; Rubber $9.85 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Blink Wired Floodlight Camera (Black or White) $30</title>
     <expired>false</expired>
@@ -854,7 +886,7 @@
   </expiration>
   <expiration>
     <title>32-Oz 303 Aerospace Automotive UV Protectant Spray for Vinyl, Plastic &amp; Rubber $11.80 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>2.2-Lb Lavazza Whole Bean Coffee Blend (Crema e Aroma, Medium Roast) $12.15 w/ S&amp;S</title>
@@ -987,33 +1019,5 @@
   <expiration>
     <title>2TB Seagate Game Drive USB 3.2 External Hard Drive for Xbox Consoles $90 + Free S&amp;H w/ Prime</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Trule Giant Bean Bag Comfy Lazy Sofa/ Lounge Chair (Faux Fur Dark Blue) $80 + Free S/H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>2-Pack TaylorMade Lefthanded Golf Stratus Tech Glove $13.20</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>9.5 oz Kraft Mac and Cheese Restaurant Edition (3 Flavors) +2.97 Walmart Cash $2.95</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>287-Pc LEGO Speed Champions McLaren W1 Race Car Building Toy $22.40</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Columbia Boys Youth Steens Mountain II Fleece Jacket (3 Colors) From $10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>4-Pack Panasonic eneloop 2000mAh AA Rechargeable Batteries w/ Advanced Charger $17.40</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>MicroCenter: PowerColor AMD Radeon RX 9070 Reaper 16GB GDDR6 Graphics Card $560 + Free Pickup</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
