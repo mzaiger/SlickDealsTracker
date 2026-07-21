@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-21T00:57:24.863930+00:00">
+<expirations generated="2026-07-21T01:57:30.092766+00:00">
+  <expiration>
+    <title>5-Ct Twinings Refreshers Peach Mango Herbal Tea Drink Mix Packets $1.15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Logitech MK235 Wireless Keyboard &amp; Mouse Combo $14</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>3-Pk 3-Oz Old Spice Men's Aluminum Free Deodorant Stick (Refresh) $6.75 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Lee Men's Extreme Motion 10" Flat Front Shorts (various) $12.55</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Refurb: 15.6" AOC 16T15 1080p Portable IPS Monitor w/ Built-In Speakers $30 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>G Gradual Men's Full Zip UPF 50+ Sun Protection Hoodie Jacket (Various) $14.80</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>2-Pk Tughlax 5-Mode Rechargeable LED Flashlights w/ LCD Display $18 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>16-Pk BEVIGOR Rechargeable LSD 2800mAh 1.2V AA Ni-MH Batteries $9.25 w/ S&amp;S</title>
     <expired>false</expired>
@@ -118,7 +146,7 @@
   </expiration>
   <expiration>
     <title>3-Port TALIX 20000mAh Laptop Power Bank w/ Built-in USB-C Cable (140W max, 190W total) $25 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Tilswall Shark700 Brushless Cordless Paint Sprayer w/  Container (Tool Only) $40 + Free S&amp;H</title>
@@ -166,7 +194,7 @@
   </expiration>
   <expiration>
     <title>10' Frost King Sponge Rubber Foam Tape $2</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>HOKA Men's Transport GTX Shoes (Druzy / Birch) $87.10 + Free S&amp;H</title>
@@ -1102,22 +1130,6 @@
   </expiration>
   <expiration>
     <title>Kohl's Clearance and Closeout Sale: up to 70% Off + Free Pickup</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>32-Ct Peet's Coffee Medium Roast Big Bang K-Cup Coffee Pods $10.40 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Staples App: PNY NVIDIA GeForce RTX 5070 12GB Graphics Card $522 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Walker's Razor Slim Electronic Muff (Patriot, 2 Styles) from $21</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>21-Pc DeWALT Titanium Nitride Coated Pilot Point Drill Bit Set w/ Case $21</title>
     <expired>false</expired>
   </expiration>
 </expirations>
