@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-21T03:57:14.766991+00:00">
+<expirations generated="2026-07-21T04:57:10.283887+00:00">
+  <expiration>
+    <title>Olight i3T EDC 180-Lumens Flashlight (Black) $11.70 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Better Homes &amp; Gardens Modern Farmhouse Bookcase w/ Doors (Rustic Gray) $95.40 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>16-lb FitRx Neoprene Coated Weighted Vest $12.50</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>58" Hisense QD50 Hi-QLED Series 4K UHD Smart Roku TV (2026) $200 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>RIDGID 18V Brushless 6-Tool Combo Kit w/ 6.0 Ah, 2.0 Ah MAX Output Batts &amp; Charger $349 + Free S&amp;H</title>
     <expired>false</expired>
@@ -30,7 +46,7 @@
   </expiration>
   <expiration>
     <title>5-Ct Twinings Refreshers Peach Mango Herbal Tea Drink Mix Packets $1.15</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Logitech MK235 Wireless Keyboard &amp; Mouse Combo $14</title>
@@ -98,7 +114,7 @@
   </expiration>
   <expiration>
     <title>Korky Standard 2" 2X Ultra High Performance Universal Rubber Toilet Flapper $1.60</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>128GB Tracfone Motorola moto g Power 5G Smartphone (2024) + 1-Yr Service Plan $49.90 + Free S&amp;H</title>
@@ -1122,22 +1138,6 @@
   </expiration>
   <expiration>
     <title>Costco Members: KEF LSX II LT Wireless Bookshelf Speaker (Pair) $400 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Ozark Trail Rechargeable Waterproof 1000LM LED Pocket Flashlight $3.20</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 12-Pk 14-Oz Ensure Max 42g Complete Protein Shake (Milk Chocolate) $15.80 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Best Price Mattress 2" Swirl Gel Breeze Memory Foam Mattress Topper (King) $4.95</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>113-Pc Hyper Tough 1/4 and 3/8" Drive SAE Mechanics Tool Set $7.15</title>
     <expired>false</expired>
   </expiration>
 </expirations>
