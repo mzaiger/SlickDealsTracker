@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-22T00:57:32.023368+00:00">
+<expirations generated="2026-07-22T01:57:50.204217+00:00">
+  <expiration>
+    <title>Costco Members: Car Rentals: $25 Digital Shop Card Free w/ Qualifying 3+ Day Rental (Book by 7/22, Travel by 9/13)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Nike Men's Jordan 6 Rings Shoes (3 colors) $99 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Costco Members: 24-Count Kirkland Signature V3.0 Golf Balls (Yellow or White) $34 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>559-pc LEGO Star Wars Home One Starcruiser Building Set (75405) $46.75 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>2-Pk resqme Emergency Keychain 2-in-1 Seatbelt Cutter &amp; Window Breaker (Pink) $5</title>
     <expired>false</expired>
@@ -70,7 +86,7 @@
   </expiration>
   <expiration>
     <title>5lb Kaytee Bird &amp; Balcony Wild Food No Mess Seed Blend $6.05 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Seiko 5 Sports Men's 43mm Silver Dial Stainless Steel Automatic Watch $297 + Free S&amp;H</title>
@@ -1162,14 +1178,6 @@
   </expiration>
   <expiration>
     <title>Select Accts: 50-Ct Reynolds Kitchens 9" x 9" Unbleached Parchment Air Fryer Liners $2.70 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pk 12-Oz OLIPOP Prebiotic Soda Pop (Strawberry Vanilla) $8.80 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Merrell Men's Morphlite Trail Sneakers (Limited Sizes, Black) $35</title>
     <expired>true</expired>
   </expiration>
 </expirations>
