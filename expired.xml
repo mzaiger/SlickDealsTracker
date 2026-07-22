@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-22T05:57:45.940930+00:00">
+<expirations generated="2026-07-22T06:58:06.132978+00:00">
+  <expiration>
+    <title>Costco Members: MSI Prestige 16 Laptop: Core Ultra X7 358H, 2.8K OLED Touch, 32GB $1400 + $15 S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Woot!: Extra 22% Off Video Game Sale: Mario &amp; Luigi: Brothership (Switch, UK) $19.50 &amp; More + Free S&amp;H w/ Prime</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Logitech Pebble Mouse 2 M350s Wireless Bluetooth Mouse (Tonal White) $11.50</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>277-Pc YIDERBO Travel First Aid Kit $10</title>
     <expired>false</expired>
@@ -1159,9 +1171,5 @@
   <expiration>
     <title>Select Lowe's Stores: Police Security Elite Skylar 3300-Lumens LED Flashlight $12.50 + Free Pickup Only</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>18-Oz Aveeno Tone + Texture Daily Renewing Body Lotion $3 w/ S&amp;S</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
