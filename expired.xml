@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-22T08:58:22.065768+00:00">
+<expirations generated="2026-07-22T09:57:59.867862+00:00">
+  <expiration>
+    <title>2.8-Lb Tiki Pets Born Carnivore High Protein Dry Cat Food (Deboned Chicken &amp; Egg) $6.90 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Nike Men's Vaporfly 4 Road Racing Shoes (various colors) from $142.50 + Free S&amp;H</title>
     <expired>false</expired>
@@ -82,7 +86,7 @@
   </expiration>
   <expiration>
     <title>Zooi 22-in-1 Ratchet Screwdriver Set $6</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Master Lock 1/2" &amp; 5/8" Swivel Head Hitch Receiver Lock $5.25</title>
@@ -306,7 +310,7 @@
   </expiration>
   <expiration>
     <title>Taco Bell Enchirito $1 + Free Pickup</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Monoprice Indio DS-6 True Bypass Analog Vintage Distortion Guitar Effect Pedal $15</title>
@@ -1163,13 +1167,5 @@
   <expiration>
     <title>28-Ct Culturelle Immune Defense Probiotic Chewables (Mixed Berry) $3.60 w/ S&amp;S</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Anker GaN Prime 6-Port up to 250W USB-C Charging Station w/ 2.26" Display $95 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Postal 2 (PCDD/Steam) $1</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
