@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-23T20:57:52.191775+00:00">
+<expirations generated="2026-07-23T21:57:33.833171+00:00">
+  <expiration>
+    <title>e.l.f. Holy Strokes Micro-Fine Brow Pencil (various) from $1.15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>JW Pet HOL-ee Roller Tug &amp; Fetch Treat Dispenser Puzzle Ball Dog Toy from $3.85</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>BOSCH 12V Max Lithium-Ion LED Worklight (Bare Tool) $24.50</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>12-Pk 4-Oz Dole Fruit Bowl Snacks (Pineapple Tidbits &amp; Tropical Fruit) $5.35 w/ S&amp;S</title>
     <expired>false</expired>
@@ -10,7 +22,7 @@
   </expiration>
   <expiration>
     <title>9' MD Sports Roll &amp; Score Table w/ LED Scorer &amp; 4 Balls $284.85 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Marvel Comics: One World Under Doom (Paperback Graphic Novel) $13.05</title>
@@ -58,7 +70,7 @@
   </expiration>
   <expiration>
     <title>24" x 16" ZJWZLG Raised Edge Silicone Coffee Mat $9</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>G Gradual Men's Grid Lightweight Dry Fit Golf Polo Shirt (Various) $12.95</title>
@@ -1067,29 +1079,5 @@
   <expiration>
     <title>5lb Kaytee Bird &amp; Balcony Wild Food No Mess Seed Blend $6.05 w/ S&amp;S</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Seiko 5 Sports Men's 43mm Silver Dial Stainless Steel Automatic Watch $297 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Metabo HPT 18V MultiVolt Brushless Compact Brad Nailer w/ 2Ah Battery &amp; More $125.40 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Southwire Woods 18/2-Gauge SPT-2 Hood Clamp Lamp $2.65</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Logitech G335 Wired Gaming Headset w/ 3.5mm Jack (White) $30</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>3-pk Hanes Breathable Stretch Mesh Underwear Boxer Briefs $7.75</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Hydro Flask Standard Mouth Flex Straw Cap $8</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
