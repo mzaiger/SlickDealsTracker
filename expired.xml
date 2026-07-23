@@ -1,5 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-23T15:57:38.890940+00:00">
+<expirations generated="2026-07-23T16:58:23.620659+00:00">
+  <expiration>
+    <title>Popeyes: 12-Pc Wings (Boneless or Bone-In) or 12-Pc Tenders (3 Flavors) $12 + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>8-Oz Kraft Microwavable Minute Tapioca Dessert $2.45 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Select Xfinity Rewards Members: $10 Starbucks eGift Card Free</title>
+    <expired>true</expired>
+  </expiration>
+  <expiration>
+    <title>4-Pk 25.4-Oz Torani Syrup Variety Pack $14.30 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Like New: Amazon Fire TV Stick 4K Select $15.60 &amp; More + Free S&amp;H w/ Prime</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>HP OmniBook 3 Laptop: Snapdragon X1-26-100, 14" Touch, 16GB RAM, 512GB SSD $550 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Avatar: The Last Airbender: The Complete Series (DVD) $14.95</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Select Subway Restaurants: Select Footlong Subs Buy 1, Get 1 Free &amp; More + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>9-In-1 Collapsible Multi Chopping Camping Cutting Board (4 Colors) $12.50</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Select Accts: 12-Count 1.4-Oz KIND Healthy Snacks Bars (Mango Pineapple Nut) $4.65 w/ S&amp;S</title>
     <expired>false</expired>
@@ -26,7 +62,7 @@
   </expiration>
   <expiration>
     <title>Logitech Z623 400W 2.1 THX Certified Speaker System $101.40 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>2-pk 50-ct Post-it Removable Page Marker Flags (white) $1.95</title>
@@ -450,7 +486,7 @@
   </expiration>
   <expiration>
     <title>30"x10" GARDTECH Reinforced Steel Foldable Lawn Leveling Rake w/ Adjustable Handle $24.30 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>$100 Doordash Gift Card + $20 Target Promo eGift Card $100</title>
@@ -950,7 +986,7 @@
   </expiration>
   <expiration>
     <title>Greenworks 80V 750 CFM Cordless Handheld Blower w/ 1x 2.5Ah Battery &amp; Charger $120 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Spyder Men's Polarized &amp; Non-Polarized Sunglasses (Various Styles) $26 + Free S&amp;H</title>
@@ -1042,42 +1078,6 @@
   </expiration>
   <expiration>
     <title>adidas Men's Galaxy 7 Running Shoes (Various Colors) $22.80 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Ratchet &amp; Clank: Rift Apart (PS5) $29.85</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Microsoft Office Standard 2024 for Windows 10/11 (1 Device) $6 Digital Delivery</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>98" Samsung Crystal UHD DU9000 HDR Smart TV (2024) $1400 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Ozark Trail 9L Sling Pack (Cream) $7.50</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Philips Norelco 3000 Waterproof Beard Trimmer $25</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Prime Members: Katerk Cordless Hot Glue Gun w/ 50 Mini Glue Sticks (2 Colors) from $12.45 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>DJI Mini 4K UHD Camera Drone w/ Battery &amp; RC-N1C Controller $229 &amp; More + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>LISEN 84W 4-Port Retractable Car Charger w/ Built-In USB-C &amp; Lightning Cables $11.25</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>adidas Originals Men's Adicolor Essentials Trefoil Hoodie (Cardboard) $18</title>
     <expired>false</expired>
   </expiration>
 </expirations>
