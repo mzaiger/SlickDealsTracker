@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-23T12:58:01.590751+00:00">
+<expirations generated="2026-07-23T13:58:18.541204+00:00">
+  <expiration>
+    <title>2-Pk WOWBOX Wood Lazy Susan Turntable Organizer (9"&amp;10") $14.40</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>1917 (4K UHD + Blu-Ray + Digital) $10.90</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Sam's Club Members: Shokz OpenRun Pro Endurance Wireless Bluetooth Headphones $79 + Free Pickup</title>
     <expired>false</expired>
@@ -466,7 +474,7 @@
   </expiration>
   <expiration>
     <title>Eau de Parfum Fragrance Spray Sale: Yves Saint Laurent, Cartier, Gucci, Creed Extra 22% Off &amp; Many More + Free S&amp;H w/ Amazon Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Tapo HybridCam Duo 2K 3MP Indoor/Outdoor Dual Lens Pan/Tilt Security Camera $55 w/ 25% Back for Prime Cardholders + Free S&amp;H</title>
@@ -1047,21 +1055,5 @@
   <expiration>
     <title>7-Pc RIDGID 1.25" Car Cleaning Accessory Kit for RIDGID Wet/Dry Vacs $18.50</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Men's G Gradual Athletic Workout UPF 50+ Fabric T-Shirts (various) $9.85</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Men's/Women's Hoka &amp; On Running Shoes Sale (various styles/sizes) Extra 22% Off + Free S&amp;H w/ Amazon Prime</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>VRST Men's Recharge Pebble Fleece 1/4 Zip (Gold) $9.75 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>GameSir Super Nova Wireless Gaming Controller for PC/Switch/Switch 2 (various) from $30</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
