@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-24T04:58:38.640264+00:00">
+<expirations generated="2026-07-24T05:57:56.700945+00:00">
+  <expiration>
+    <title>Nike Dunk Low x LEGO Collection Big Kids' Shoes (Various) from $71.25 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>6-Pk 36-Oz Stubb's Original BBQ Sauce $15 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Libman 24" High Power Push Broom w/ Steel Handle &amp; Squeegee $13</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Select Accts: 1-Oz Revlon PhotoReady Lift + Fill Skin Tint (160 Tone) $1.35 w/ S&amp;S &amp; More</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Beautyrest Beyla Ergonomic Manager Office Chair w/ Padded Armrest $58.80 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Bernzomatic 20,000 BTU Self-Igniting Outdoor Torch $17.35</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Nike Men's Air Jordan MVP 92 Shoes (Black/Anthracite/Gamma Blue) $60.75 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Select Accounts: 5-Lb OxiClean Versatile Stain Remover Powder w/ White Revive $9.45 w/ S&amp;S</title>
     <expired>false</expired>
@@ -78,7 +106,7 @@
   </expiration>
   <expiration>
     <title>Kate Kasin Women's Floral Maxi Skirt w/ Pockets (Red) $7.50</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>3-Pk 2.11oz Men's Rogaine 5% Minoxidil Foam for Hair Loss &amp; Hair Regrowth $30 w/ S&amp;S</title>
@@ -282,7 +310,7 @@
   </expiration>
   <expiration>
     <title>Prime Members: 20-in-1 WORKPRO 3.6V Electric Screwdriver w/ Magnetizer &amp; Bits $14 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Select Walgreens Stores: FIFA World Cup 2026 Merch $1 (In-Store Only)</title>
@@ -1107,13 +1135,5 @@
   <expiration>
     <title>Logitech Pebble Mouse 2 M350s Wireless Bluetooth Mouse (Tonal White) $11.50</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>277-Pc YIDERBO Travel First Aid Kit $10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>125-Ct 8" Vailnd Disposable Air Fryer Parchment Paper Liners (Square) $6</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
