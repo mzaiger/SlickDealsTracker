@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-25T11:57:47.622802+00:00">
+<expirations generated="2026-07-25T12:57:49.568393+00:00">
+  <expiration>
+    <title>9-Pc Bosch Daredevil High Carbon Steel Standard Spade Bit Set $8.55 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Westcott 15'' TrimAir Wood Guillotine 30 Sheet Paper Cutter &amp; Trimmer $25.35</title>
+    <expired>true</expired>
+  </expiration>
+  <expiration>
+    <title>559-pc LEGO Star Wars Home One Starcruiser Building Set (75405) $46.75 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>NYX Professional Makeup Epic Inky Stix Eyeliner (Blush Byte 12 Metallic) $2 w/ S&amp;S &amp; More</title>
     <expired>false</expired>
@@ -106,10 +118,6 @@
   </expiration>
   <expiration>
     <title>DEWALT 4" x 5/8"-11 HP .020 Carbon Stringer Wire Wheel Bulk $6.65</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Westcott 15'' TrimAir Wood Guillotine 30 Sheet Paper Cutter &amp; Trimmer $25.35</title>
     <expired>false</expired>
   </expiration>
   <expiration>
@@ -250,7 +258,7 @@
   </expiration>
   <expiration>
     <title>2-Ct Bedsure Queen Size Satin Pillowcases (20" x 30", Beige) $4</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>adidas Men's Trefoil Essentials Crew Sweatshirt (Wonder White/White) $15.60 + Free S&amp;H</title>
@@ -1207,17 +1215,5 @@
   <expiration>
     <title>1917 (4K UHD + Blu-Ray + Digital) $10.90</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Sam's Club Members: Shokz OpenRun Pro Endurance Wireless Bluetooth Headphones $79 + Free Pickup</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>25.4oz. Splenda Sugar Free Flavored Liquid Syrup (French Vanilla) $2.85 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>8-Oz STA-BIL Fast Fix Small Engine Treatment $6.65</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
