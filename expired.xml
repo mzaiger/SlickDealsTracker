@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-25T05:57:39.974305+00:00">
+<expirations generated="2026-07-25T06:57:44.260864+00:00">
+  <expiration>
+    <title>8-Ct 45-Sheets 6" x 4" Post-it Super Sticky Notes (Neon Fizz) $4.90</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Prime Members: 6-Pk LETMY Outdoor Solar LED Stake Spot Lights $19.50 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>16-Ct Granicell Rechargeable AA &amp; AAA Batteries w/ Charger $15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>American Eagle: Aerie Women's Underwear 10 for $31.50 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>DEWALT 4" x 5/8"-11 HP .020 Carbon Stringer Wire Wheel Bulk $6.65</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Westcott 15'' TrimAir Wood Guillotine 30 Sheet Paper Cutter &amp; Trimmer $25.35</title>
     <expired>false</expired>
@@ -34,7 +54,7 @@
   </expiration>
   <expiration>
     <title>22" DeWALT 20V MAX Brushless Cordless Hedge Trimmer (Tool Only) $114.65 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Arby's App Weekend Offer: Any Arby's Sandwich B1G1 Free (Valid thru 7/26)</title>
@@ -46,7 +66,7 @@
   </expiration>
   <expiration>
     <title>DeWALT 20V MAX Portable 650 CFM Variable Speed Fan (Tool Only) $74.10 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Cole Haan Men's 2.ZERØGRAND Laser Wingtip Oxford Shoes (various) from $91 + Free S&amp;H on $99+</title>
@@ -202,11 +222,11 @@
   </expiration>
   <expiration>
     <title>DeWALT 20V Max LED Rechargeable Pivoting Head Work Light (Bare Tool Only) $35.10 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>26" Hyper Bicycles Shocker Adult Mountain Bike (Black/Blue) $75.20 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Sabrent NVMe M.2 SSD to PCIe Card w/ Aluminum Heat Sink $13.50</title>
@@ -238,7 +258,7 @@
   </expiration>
   <expiration>
     <title>DeWALT 20V MAX XR 1/2" Brushless Cordless Hammer Drill (Tool Only) $118.55 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>2.5-Oz K-Y Natural Feeling Water Based Personal Lubricant w/ Hyaluronic Acid $3 w/ S&amp;S</title>
@@ -294,7 +314,7 @@
   </expiration>
   <expiration>
     <title>3-Pk M+ Men's Reading Glasses $2.90 &amp; More</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>2-pc Ekouaer Women's Satin Short Sleeve Button Down Wide Leg Pajama Set (Various) $12</title>
@@ -1174,26 +1194,6 @@
   </expiration>
   <expiration>
     <title>Twin Sails Interactive 27-Game w/ DLC 2026 Humble Bundle (PCDD/Steam) $20</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>DJI Action 2 Dual-Screen Combo $140 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>SABRENT USB 3.0 / Type-C microSD / SD Memory Card Reader (Speeds up to 5Gbps) $6.90</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>2-Port wedgear 45W USB-C GaN Fast Charger w/ Foldable Plug $10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Sonic Racing: CrossWorlds Amazon Exclusive Edition (Nintendo Switch) $14.05 + Free S&amp;H w/ Prime</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Razer Cobra 8500 DPI Wired Gaming Mouse w/ Chroma RGB Lighting $17.50</title>
     <expired>false</expired>
   </expiration>
 </expirations>
