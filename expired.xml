@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-25T18:56:51.017315+00:00">
+<expirations generated="2026-07-25T19:56:47.424892+00:00">
+  <expiration>
+    <title>Select DoorDash DashPass Members: eBay eGift Card 10% Off (Maximum Discount of $25)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Select Stores: BORA Pro Compact Pocket Hole Jig $20 + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>FEATH-R-LITE Inflatable Stand Up Paddle Board w/ Paddle, Pump, Backpack &amp; Accessories from $84 &amp; More + Free S&amp;H</title>
     <expired>false</expired>
@@ -118,7 +126,7 @@
   </expiration>
   <expiration>
     <title>28L JanSport All Around Pack Backpack (Dune Red) $27 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>24-Pc JoyJolt JoyFul Borosilicate Glass Airtight Food Storage Containers Set $30</title>
@@ -558,7 +566,7 @@
   </expiration>
   <expiration>
     <title>Sorgion Bread Box, Slicer Guide &amp; 3-pc Condiment Tray Set (White, Beige, Pink) $5</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Prime Members: BlissTrends Memory Foam Knee Pillow for Side Sleepers $7 + Free S&amp;H</title>
@@ -1067,65 +1075,5 @@
   <expiration>
     <title>16-Pk 4.4-Oz Minute Ready-to-Serve Microwavable White Rice Cups $7.95</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Nike Men's Air Force 1 '07 LV8 Shoes (Navy/Worn Blue) $65.25 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>FanttikOutdoor Zeta C2 2-Person Instant Dome Tent $30 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Nike Men's ACG Pegasus Trail Running Shoes (Baltic Blue/Light Orewood) $81.75 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Wilson NBA DRV Outdoor Basketball (Various Sizes) $9.65</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>58" Hisense QD50 Hi-QLED Series 4K UHD Smart Roku TV (2026) $200 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Reconditioned: Shark FlexBreeze Pedestal &amp; Tabletop Fan $55 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>2-Pk Tughlax 5-Mode Rechargeable LED Flashlights w/ LCD Display $18 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Refurb: 15.6" AOC 16T15 1080p Portable IPS Monitor w/ Built-In Speakers $30 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>24" x 16" ZJWZLG Raised Edge Silicone Coffee Mat $9</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>G Gradual Men's Grid Lightweight Dry Fit Golf Polo Shirt (Various) $12.95</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>3-Port TALIX 12800mAh 125W Laptop Power Bank w/ 240W USB-C Cable $23 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Seesii 6/7" Variable Speed Corded Rotary Car Buffer Polisher Kit $28.50 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>BAIMEI IcyMe Gua Sha &amp; Jade Roller Facial Skincare Tool Set (Green) $3.75</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Prime Members: 20-in-1 WORKPRO 3.6V Electric Screwdriver w/ Magnetizer &amp; Bits $14 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Walgreens Stores: FIFA World Cup 2026 Merch $1 (In-Store Only)</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
