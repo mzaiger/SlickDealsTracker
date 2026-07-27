@@ -1,8 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-27T15:57:18.118997+00:00">
+<expirations generated="2026-07-27T16:57:40.815627+00:00">
+  <expiration>
+    <title>4.5 oz. Jiffy Pop Butter Flavored Stovetop Popping Popcorn $1.60 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>27-pc NULAS Griddle Accessories Kit w/ Spatula &amp; Burger Press $28.50</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>16-Ct Granicell Rechargeable AA &amp; AAA Batteries w/ Charger $15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>16-Oz GLOMAX Ceramic Coating for Cars w/ UV Protection $9 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Milwaukee M18 18V Li-Ion Cordless Electric Portable Inflator (Tool Only) $139 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>8-Pc WORKPRO 72-Tooth Flex-Head Ratcheting Metric Combination Wrench Set $30 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>32-oz Pure Original Ingredients Citric Acid 2 for $8.95 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>AMD Ryzen 9 9950X3D 16-Core / 32 Thread 170W AM5 Unlocked CPU $569 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>50-ct Armor All Car Cleaning Wipes $3 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>AIRSURE Cordless 150PSI Tire Inflator &amp; Portable Air Compressor from $12</title>
@@ -274,7 +306,7 @@
   </expiration>
   <expiration>
     <title>Refurb: 512GB Samsung Galaxy S25 Ultra Unlocked Smartphones (Various) from $680 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>MISSION ZX-1 Standmount/Surround Bookshelf Passive Speakers (Pair) $130 &amp; More + Free S&amp;H</title>
@@ -911,21 +943,5 @@
   <expiration>
     <title>44mm Casio MRW200H Men's Analog Watch (Beige/Black) $27.55</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Stores: 350-Pc BORA Coarse Thread Pocket Hole Screws (Assorted) $10 + Free Pickup</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Jamo Studio Series Speakers: 2x S 809 + 2x S 803 + 2x S 8 + S 81 + S 810 $449 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>5-Oz Astroglide LiquiGel Premium Silicone Lubricant $4.45 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>77" x 58" Nuby Reversible Baby Floor Mat (Star Pattern) $20</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
