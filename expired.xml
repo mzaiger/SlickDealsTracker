@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-27T05:56:41.274394+00:00">
+<expirations generated="2026-07-27T06:56:39.256265+00:00">
+  <expiration>
+    <title>Costco Members: Savings on Same-Day Delivery Orders: Get $10 off $35+ Orders (Exclusions Apply)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Cold Steel Santoprene Kukri Trainer Knife $7.85</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>MIALEXO 3-In-1 Mini Handheld Fan w/ Cooling Plate (Dark Grey or Silver Grey) $10</title>
     <expired>false</expired>
@@ -94,7 +102,7 @@
   </expiration>
   <expiration>
     <title>75" TCL 75QM5K QD-Mini LED 4K 60Hz Smart TV (2025) $550 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Walgreens Photo: 3-Pk 8" x 8" TilePix Customized Photo Framed Prints $13.50 &amp; More + Free Pickup</title>
@@ -871,21 +879,5 @@
   <expiration>
     <title>ANCOR 22-10 AWG Cut/Strip/Crimp Multi-Tool $2.75 + Free Pickup</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>8-Ct 45-Sheets 6" x 4" Post-it Super Sticky Notes (Neon Fizz) $4.90</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Prime Members: 6-Pk LETMY Outdoor Solar LED Stake Spot Lights $19.50 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>16-Ct Granicell Rechargeable AA &amp; AAA Batteries w/ Charger $15</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>American Eagle: Aerie Women's Underwear 10 for $31.50 + Free S&amp;H</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
