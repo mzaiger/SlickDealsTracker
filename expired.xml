@@ -1,5 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-28T05:04:21.728178+00:00">
+<expirations generated="2026-07-28T05:57:25.112900+00:00">
+  <expiration>
+    <title>Select Accounts: 9-Pk 16-Pc Trident White Sugar Free Gum (Peppermint) $4.95 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>15.6" Better Homes &amp; Gardens Bamboo Melamine Serving Tray (Tomato or Olive) $2.50 &amp; More</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Goodal Heartleaf Hydrating Broad-Spectrum SPF 50 Sunscreen Cream &amp; Stick Bundle $27.35 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Wacom Intuos Pro Accessories: Digital Stylus Ballpoint Pen or Finetip Stylus Pen $3 each &amp; More + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>12-Pk 12oz 7UP Lemon Lime Soda 3 for $14.75 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Refurb: Sony PlayStation DualShock 4 Wireless Controllers (4 Colors) $34 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>AMD Ryzen 7 7800X3D + GIGABYTE B650E Eagle Mobo + 32GB Corsair DDR5 + AIO Cooler $756 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Greenworks 80V 750 CFM Cordless Handheld Blower w/ 1x 2.5Ah Battery &amp; Charger $120 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>6-Pk BLACK+DECKER Quick Stick Removeable Wire Wall Hooks (Holds up to 2 lbs) $2.75</title>
     <expired>false</expired>
@@ -22,7 +54,7 @@
   </expiration>
   <expiration>
     <title>12-Pk 14.5-Oz Contadina Diced Roma Tomatoes $7.60 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>RIDGID 18V NUKE SubCompact 1/2" Drill/Driver Kit w/ 2.0Ah &amp; 4.0Ah Batteries $139 + Free S&amp;H</title>
@@ -1007,37 +1039,5 @@
   <expiration>
     <title>Crank Brothers Stamp 7 Le Flat Bike Pedals: Small $80, Large $90 + Free S&amp;H</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Open Box: Vankyo V700 PRO 120" FHD Smart LED Projector $46 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 2-Pk 3.4-Oz Mitchum Triple Odor Protection Gel Deodorant $3.85 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Alaroo Women's Long Sleeve UV Protection Sun Shirt (Various) $6</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>22" WORX Electric Hedge Trimmer w/ Dual-Action Blades (Tool Only) $35</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>1TB Silicon Power US85 NVMe PCIe 5.0 M.2 Internal SSD $108.10 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>HOKA Women's Rincon 4 Shoes (2 colors) $75 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>3-Pk 4' Xnewcable 3-In-1 Multi Charge Cable (USB-C, MicroUSB, Lightning) $4.50</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 3.5-Oz Tim Hortons Dark Roast Instant Coffee $5.25</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
