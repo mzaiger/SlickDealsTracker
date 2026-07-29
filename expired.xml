@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-29T09:58:05.169030+00:00">
+<expirations generated="2026-07-29T10:58:23.535592+00:00">
+  <expiration>
+    <title>School Supplies Sale: 12-Ct Crayola Colored Pencils $1, 24-Ct Crayola Crayons $0.50 &amp; More + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Loaded PCDD/Steam Sale: The Alters $12.70, No Man's Sky $16, Control UE $3.30 &amp; Many More</title>
     <expired>false</expired>
@@ -222,7 +226,7 @@
   </expiration>
   <expiration>
     <title>ASUS ROG Flow Z13: 13.4" 2.5K 180Hz Touch, Ryzen AI Max+ 395, 64GB DDR5, 1TB $2100 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Marvel vs. Capcom Fighting Collection: Arcade Classics (Nintendo Switch) $20 + Free Pickup</title>
@@ -394,7 +398,7 @@
   </expiration>
   <expiration>
     <title>Taco Bell: Mexican Pizza or Regular Drink $1 each + Free Pickup</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>22" WORX Electric Hedge Trimmer w/ Dual-Action Blades (Tool Only) $35</title>
@@ -706,10 +710,6 @@
   </expiration>
   <expiration>
     <title>Monoprice Monolith M2100X 2x90 W/Ch Home Theater Power Amplifier $200 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>School Supplies Sale: 12-Ct Crayola Colored Pencils $1, 24-Ct Crayola Crayons $0.50 &amp; More + Free Pickup</title>
     <expired>false</expired>
   </expiration>
   <expiration>
@@ -1094,10 +1094,6 @@
   </expiration>
   <expiration>
     <title>12-Pk uniball 207 Plus+ 0.7mm Medium Point Retractable Gel Pens (Black Ink) $10.35 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Athletic Works Men's Performance Short Sleeve Hoodie (White Heather) from $5.90</title>
     <expired>false</expired>
   </expiration>
 </expirations>
