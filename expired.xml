@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-29T10:58:23.535592+00:00">
+<expirations generated="2026-07-29T11:57:51.225902+00:00">
+  <expiration>
+    <title>adidas Men's Barreda Decode Shoes (2 Colors) $28.80 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>2-Pk 65W Baseus 3-Port USB-C Foldable Wall Charger Blocks $27 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>School Supplies Sale: 12-Ct Crayola Colored Pencils $1, 24-Ct Crayola Crayons $0.50 &amp; More + Free Pickup</title>
     <expired>false</expired>
@@ -234,7 +242,7 @@
   </expiration>
   <expiration>
     <title>12" Tramontina Professional Restaurant Fry Pan $21</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Champion Sports Adult Baseball &amp; Softball Uniform Belt (22-46") $1.15</title>
@@ -518,7 +526,7 @@
   </expiration>
   <expiration>
     <title>44mm Citizen Men's Eco-Drive Stainless Steel Weekender Watch (Blue) $147.30 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>New Customers: DeWALT 20-Volt MAX Brushless 1/2" Impact Wrench (Tool Only) $109 + Free S&amp;H on $150+</title>
@@ -1075,25 +1083,5 @@
   <expiration>
     <title>EGO Power+ 21" 56V Cordless Snow Blower w/ 2x 5.0Ah Batteries &amp; Dual Port Charger $524 + Free S&amp;H</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>16oz. Axe Body Wash (3 Scents) 2 for $3.40 + Free Pickup on $10+ Order</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>10' x 3/4" VELCRO Sticky Back Tape (Hook Only) $2.80</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Street Fighter (Blu-ray) $8</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pk 2.75-Oz My-T-Fine Lemon Pudding Mix &amp; Pie Filling $5.90</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pk uniball 207 Plus+ 0.7mm Medium Point Retractable Gel Pens (Black Ink) $10.35 w/ S&amp;S</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
