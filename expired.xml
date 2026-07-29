@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-29T08:58:46.689530+00:00">
+<expirations generated="2026-07-29T09:58:05.169030+00:00">
+  <expiration>
+    <title>Loaded PCDD/Steam Sale: The Alters $12.70, No Man's Sky $16, Control UE $3.30 &amp; Many More</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Monopoly Pokemon Edition Family Board Game $12.75</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>$100 PlayStation Store eGift Card (Digital Delivery) $82.15</title>
     <expired>false</expired>
@@ -22,7 +30,7 @@
   </expiration>
   <expiration>
     <title>77" Samsung S84F 120Hz OLED 4K TV w/ Vision AI $998 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>lululemon Women's Thermal High-Rise Running Tight (Black, 28" Length) $39 + Free S&amp;H</title>
@@ -1054,7 +1062,7 @@
   </expiration>
   <expiration>
     <title>Monopoly Pokemon Edition Family Board Game $12.70</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Costco: 2-Pk Philips Sonicare Advanced Clean Rechargeable Electric Toothbrushes $70 + $7 Shipping</title>
@@ -1090,26 +1098,6 @@
   </expiration>
   <expiration>
     <title>Athletic Works Men's Performance Short Sleeve Hoodie (White Heather) from $5.90</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Hanes Men's Full-Zip Eco-Smart Hoodie (Various Colors) $9.10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Costco Members: 40" MSI Mag 401QR Ultra Wide QHD IPS Premium Gaming Monitor $250 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>46-Pc Klein Tools KNECT Impact-Rated Multi-Bit Screwdriver / Nut Driver Set $28</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Hanes Moves Women's Pull-On Racerback Crop Sports Bra $10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>AutoLine Pro HyperSmoke EVAP Vacuum Leak Tester/Smoke Machine $50 &amp; More + Free S&amp;H</title>
     <expired>false</expired>
   </expiration>
 </expirations>
