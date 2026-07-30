@@ -1,12 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-30T05:57:37.295451+00:00">
+<expirations generated="2026-07-30T06:57:40.666180+00:00">
+  <expiration>
+    <title>Metal Gear Solid Delta: Snake Eater Tactical Edition (PlayStation 5) $25.40</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Ucanfeel Heavy-Duty Plantar Fasciitis Insoles w/ High Arch Support (3 Colors) $9</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>1-Gal Ortho GroundClear Weed &amp; Grass Killer Spray w/ Comfort Wand $16.65</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>BEVA 150PSI Portable Air Compressor w/ Digital Pressure Gauge &amp; LED Light $15</title>
     <expired>false</expired>
   </expiration>
   <expiration>
     <title>13-in-1 WOOPHEN Multi-Bit Screwdriver Set w/ Adjustable Extension Shaft $5</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>909-Pc LEGO DC Batman: Batman Forever Batmobile Building Toy $75 + Free S&amp;H</title>
@@ -890,7 +902,7 @@
   </expiration>
   <expiration>
     <title>Petmate Waterproof Non Slip Waste Trapping Cat Litter Mat (17" x 14" x 0.25") $2.70</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>24-Ct Crayola Classic Crayons (Assorted Colors) $0.50 + Free Pickup</title>
@@ -1006,30 +1018,6 @@
   </expiration>
   <expiration>
     <title>Galapagos: A Novel (Delta Fiction) (eBook) $2</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>6-Tier Casacomoda Tree Bookshelf w/ Storage Cabinet $20</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Anker 9-in-1 Charging Station w/ 100W Type-C + 3x AC (Black or White) $34</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Nike Men's Total 90 Shoes (Black/White/Bright Crimson) $60 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>WOLFBOX 2000A 12V 10000mAh Portable Car Jump Starter w/ 150PSI Air Compressor $41.75 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Nike Men's Air Max 90 Shoes (Red/White) $72.75 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>RYOBI ONE+ 18V HP Brushless Brad Nailer w/ 2x 4Ah Batteries, 2Ah Battery &amp; Charger $179 + Free S&amp;H</title>
     <expired>false</expired>
   </expiration>
 </expirations>
