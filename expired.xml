@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-30T00:58:25.512984+00:00">
+<expirations generated="2026-07-30T01:57:55.869657+00:00">
+  <expiration>
+    <title>Select Accounts: 13-Oz Amazon Grocery Hazelnut Spread w/ Cocoa $1.35 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>16-Oz Dawn Platinum Plus Lemon Scent Dish Spray Refill $2.20 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>10-Oz Burt's Bees Waterless Shampoo for Cats $3.55 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Aegend No Leaking Anti Fog UV Protection Swimming Goggles w/ Case $3</title>
     <expired>false</expired>
@@ -162,7 +174,7 @@
   </expiration>
   <expiration>
     <title>36-Pk 6' Amazon Basics HDMI to DVI Bi-Directional Adapter Cable $9 + Free S&amp;H w/ Amazon Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Hanes Men's &amp; Women's EcoSmart Fleece Hoodie (Navy) $5.20</title>
@@ -1075,13 +1087,5 @@
   <expiration>
     <title>Metabo HPT Pneumatic Palm Nailer w/ Magnetic Nose &amp; 360-Degree Swivel $24.50</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>39mm Casio Vintage Stainless Steel Bracelet Watch w/ LED Illumination &amp; Stopwatch $27.55</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Monoprice Monolith M2100X 2x90 W/Ch Home Theater Power Amplifier $200 + Free S&amp;H</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
