@@ -1,5 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-30T10:57:25.021671+00:00">
+<expirations generated="2026-07-30T11:57:14.609056+00:00">
+  <expiration>
+    <title>Staples Easy Rewards Offer: All Ink/Toner Purchases &amp; Earn Staples Points 40% Back (Valid thru 8/1)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>$50 Texas Roadhouse eGift Card (Email Delivery) $43</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Extra 40% Off Select Styles: New Balance Men's 520 v9 Running Shoes (Black) $36 &amp; More + Free S/H Orders $99+</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>LEGO Icons Williams Racing FW14B &amp; Nigel Mansell F1 Model Building Set (10353) $63.95 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Samsung EDU/EPP Members: 55" Odyssey Ark 4K Quantum Mini-LED 165Hz Curved Monitor $1170 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Sam's Club Members: Arctic Zone PRO 16-Can Zipperless Cooler (3 Colors) $13.50 + Free S&amp;H on $50+ w/ Plus</title>
     <expired>false</expired>
@@ -578,7 +598,7 @@
   </expiration>
   <expiration>
     <title>7" Bellemain Heavy-Duty Cast Iron Bacon / Burger Press w/ Wooden Handle $9</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>New Visible Members:12-Months Unlimited Visible Mobile Phone Service Plans from $19/Month</title>
@@ -966,14 +986,6 @@
   </expiration>
   <expiration>
     <title>FIFA World Cup National Team Fan Merchandise Clearance: T-Shirts, Accessories From $1.25 &amp; More + Free Pickup</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>The Rogue Prince of Persia (Nintendo Switch 2 Game-Key Card) $19.60</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>T-Mobile Customers: $5 Atom Movie Ticket for Spider-Man: Brand New Day (2026) Free to Claim via T-Mobile T-Life App</title>
     <expired>false</expired>
   </expiration>
 </expirations>
