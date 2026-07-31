@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-07-31T00:58:03.745041+00:00">
+<expirations generated="2026-07-31T01:58:03.560463+00:00">
+  <expiration>
+    <title>Berrcom Fingertip Pulse Oximeter SpO2 &amp; Blood Oxygen Saturation Monitor (Black) $6.50</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>4-Pk VOVOnline Apple MFi Certified Air Tracker Tags (iOS Only) $10</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Zurn Wilkins 3/4" NR3XL Pressure Reducing Valve $58.90 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Nike Men's Air Max Excee Shoes (Summit White/Racer Blue) $60 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>16-Oz Dawn Platinum Plus Powerwash Dish Soap Spray Refill $2 &amp; More + Free Pickup</title>
     <expired>false</expired>
@@ -130,7 +146,7 @@
   </expiration>
   <expiration>
     <title>Refurb: De'Longhi Magnifica Evo Espresso Machine w/ Automatic Frother $277 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Disc Golf Discs: Innova DX Valkyrie $9, Discraft Paul McBeth Hades $15.60 &amp; More</title>
@@ -1062,14 +1078,6 @@
   </expiration>
   <expiration>
     <title>Nike Downshifter 14 Men's Running Shoes (2 Colors) $48.75 + Free S&amp;H on $50+</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: 15-Pk 2.4-Oz CLIF BAR Protein Energy Bars (Chocolate Brownie) $9.95 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: 9.1-Oz Neutrogena Oil-Free Pink Grapefruit Acne Face Wash $2.50 w/ S&amp;S</title>
     <expired>false</expired>
   </expiration>
 </expirations>
