@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-01T05:58:05.561055+00:00">
+<expirations generated="2026-08-01T06:58:13.053481+00:00">
+  <expiration>
+    <title>22" x 19" Aisslro Silicone Dog or Cat Feeding Mat w/ Raised Edges (2 Colors) $9</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>New Customers: DeWALT 20V 1/2" Brushless Impact Wrench (Tool Only) $169 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Zengest 4K+1080P Dual Dash Cam w/ GPS, 5G WiFi, ADAS &amp; 64GB Card $36 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Prime: 6-Pk 4x4 Brightever Solar Post Cap Lights w/ 3 Lighting Modes (Black) $15 + Free S&amp;H</title>
     <expired>false</expired>
@@ -74,7 +86,7 @@
   </expiration>
   <expiration>
     <title>Refurb: 15.6" AOC 1080p Portable USB-C IPS Monitor w/ Built-In Speakers $28.20 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Avidlove Women's Lace Kimono Robe (Various Colors) $7.50</title>
@@ -314,7 +326,7 @@
   </expiration>
   <expiration>
     <title>7" Disney Stitch Small Plush and Pineapple $4.80</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Old Navy Clearance Sale: Women's, Men's &amp; Kids' Apparel &amp; More up to 85% OFF + Free S&amp;H on $50+</title>
@@ -1051,21 +1063,5 @@
   <expiration>
     <title>Men's Patagonia Outdoor Everyday Marsupial Pullover Jacket (various color/sizes) $78.75 + Free S&amp;H</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Metal Gear Solid Delta: Snake Eater Tactical Edition (PlayStation 5) $25.40</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Ucanfeel Heavy-Duty Plantar Fasciitis Insoles w/ High Arch Support (3 Colors) $9</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>1-Gal Ortho GroundClear Weed &amp; Grass Killer Spray w/ Comfort Wand $16.65</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>50" RIYO RGB Corner Floor Standing Lamp w/ Music Sync, 68+ Scene Modes &amp; Remote $15</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
