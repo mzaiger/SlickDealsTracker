@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-01T19:57:26.277413+00:00">
+<expirations generated="2026-08-01T20:56:42.832591+00:00">
+  <expiration>
+    <title>Sam's Club Members: Lifetime Children's Picnic Table (Almond) $35.95 + Free S&amp;H on $50+ w/ Plus</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>110ml ThermoMaven Rechargeable Salt &amp; Pepper Grinder Set $20 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>ASUS RT-BE59 BE5000 Dual-Band WiFi 7 Router $95 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Paradise Lost (Penguin Classics, Kindle eBook) $1</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>5.5" Lightswim 5X Hands-Free Magnifying Glass w/ 2-Pk 10X Pocket Magnifiers $11.95</title>
     <expired>false</expired>
@@ -14,7 +30,7 @@
   </expiration>
   <expiration>
     <title>Select Locations: 4-Pk 12-Oz C4 Performance Energy Drink (Strawberry Blast) $3.70 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Mingfix Magnetic Eyeglasses Repair Kit w/ 8 Precision Screwdrivers $5</title>
@@ -955,29 +971,5 @@
   <expiration>
     <title>12-Pk 12-Oz A&amp;W Zero Sugar Root Beer Soda 3 for $14.75 w/ S&amp;S</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Zinus 14" Cooling Comfort Support Hybrid Mattress (King) $140 + Free S&amp;H w/ Prime</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Prime: 0.51-Oz Beetles 2-in-1 Jelly Nail Concealer &amp; Strengthener Polish $2.85 w/ S&amp;S + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>1.17-lb Orgain X Justin's 20g Protein Powder (Peanut Butter) $16.45 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>JBL PartyBox Encore Essential 2 Portable Party Speaker $200 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>No Boundaries Women's Asymmetrical Lace Midi Skirt (Winter White) $3</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Costco Members: 65" Hisense U65 Pro 4K ULED MiniLED Smart TV + 5-Yr Warranty $650 + Free Delivery</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
