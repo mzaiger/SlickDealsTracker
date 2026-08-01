@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-01T10:58:29.677352+00:00">
+<expirations generated="2026-08-01T11:58:28.363061+00:00">
+  <expiration>
+    <title>Harbor Freight In-Stores Coupon: Make It A Savings Weekend For Everyone 30% Off All Items Under $10 &amp; More (Valid thru 8/2)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Arm &amp; Hammer In-Wash Scent Booster (15-oz Beads or 18-oz Crystals) $2 + Free Pickup</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>3-in-1 Saker Silicone Caulking Tool $4</title>
     <expired>false</expired>
@@ -262,7 +270,7 @@
   </expiration>
   <expiration>
     <title>Minthouz 5Gbps RJ45 to USB-C Gigabit Ethernet Adapter $15</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>13" DEWALT 20V MAX String Trimmer w/ 4Ah Battery &amp; Charger + $25 Store Rebate $100 + Free Pickup</title>
@@ -386,7 +394,7 @@
   </expiration>
   <expiration>
     <title>29"x17" GORILLA GRIP 100% Waterproof All-Season WeatherMAX Doormat (Gray Diamond) $15</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Select Accts: 120-Ct VitBoost Magnesium Glycinate 500mg Sleep Support Capsules $7.95 w/ S&amp;S</title>
@@ -1074,26 +1082,6 @@
   </expiration>
   <expiration>
     <title>Lyrur Women's Floral Square Neck Smocked Knee Length Summer Dress (Various) $10</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Staples Easy Rewards Offer: All Ink/Toner Purchases &amp; Earn Staples Points 40% Back (Valid thru 8/1)</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>$50 Texas Roadhouse eGift Card (Email Delivery) $43</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Extra 40% Off Select Styles: New Balance Men's 520 v9 Running Shoes (Black) $36 &amp; More + Free S/H Orders $99+</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>LEGO Icons Williams Racing FW14B &amp; Nigel Mansell F1 Model Building Set (10353) $63.95 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Samsung EDU/EPP Members: 55" Odyssey Ark 4K Quantum Mini-LED 165Hz Curved Monitor $1170 + Free S&amp;H</title>
     <expired>false</expired>
   </expiration>
 </expirations>
