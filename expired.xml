@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-01T00:57:26.463472+00:00">
+<expirations generated="2026-08-01T01:57:57.289395+00:00">
+  <expiration>
+    <title>Marmot: Sale Styles: Up to 40% Off + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Gap: Select Styles: Up to 60% Off + Additional 20% Off + Free S&amp;H on $50+</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Select Micro Center Stores: AMD Ryzen 7 7800X3D 4.2GHz AM5 Desktop Processor $320 + Free Pickup</title>
     <expired>false</expired>
@@ -562,7 +570,7 @@
   </expiration>
   <expiration>
     <title>REI Co-op Men's Trailmade Rain Jacket (Limited Sizes) $19.85 + Free Pickup</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>3-Pk Amazon Essentials Men's Microfiber Boxer Briefs from $6 + Free S&amp;H w/ Prime</title>
@@ -1067,17 +1075,5 @@
   <expiration>
     <title>24-Oz Stanley Stay-Hot Camp Mug (Cream) $18</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: 13-Oz Amazon Grocery Hazelnut Spread w/ Cocoa $1.35 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>16-Oz Dawn Platinum Plus Lemon Scent Dish Spray Refill $2.20 w/ S&amp;S</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>10-Oz Burt's Bees Waterless Shampoo for Cats $3.55 w/ S&amp;S</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
