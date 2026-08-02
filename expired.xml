@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-02T10:57:45.771052+00:00">
+<expirations generated="2026-08-02T11:57:26.516713+00:00">
+  <expiration>
+    <title>Refurb: Dyson AM09 Hot + Cool Heater &amp; Fan (Various) $170 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Select 8-oz Kraft Salad Dressings (Catalina, Ranch, Caesar, Thousand Island) $1 + Free Pickup</title>
     <expired>false</expired>
@@ -818,7 +822,7 @@
   </expiration>
   <expiration>
     <title>Chipotle: Purchase Any Entree, Get Chips &amp; Guac Free (valid 7/31 - 8/1 only)</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Peiyuu 4000mAh 3-Speed Rechargeable Neck Fan w/ USB-C Charging (2 Colors) $10</title>
@@ -942,14 +946,6 @@
   </expiration>
   <expiration>
     <title>DeWALT Atomic 20V Compact 1/2" Drill/Driver Kit w/ 2.0Ah Battery &amp; Charger $99 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Costco Members: 2-Pk Winix Replacement Air Filters (C545 / C535 / C909) $60 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>12-Count Terro Borax Formula Indoor Liquid Ant Bait Stations $9.60</title>
     <expired>false</expired>
   </expiration>
 </expirations>
