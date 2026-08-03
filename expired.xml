@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-03T10:56:56.181457+00:00">
+<expirations generated="2026-08-03T11:56:46.839140+00:00">
+  <expiration>
+    <title>LISEN Retractable Car Charger w/ USB-C Cable: 75W 4-in-1 $11.99; 63W 3-in-1 $8.50</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Ninja Crispi Pro 6-Qt Glass Air Fryer 4-in-1 (Pink, Green, or White) $199 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>4TB Samsung 990 EVO Plus M.2 2280 PCIe Gen 4x4 NVMe Solid State Drive $315 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Wurkkos HD03 680 Lumen Rechargeable 95 CRI LED Clip-On Flashlight (Various) $15</title>
     <expired>false</expired>
@@ -867,13 +879,5 @@
   <expiration>
     <title>Harbor Freight Stores: QUINN 14-in-1 Painters Tool $2.80 (In-Store Only)</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Harbor Freight In-Stores Coupon: Make It A Savings Weekend For Everyone 30% Off All Items Under $10 &amp; More (Valid thru 8/2)</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Arm &amp; Hammer In-Wash Scent Booster (15-oz Beads or 18-oz Crystals) $2 + Free Pickup</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
