@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-03T06:56:43.005922+00:00">
+<expirations generated="2026-08-03T07:56:38.150729+00:00">
+  <expiration>
+    <title>Clair Obscur: Expedition 33 (PC Digital) $22</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>ECOFLOW Delta 3 Classical 1024Wh 1800W LiFePO4 Power Station $341.45 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>2.7-Oz AXE Men's Antiperspirant Deodorant Stick (2 scents) 2 for $3.80 + Free Pickup on $10+</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>2-Oz Neutrogena Oil-Free Pink Grapefruit Acne Wash $3.50 + $3 Walmart Cash</title>
     <expired>false</expired>
@@ -182,7 +194,7 @@
   </expiration>
   <expiration>
     <title>16-Oz Dawn Platinum Plus Lemon Scent Dish Spray Refill $1.80 w/ S&amp;S</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Refurb: Brother DCP-L2640DW Wireless Compact B&amp;W Multi-Function Laser Printer $150 + Free S&amp;H</title>
@@ -882,22 +894,6 @@
   </expiration>
   <expiration>
     <title>LEGO Harry Potter Collection (PC Digital Download) $4.75</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>4-Pc WORKPRO Adjustable Wrench Set (6", 8", 10" &amp; 12") $24 + Free S&amp;H</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Digital Games: OTXO (PC), Sol Cesto (PC) &amp; Mutazione (iOS/Android) Free</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>CHARMP 5000mAh Rechargeable Waist Clip Fan (Army Green) $8</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>2-Pk 5.3-Gal VEVOR Metal Fuel Container w/ Spout &amp; Comfort Handle (2 colors) $40.90 + Free S&amp;H</title>
     <expired>false</expired>
   </expiration>
 </expirations>
