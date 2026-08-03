@@ -33,6 +33,9 @@ group so one never blocks the other:
 Both commit their output file back to the repo, rebasing onto the other's
 push if needed to avoid non-fast-forward rejections.
 
+**GitHub secrets required: none.** Slickdeals' RSS feed and individual
+deal pages are public — no API key or authentication needed.
+
 ## Running locally
 
 ```bash
