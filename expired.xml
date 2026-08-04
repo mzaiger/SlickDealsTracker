@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-04T10:57:22.500518+00:00">
+<expirations generated="2026-08-04T11:57:19.239491+00:00">
+  <expiration>
+    <title>GameStop Stores Trade-In Offer: Any Official Defective Gaming Controller &amp; Earn Same Credit As Working One (Valid thru 8/15)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Select Amazon Accts: 180-Ct Nature Made Vitamin D3 1000 IU Softgels Supplement $4.25 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>Costco Members: Select Stores: Fiskars Lopper &amp; Hand Pruner Garden Trimming Set $10 (In-Store Only)</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>T-Mobile Customers: $5 Off Any Full-Sized Entrée at Qdoba Mexican Eats &amp; More Free to Claim via T-Mobile T-Life App</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Milwaukee M18 18V 1/2" Brushless Compact Drill/Driver Kit w/ Tool Bag $95.25 + Free S&amp;H</title>
     <expired>false</expired>
@@ -402,7 +418,7 @@
   </expiration>
   <expiration>
     <title>105-Gallon Devoko Outdoor Resin Deck Box (Various) from $63 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Select Target Accounts: Target Circle 360 Annual Membership + $50 Circle Rewards from $49</title>
@@ -418,7 +434,7 @@
   </expiration>
   <expiration>
     <title>Milwaukee Top Grain Goatskin Leather Work Gloves (XL) $10.10 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>DJI Power 2000 100W Foldable Solar Panel Combo Kits $1007 &amp; More + Free S&amp;H</title>
@@ -1047,9 +1063,5 @@
   <expiration>
     <title>Prime: OLIGHT Oclip 300-Lumen Rechargeable EDC Flashlight from $18 + Free S&amp;H</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Refurb: Dyson AM09 Hot + Cool Heater &amp; Fan (Various) $170 + Free S&amp;H</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
