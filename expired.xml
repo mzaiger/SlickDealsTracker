@@ -1,5 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-05T18:59:40.424889+00:00">
+<expirations generated="2026-08-05T19:59:49.753014+00:00">
+  <expiration>
+    <title>Select Accounts: 6-Pk 19-Oz Seventh Generation Dish Liquid Soap (Free &amp; Clear) $9.95 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>T-Mobile Pre-Order: Samsung Galaxy Z Fold8, Fold8 Ultra or Flip8 Smartphones Up to $1900 Off via 24 Monthly Bill Credits w/ Eligible Trade-In &amp; Plan</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>144-Pk 0.7-oz KIND Minis Snack Bars (Caramel Almond &amp; Sea Salt) $30 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>New/Eligible AT&amp;T Fiber Optic Customers: 1-Yr 1-Gig Home Internet + $200 Rewards $50/Month w/ AutoPay Billing &amp; More</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>19-Pc LIBRATON Tapered Countersink Drill Bit Set $15</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>LISEN Phone Holder Travel Mount w/ LED Light for Planes &amp; Travel $8</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Jackery Explorer 240D 256Wh 200W DC USB Power Bank $97 + Free S&amp;H</title>
     <expired>false</expired>
@@ -30,7 +54,7 @@
   </expiration>
   <expiration>
     <title>8.75" x 2" Ezy Dose Weekly X-Large Pill Organizer (Color May Vary) $2.60</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Greenworks Pro 2300 PSI Electric Pressure Washer w/ 5x Nozzles + 2x Attachments $176 + Free S&amp;H</title>
@@ -606,7 +630,7 @@
   </expiration>
   <expiration>
     <title>Dell MS700 Bluetooth Travel Mouse (Misty Blue) $20</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>Dairy Queen Daily Offer: Blizzard Treat (Various) Buy 1, Get 1 for $1 (Valid thru 8/30)</title>
@@ -1287,41 +1311,5 @@
   <expiration>
     <title>ATDIAG OBD2 Scanner Diagnostic Tool w/ 2.4" Display &amp; More $20 + Free S&amp;H</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>PJ Paul Jones Men's Short Sleeve Knit Polo Shirt (Various) $9</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>CELOX Dish Brush w/ Built-In Soap Dispenser &amp; 2 Brush Refills (3 Colors) $8</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Scarlet Darkness Women's Corset Milkmaid Dress w/ Adjustable Straps (Various) $12.50</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Teenage Mutant Ninja Turtles Trilogy (Blu-ray) $30</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>12-Pack Bush's Best: 15.8-Oz Blackeye Peas or 15-Oz Black Beans $11.30 w/ S&amp;S</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>105-Gallon Devoko Outdoor Resin Deck Box (Various) from $63 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Select Target Accounts: Target Circle 360 Annual Membership + $50 Circle Rewards from $49</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Nike Men's Pegasus Premium Road Running Shoes (Various) from $132.75 + Free S&amp;H</title>
-    <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>PRETTYGARDEN Women's Summer Floral Boho Eyelet Flowy Maxi Dress (various) $16</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
