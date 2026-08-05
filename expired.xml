@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-05T09:59:44.188518+00:00">
+<expirations generated="2026-08-05T10:59:04.004836+00:00">
+  <expiration>
+    <title>COPYLEAF Women's Crossover Waist Wide Leg Yoga Pants w/ 2 Pockets (Various) $10</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Subway Restaurant Coupon Offer: Any Qualifying Subway Footlong Sub B1G1 Free (Valid thru 8/8)</title>
     <expired>false</expired>
@@ -130,7 +134,7 @@
   </expiration>
   <expiration>
     <title>BILLCONCH Biometric Safe w/ Electronic Lock &amp; LED Light (Black) $35 + Free S&amp;H</title>
-    <expired>false</expired>
+    <expired>true</expired>
   </expiration>
   <expiration>
     <title>4-Pk Linkind Outdoor A19 Dusk-to-Dawn LED Light Bulbs w/ Automatic On/Off Sensor $7.50 + Free S&amp;H</title>
@@ -1291,13 +1295,5 @@
   <expiration>
     <title>4TB Samsung 990 EVO Plus M.2 2280 PCIe Gen 4x4 NVMe Solid State Drive $315 + Free S&amp;H</title>
     <expired>true</expired>
-  </expiration>
-  <expiration>
-    <title>Wurkkos HD03 680 Lumen Rechargeable 95 CRI LED Clip-On Flashlight (Various) $15</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>379-Pc LEGO Marvel Iron Spider-Man Bust Collectible (76326) $48 + Free S&amp;H</title>
-    <expired>false</expired>
   </expiration>
 </expirations>
