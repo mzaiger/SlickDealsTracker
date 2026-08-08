@@ -70,7 +70,9 @@ function triggerSlickDealsWorkflow() {
     Logger.log("Failed to dispatch workflow: " + e.toString());
   }
 }
+```
 
+```javascript
 function triggerSlickDealsExpirationWorkflow() {
     const token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
     const url = "https://api.github.com/repos/mzaiger/SlickDealsTracker/dispatches";
