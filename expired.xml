@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-08-08T01:57:38.829077+00:00">
+<expirations generated="2026-08-08T02:58:12.271362+00:00">
+  <expiration>
+    <title>Select Accts: 32-Oz Amazon Grocery Chicken Broth $0.95 w/ S&amp;S</title>
+    <expired>false</expired>
+  </expiration>
+  <expiration>
+    <title>adidas Men's Ultradream DNA Shoes (2 Colors) from $28 + Free S&amp;H</title>
+    <expired>false</expired>
+  </expiration>
   <expiration>
     <title>Prime Members: YANIKY UPF 50+ Quick Dry Running Baseball Cap (Various) $7 + Free S&amp;H</title>
     <expired>false</expired>
@@ -1007,13 +1015,5 @@
   <expiration>
     <title>Select Accounts: 0.14-Oz Systane Ultra Lubricant Eye Drops $2.30 w/ S&amp;S</title>
     <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>Hanes Men's Ultimate Heavyweight Fleece Hoodie Sweatshirt (Light Steel) $10.40</title>
-    <expired>false</expired>
-  </expiration>
-  <expiration>
-    <title>51.7" Furinno PASIR 5-Tier Corner Bookshelf w/ Open Shelf (Blackwood) $21</title>
-    <expired>true</expired>
   </expiration>
 </expirations>
