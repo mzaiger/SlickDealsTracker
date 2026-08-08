@@ -36,6 +36,102 @@ push if needed to avoid non-fast-forward rejections.
 **GitHub secrets required: none.** Slickdeals' RSS feed and individual
 deal pages are public — no API key or authentication needed.
 
+## Timing (Google Apps Script triggers)
+
+Both workflows are triggered externally rather than on a GitHub Actions
+cron schedule, using two Google Apps Script functions that each fire a
+`repository_dispatch` event against the repo:
+
+| Function | Event type dispatched | Fires |
+|---|---|---|
+| `triggerSlickDealsWorkflow` | `trigger-deals-pull` | `pull-deals.yml` |
+| `triggerSlickDealsExpirationWorkflow` | `trigger-expiration-pull` | `pull-expiration.yml` |
+
+```javascript
+function triggerSlickDealsWorkflow() {
+    const token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+    const url = "https://api.github.com/repos/mzaiger/SlickDealsTracker/dispatches";
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer " + token,
+      "Accept": "application/vnd.github.v3+json",
+      "User-Agent": "Google-Apps-Script-Automation"
+    },
+    contentType: "application/json",
+    payload: JSON.stringify({ event_type: "trigger-deals-pull" })
+  };
+
+  try {
+    UrlFetchApp.fetch(url, options);
+    Logger.log("SlickDealsTracker workflow dispatched successfully!");
+  } catch (e) {
+    Logger.log("Failed to dispatch workflow: " + e.toString());
+  }
+}
+
+function triggerSlickDealsExpirationWorkflow() {
+    const token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+    const url = "https://api.github.com/repos/mzaiger/SlickDealsTracker/dispatches";
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Authorization": "Bearer " + token,
+      "Accept": "application/vnd.github.v3+json",
+      "User-Agent": "Google-Apps-Script-Automation"
+    },
+    contentType: "application/json",
+    payload: JSON.stringify({ event_type: "trigger-expiration-pull" })
+  };
+
+  try {
+    UrlFetchApp.fetch(url, options);
+    Logger.log("SlickDealsTracker workflow dispatched successfully!");
+  } catch (e) {
+    Logger.log("Failed to dispatch workflow: " + e.toString());
+  }
+}
+```
+
+**Setup:**
+
+1. Go to [script.google.com](https://script.google.com/home/), create (or
+   open) the project, and paste in both functions above.
+2. Store the GitHub token as a script property rather than hardcoding it:
+   **Project Settings → Script Properties → Add script property**, name
+   it `GITHUB_TOKEN`, and set it to a GitHub personal access token scoped
+   to trigger repo dispatches (`repo` scope) on
+   `mzaiger/SlickDealsTracker`. The script reads it at runtime via
+   `PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN")`,
+   so the token never appears in the script body.
+3. Add time-driven triggers for each function independently: in the Apps
+   Script editor, **Triggers** (clock icon) → **Add Trigger** →
+   function `triggerSlickDealsWorkflow`, event source **Time-driven**,
+   type **Minutes timer → Every 15 minutes** (matching the `pull-deals.yml`
+   cadence noted above). Repeat for `triggerSlickDealsExpirationWorkflow`
+   on whatever cadence makes sense for the slower expiration sweep.
+4. On the GitHub side, `pull-deals.yml` and `pull-expiration.yml` already
+   listen for `repository_dispatch` — just make sure their `types:` match
+   the `event_type` values dispatched above:
+
+   ```yaml
+   on:
+     repository_dispatch:
+       types: [trigger-deals-pull]      # pull-deals.yml
+   ```
+
+   ```yaml
+   on:
+     repository_dispatch:
+       types: [trigger-expiration-pull] # pull-expiration.yml
+   ```
+
+Rotate the `GITHUB_TOKEN` script property periodically like any personal
+access token, and never paste the raw token into the script code or
+commit it anywhere.
+
 ## Running locally
 
 ```bash
