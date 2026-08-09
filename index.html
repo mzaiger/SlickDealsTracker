@@ -2,675 +2,1126 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Football Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<title>Slick Deals Tracker</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg: #0a0d10;
-    --bg-panel: #12161b;
-    --line: #232a31;
-    --turf: #2f8f5b;
-    --turf-bright: #43c179;
-    --chalk: #e8ecef;
-    --dim: #8a95a1;
-    --gold: #e0a63c;
-    --dk-green: #53d337;
-    --fd-blue: #1493ff;
-    --loss-red: #e2584a;
-    --pick-yellow: #ffd60a;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      radial-gradient(ellipse at top, #131a1f 0%, var(--bg) 55%),
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 64px);
-    color:var(--chalk);
-    font-family:'JetBrains Mono', monospace;
-    min-height:100vh;
-    padding-bottom:4rem;
-  }
-  .hero{
-    padding:2.5rem 1.5rem 1.75rem;
-    border-bottom:1px solid var(--line);
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background:linear-gradient(120deg, rgba(47,143,91,0.16), transparent 55%);
-    pointer-events:none;
-  }
-  .hero-inner{max-width:1180px;margin:0 auto;position:relative;}
-  .eyebrow{
-    font-family:'Oswald',sans-serif;
-    text-transform:uppercase;
-    letter-spacing:0.22em;
-    font-size:0.72rem;
-    color:var(--turf-bright);
-    font-weight:600;
-  }
-  h1{
-    font-family:'Oswald',sans-serif;
-    font-weight:700;
-    font-size:clamp(2rem, 5vw, 3.1rem);
-    margin:0.35rem 0 0.5rem;
-    letter-spacing:-0.01em;
-  }
-  .meta-row{
-    display:flex; flex-wrap:wrap; gap:1.25rem;
-    color:var(--dim); font-size:0.82rem; margin-top:0.5rem;
-  }
-  .meta-row b{color:var(--chalk); font-weight:600;}
-  .channels{
-    display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.9rem;
-  }
-  .chan-pill{
-    border:1px solid var(--line); border-radius:999px;
-    padding:0.15rem 0.65rem; font-size:0.72rem; color:var(--dim);
+  :root {
+    --bg:        #FFFFFF;
+    --panel:     #F2F7FD;
+    --line:      #D9E5F2;
+    --text:      #10233F;
+    --text-dim:  #64798E;
+    --blue:      #1B63E0;
+    --blue-deep: #0C3F94;
+    --cool:      #2FA8B8;
+    --warm:      #F2A93B;
+    --hot:       #E4572E;
+    --radius:    10px;
   }
 
-  main{max-width:1180px;margin:0 auto; padding:0 1.5rem;}
+  * { box-sizing: border-box; }
 
-  .day-block{margin-top:2.5rem;}
-  .day-heading{
-    display:flex; align-items:baseline; gap:0.75rem;
-    padding-bottom:0.6rem; margin-bottom:1.1rem;
-    border-bottom:2px solid var(--turf);
-  }
-  .day-heading .weekday{
-    font-family:'Oswald',sans-serif; font-weight:700; font-size:1.5rem;
-    text-transform:uppercase; letter-spacing:0.02em;
-  }
-  .day-heading .date{color:var(--dim); font-size:0.85rem;}
-  .day-heading .count{
-    margin-left:auto; color:var(--dim); font-size:0.78rem;
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 
-  .slot-block{margin-bottom:1.75rem;}
-  .slot-block:last-child{margin-bottom:0;}
-  .slot-heading{
-    display:flex; align-items:baseline; gap:0.6rem;
-    margin-bottom:0.7rem;
-  }
-  .slot-heading .slot-name{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.95rem;
-    text-transform:uppercase; letter-spacing:0.08em; color:var(--turf-bright);
-  }
-  .slot-heading .slot-icon{font-size:0.9rem;}
-  .slot-heading::after{
-    content:""; flex:1; height:1px; background:var(--line);
-  }
-  .slot-heading .slot-count{color:var(--dim); font-size:0.72rem;}
-
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(340px, 1fr));
-    gap:1rem;
+  body {
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(27,99,224,0.07), transparent 45%),
+      radial-gradient(circle at 88% 6%, rgba(27,99,224,0.05), transparent 40%);
   }
 
-  .card{
-    background:var(--bg-panel);
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:1.1rem 1.2rem 1.2rem;
-    position:relative;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  .card:hover{border-color:#39424b; transform:translateY(-1px);}
-  .card.marquee{border-color:rgba(224,166,60,0.55); box-shadow:0 0 0 1px rgba(224,166,60,0.12), 0 8px 24px -12px rgba(224,166,60,0.25);}
-  .card.slot-pick{
-    border:2px solid var(--pick-yellow);
-    box-shadow:0 0 0 1px rgba(255,214,10,0.25), 0 10px 26px -12px rgba(255,214,10,0.4);
-    padding-top:2.4rem;
-  }
-  .pick-banner{
-    position:absolute; top:0; left:0; right:0;
-    background:var(--pick-yellow); color:#1a1400;
-    font-family:'Oswald',sans-serif; font-weight:700; font-size:0.7rem;
-    text-transform:uppercase; letter-spacing:0.1em; text-align:center;
-    padding:0.3rem 0.5rem; border-radius:9px 9px 0 0;
-  }
-  .odds td.picked{background:rgba(255,214,10,0.16); color:var(--pick-yellow); font-weight:700; border-radius:4px;}
-  .pick-toolbar{display:grid; grid-template-columns:repeat(4,1fr); gap:0.35rem; margin-top:0.6rem;}
-  .pick-btn{
-    font-family:'Inter',sans-serif; font-size:0.68rem; font-weight:600;
-    color:var(--dim); background:#161b20; border:1px solid var(--line);
-    border-radius:6px; padding:0.4rem 0.2rem; cursor:pointer;
-    text-align:center; line-height:1.15; transition:all 0.12s ease;
-  }
-  .pick-btn:hover{border-color:var(--pick-yellow); color:var(--chalk);}
-  .pick-btn.active{background:var(--pick-yellow); border-color:var(--pick-yellow); color:#1a1400;}
-
-  .card-top{display:flex; justify-content:space-between; align-items:flex-start; gap:0.75rem;}
-  .score-badge{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.68rem;
-    text-transform:uppercase; letter-spacing:0.08em; color:var(--turf-bright);
-    border:1px solid rgba(67,193,121,0.35); border-radius:999px;
-    padding:0.2rem 0.55rem; white-space:nowrap;
-  }
-  .marquee .score-badge{color:var(--gold); border-color:rgba(224,166,60,0.45);}
-  .channel-pill{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.7rem;
-    background:var(--turf); color:#04140a; border-radius:5px;
-    padding:0.2rem 0.5rem; letter-spacing:0.02em;
+  header {
+    padding: 40px 24px 20px;
+    max-width: 1700px;
+    margin: 0 auto;
   }
 
-  .matchup{
-    margin:0.85rem 0 0.6rem;
-    display:flex; align-items:center; flex-wrap:nowrap; gap:0.45rem;
-    font-family:'Oswald',sans-serif; font-size:1.05rem; font-weight:600;
-    white-space:nowrap; overflow-x:auto; scrollbar-width:none;
-  }
-  .matchup::-webkit-scrollbar{display:none;}
-  .team{display:inline-flex; align-items:center; gap:0.4rem;}
-  .rank{
-    font-size:0.68rem; color:var(--gold); border:1px solid rgba(224,166,60,0.4);
-    border-radius:4px; padding:0.05rem 0.3rem; min-width:1.6rem; text-align:center;
-    flex-shrink:0;
-  }
-  .rank.unranked{visibility:hidden;}
-  .at{color:var(--dim); font-size:0.72rem; font-family:'JetBrains Mono',monospace; flex-shrink:0;}
-
-  @media (max-width: 480px){
-    .matchup{
-      flex-wrap:wrap; white-space:normal; overflow-x:visible;
-      font-size:1rem;
-    }
-    .at{margin:0 0.1rem;}
+  .eyebrow-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
-  .subline{
-    color:var(--dim); font-size:0.75rem; display:flex; gap:1rem; flex-wrap:wrap;
-    margin-bottom:0.9rem;
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0;
   }
 
-  table.odds{
-    width:100%; border-collapse:collapse; font-size:0.78rem;
-  }
-  table.odds th{
-    text-align:right; color:var(--dim); font-weight:500;
-    font-size:0.66rem; text-transform:uppercase; letter-spacing:0.05em;
-    padding-bottom:0.35rem;
-  }
-  table.odds th:first-child, table.odds td:first-child{text-align:left;}
-  table.odds td{
-    text-align:right; padding:0.3rem 0; border-top:1px solid var(--line);
-  }
-  .book{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.72rem;
-  }
-  .book.dk{color:var(--dk-green);}
-  .book.fd{color:var(--fd-blue);}
-  .num.neg{color:var(--loss-red);}
-  .num-am{display:block; font-size:0.7rem; margin-top:0.1rem;}
-  .empty-cell{color:#3d454d;}
-
-  .no-odds{color:var(--dim); font-size:0.75rem; padding:0.4rem 0;}
-
-  .score-line{
-    flex-basis:100%; font-weight:700; font-size:0.78rem; display:flex;
-    align-items:center; gap:0.4rem;
-  }
-  .score-line.live{color:#ff5f56;}
-  .score-line.final{color:var(--dim);}
-  .live-dot{
-    width:0.5rem; height:0.5rem; border-radius:50%; background:#ff5f56;
-    display:inline-block; animation:live-pulse 1.4s ease-in-out infinite;
-  }
-  @keyframes live-pulse{
-    0%,100%{opacity:1;} 50%{opacity:0.35;}
-  }
-
-  .gemini-toggle{
-    width:100%; margin-top:0.6rem;
-    display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap; row-gap:0.3rem;
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.7rem;
-    color:var(--dim); background:#161b20; border:1px solid var(--line);
-    border-radius:6px; padding:0.45rem 0.6rem; cursor:pointer;
-    text-align:left; transition:all 0.12s ease;
-  }
-  .gemini-toggle:hover{border-color:#8b5cf6; color:var(--chalk);}
-  .gemini-toggle.open{border-color:#8b5cf6; color:#c4b5fd; background:rgba(139,92,246,0.1);}
-  .gemini-toggle-icon{font-size:0.85rem; flex-shrink:0;}
-  .gemini-toggle-main{
-    display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;
-    flex:1; min-width:0;
-  }
-  .gemini-toggle-winner{
-    color:var(--chalk); text-transform:none; letter-spacing:normal; font-weight:600;
-  }
-  .gemini-toggle-ats{
-    color:#ffffff; letter-spacing:0.04em; font-size:0.65rem;
-  }
-  .gemini-toggle-trailing{
-    display:flex; align-items:center; gap:0.4rem; margin-left:auto; flex-shrink:0;
-  }
-  /* Tiles view: always drop the Pick/ATS summary to its own line under the
-     "Gemini Prediction Summary" label instead of only wrapping when it
-     doesn't fit on the first line. Row view lays this button out
-     differently (see body.row-view rules below), so this is scoped off. */
-  body:not(.row-view) .gemini-toggle-trailing{
-    flex-basis:100%; margin-left:0; justify-content:space-between;
-  }
-  .gemini-conf{color:#a78bfa; font-family:'JetBrains Mono',monospace; font-weight:700; text-transform:none;}
-  .gemini-caret{font-size:0.6rem; transition:transform .12s ease; color:inherit;}
-  .gemini-toggle.open .gemini-caret{transform:rotate(180deg);}
-  .gemini-panel{
-    margin-top:0.5rem; padding:0.7rem 0.8rem;
-    background:#14101c; border:1px solid rgba(139,92,246,0.3); border-radius:8px;
-  }
-  .gemini-panel-row{
-    display:flex; justify-content:space-between; gap:0.75rem;
-    font-size:0.75rem; padding:0.15rem 0; color:var(--dim);
-  }
-  .gemini-panel-row .gemini-value{color:var(--chalk); font-weight:600; text-align:right;}
-  .gemini-analysis{
-    margin:0.55rem 0 0; color:var(--chalk); font-size:0.78rem; line-height:1.55;
-  }
-  .gemini-picks-summary {
+  .updated-row {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 28px;              /* separation — bump up or down to taste */
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+
+  .refresh-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--blue);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .refresh-btn:hover { border-color: var(--blue); background: #E9F1FD; }
+  .refresh-btn:disabled { opacity: 0.5; cursor: default; }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1;
+    margin: 0 0 8px;
+    color: var(--text);
+  }
+
+  .sub {
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0;
+  }
+
+  main {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  .controls {
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 8px 0 28px;
+    position: sticky;
+    top: 0;
+    padding: 16px 0;
+    background: linear-gradient(var(--bg) 78%, transparent);
+    z-index: 10;
   }
-  body.row-view .gemini-toggle,
-  body.row-view .gemini-panel{grid-column:1 / -1;}
-  body.row-view .gemini-toggle{grid-row:3;}
-  body.row-view .gemini-panel{grid-row:4;}
 
-  footer{
-    max-width:1180px; margin:3rem auto 0; padding:0 1.5rem;
-    color:var(--dim); font-size:0.75rem; border-top:1px solid var(--line); padding-top:1rem;
+  .tabs {
+    display: flex;
+    gap: 6px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px;
   }
-  .status{max-width:1180px;margin:2rem auto;padding:0 1.5rem;color:var(--dim);}
 
-  .nav-bar{
-    position:sticky; top:0; z-index:100;
-    background:var(--bg);
-    border-bottom:1px solid transparent;
-    transition:border-color .15s ease, box-shadow .15s ease;
+  .tab-btn {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--text-dim);
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+    padding: 9px 18px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
   }
-  .nav-bar.stuck{
-    border-bottom-color:var(--line);
-    box-shadow:0 8px 20px -12px rgba(0,0,0,0.6);
-  }
-  .site-nav{
-    max-width:1180px; margin:0 auto; padding:0.9rem 1.5rem;
-    display:flex; gap:1.25rem; align-items:center;
-  }
-  .site-nav a{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.82rem;
-    text-transform:uppercase; letter-spacing:0.04em;
-    color:var(--dim); text-decoration:none;
-    padding:0.3rem 0; border-bottom:2px solid transparent;
-  }
-  .site-nav a:hover{color:var(--chalk);}
-  .site-nav a.active{color:var(--turf-bright); border-bottom-color:var(--turf-bright);}
-  .nav-spacer{flex:1;}
-  .view-toggle{
-    display:flex; gap:0.25rem; background:var(--bg-panel);
-    border:1px solid var(--line); border-radius:8px; padding:0.2rem;
-  }
-  .view-toggle .view-btn{
-    font-family:'Oswald',sans-serif; font-weight:600; font-size:0.72rem;
-    text-transform:uppercase; letter-spacing:0.04em;
-    color:var(--dim); background:transparent; border:none; border-radius:6px;
-    padding:0.3rem 0.7rem; cursor:pointer; transition:all 0.12s ease;
-  }
-  .view-toggle .view-btn:hover{color:var(--chalk);}
-  .view-toggle .view-btn.active{background:var(--turf); color:#04140a;}
 
-  .week-block{margin-top:2.25rem;}
-  .week-block:first-child{margin-top:1.5rem;}
-  .week-heading{
-    display:flex; align-items:baseline; gap:0.75rem;
-    padding-bottom:0.5rem; margin-bottom:0.25rem;
-    border-bottom:1px dashed var(--line);
-  }
-  .week-heading .week-name{
-    font-family:'Oswald',sans-serif; font-weight:700; font-size:1.15rem;
-    text-transform:uppercase; letter-spacing:0.05em; color:var(--gold);
-  }
-  .week-heading .week-count{margin-left:auto; color:var(--dim); font-size:0.78rem;}
-  .week-empty{color:var(--dim); font-size:0.85rem; padding:0.5rem 0 1.5rem;}
+  .tab-btn:hover { color: var(--text); }
 
-  /* Rows view: same card markup, laid out as a column-aligned table instead of
-     tiles. Every row is a CSS grid using the same fixed column tracks (Rank /
-     TV / Team / Odds / Buttons), so all rows line up with each other going
-     down the page no matter which day or time slot they're in. The row list
-     is inset from the page edges rather than running edge-to-edge. */
-  body.row-view .site-nav,
-  body.row-view .hero-inner,
-  body.row-view footer,
-  body.row-view .status{
-    max-width:1760px;
+  .tab-btn.active {
+    background: var(--blue);
+    color: #FFFFFF;
   }
-  body.row-view main{
-    max-width:1480px;
-    padding:0 3.25rem;
+
+  .sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
   }
-  body.row-view .grid{
-    display:flex; flex-direction:column; gap:0.85rem;
-    margin:0 1.75rem;
+
+  .sort-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
   }
-  body.row-view .card{
-    display:grid;
-    grid-template-columns:100px 78px minmax(200px,1fr) 280px 190px;
-    grid-template-rows:auto auto;
-    align-items:center;
-    column-gap:0.65rem;
-    padding:0.45rem 0.9rem;
-    position:relative;
+
+  .sort-btn.active {
+    border-color: var(--blue);
+    color: var(--blue);
   }
-  body.row-view .card.slot-pick{padding-top:1rem;}
-  body.row-view .pick-banner{
-    position:absolute; top:-0.35rem; left:0.9rem;
-    width:188px;
-    display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:0.05rem; line-height:1.15; text-align:center;
-    border-radius:6px; padding:0.3rem 0.4rem; margin:0; white-space:normal;
-    font-size:0.58rem; z-index:2;
+
+  .layout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
   }
-  body.row-view .card-top{display:contents;}
-  body.row-view .card-top .score-badge{
-    grid-column:1; grid-row:1 / 3; justify-self:start; align-self:center;
+
+  .layout-btn {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
   }
-  body.row-view .card-top .channel-pill{
-    grid-column:2; grid-row:1 / 3; justify-self:start; align-self:center;
+
+  .layout-btn.active {
+    border-color: var(--blue);
+    color: var(--blue);
   }
-  body.row-view .matchup{
-    grid-column:3; grid-row:1;
-    margin:0; overflow-x:visible; white-space:normal;
+
+  .count {
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--text-dim);
+    font-size: 12px;
+    margin: -16px 0 20px;
   }
-  body.row-view .subline{
-    grid-column:3; grid-row:2;
-    margin:0; flex-direction:row; gap:0.6rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
   }
-  body.row-view table.odds,
-  body.row-view .no-odds{
-    grid-column:4; grid-row:1 / 3;
-    width:100%;
+
+  .card {
+    display: block;
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 2px rgba(16,35,63,0.04);
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   }
-  body.row-view table.odds{table-layout:fixed; font-size:0.7rem;}
-  body.row-view table.odds th{font-size:0.6rem; padding-bottom:0.2rem;}
-  body.row-view table.odds td{padding:0.18rem 0;}
-  body.row-view .book{font-size:0.64rem;}
-  body.row-view table.odds th:first-child,
-  body.row-view table.odds td:first-child{width:20px;}
-  body.row-view .no-odds{font-size:0.68rem;}
-  body.row-view .pick-toolbar{
-    grid-column:5; grid-row:1 / 3;
-    margin:0; width:100%;
-    grid-template-columns:repeat(2,1fr); gap:0.3rem;
+
+  .card:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(27,99,224,0.12);
   }
-  body.row-view .pick-btn{min-width:0; font-size:0.62rem; padding:0.32rem 0.2rem; overflow-wrap:break-word;}
-  /* Below this width there isn't enough room for a true single-line row even
-     with the wider container, so let each row scroll horizontally instead
-     of wrapping onto a second line. */
-  @media (max-width: 1400px){
-    body.row-view .grid{overflow-x:visible;}
-    body.row-view .card{overflow-x:auto; scrollbar-width:none; -ms-overflow-style:none;}
-    body.row-view .card::-webkit-scrollbar{display:none;}
+
+  .thumb-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--panel);
+    overflow: hidden;
   }
-  @media (max-width: 900px){
-    body.row-view main{padding:0 1.5rem;}
-    body.row-view .grid{margin:0;}
-    body.row-view .card{
-      display:flex; flex-direction:column; align-items:stretch; overflow-x:visible;
-    }
-    body.row-view .card-top{display:flex; justify-content:space-between; align-items:center; width:auto;}
-    body.row-view .card-top .score-badge,
-    body.row-view .card-top .channel-pill{grid-column:auto; grid-row:auto;}
-    body.row-view .matchup,
-    body.row-view .subline,
-    body.row-view table.odds,
-    body.row-view .no-odds,
-    body.row-view .pick-toolbar{width:auto; grid-column:auto; grid-row:auto;}
+
+  .thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .thumb-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .rating-pill {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .expired-badge {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(16, 35, 63, 0.45);
+    z-index: 2;
+  }
+
+  .expired-badge span {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: var(--hot);
+    padding: 6px 18px;
+    border-radius: 6px;
+    transform: rotate(-8deg);
+    box-shadow: 0 4px 14px rgba(228, 87, 46, 0.5);
+  }
+
+  .card.is-expired .thumb-wrap img {
+    filter: grayscale(60%);
+    opacity: 0.6;
+  }
+
+  .body { padding: 14px 16px 16px; }
+
+  .heat-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .heat-meter {
+    flex: 1;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--line);
+    overflow: hidden;
+  }
+
+  .heat-count {
+    flex-shrink: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .heat-fill {
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .heat-fill.hot { box-shadow: 0 0 8px var(--hot); animation: pulse 1.8s ease-in-out infinite; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+
+  .title {
+    font-size: 14.5px;
+    line-height: 1.35;
+    font-weight: 500;
+    margin: 0 0 10px;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-dim);
+  }
+
+  .meta .go {
+    color: var(--blue);
+  }
+
+  .archived-tag {
+    color: var(--text-dim);
+    font-style: italic;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+  }
+
+  /* Favorite toggle (checkbox) on each card */
+  .fav-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(2px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .fav-toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .fav-toggle .fav-star {
+    font-size: 23px;
+    line-height: 1;
+    color: var(--text-dim);
+    transition: color 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+  }
+
+  .fav-toggle input:checked ~ .fav-star {
+    color: var(--warm);
+    transform: scale(1.1);
+  }
+
+  /* Favorites box — sits as the first item inside the main grid */
+  .fav-box {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fav-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fav-box-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--text);
+  }
+
+  .fav-box-count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 400;
+    color: var(--text-dim);
+    margin-left: 4px;
+  }
+
+  .clear-btn {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    color: var(--hot);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .clear-btn:hover { border-color: var(--hot); background: #FDEEE9; }
+
+  /* Same card component as the main grid, just a slightly narrower min-width
+     (~90%) so multiple fit side by side inside the box before wrapping. */
+  .fav-box-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
+    gap: 14px;
+  }
+
+  @media (max-width: 700px) {
+    .fav-box { grid-column: 1 / -1 !important; }
+  }
+
+  /* ---------- Rows layout ---------- */
+  .rows-fav-section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 14px 14px;
+    margin-bottom: 16px;
+  }
+
+  .rows-wrap { overflow-x: auto; }
+
+  .rows-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 760px;
+  }
+
+  .rows-header-row,
+  .row-item {
+    display: grid;
+    grid-template-columns: 52px 64px minmax(160px, 1.3fr) minmax(200px, 2fr) 110px 110px 90px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .rows-header-row {
+    padding: 6px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .row-item {
+    background: #FFFFFF;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .row-item:hover {
+    border-color: var(--blue);
+    box-shadow: 0 4px 12px rgba(27,99,224,0.10);
+  }
+
+  .row-item.is-expired { opacity: 0.6; }
+
+  .row-thumb-wrap {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--panel);
+    flex-shrink: 0;
+  }
+
+  .row-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .row-thumb-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  .row-fav-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .row-fav-toggle input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .row-fav-toggle .fav-star {
+    font-size: 16px;
+    line-height: 1;
+    color: var(--line);
+    transition: color 0.15s ease, transform 0.15s ease;
+    pointer-events: none;
+  }
+
+  .row-fav-toggle input:checked ~ .fav-star {
+    color: var(--warm);
+    transform: scale(1.1);
+  }
+
+  .row-rating {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .row-title {
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .row-desc {
+    font-size: 12px;
+    line-height: 1.35;
+    color: var(--text-dim);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .row-url {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--blue);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .row-date {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .row-expired {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .row-expired.yes {
+    color: var(--hot);
+    background: #FDEEE9;
+  }
+
+  .row-expired.no {
+    color: var(--cool);
+    background: #EAF7F8;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .heat-fill.hot { animation: none; }
+    .card { transition: none; }
   }
 </style>
 </head>
+
 <body>
 
-<div class="nav-bar">
-<nav class="site-nav">
-  <a href="index.html" class="active">College</a>
-  <a href="nfl.html">NFL</a>
-  <a href="picks.html">Picks</a>
-  <span class="nav-spacer"></span>
-  <div class="view-toggle">
-    <button type="button" class="view-btn" data-mode="tiles">Tiles</button>
-    <button type="button" class="view-btn" data-mode="rows">Rows</button>
-  </div>
-</nav>
-</div>
-
-
-<div class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">College Football &middot; TV Schedule + Odds Board</div>
-    <h1 id="pageTitle">Loading week&hellip;</h1>
-    <div class="meta-row">
-      <span>Last updated: <b id="generatedAt">—</b></span>
-      <span><b id="totalGames">—</b> games on main channels</span>
+<header>
+  <div class="eyebrow-row">
+    <p class="eyebrow">Slickdeals · Frontpage · Auto-refreshed every 15 min</p>
+    <div class="updated-row">
+      <span id="lastUpdated">Last updated: —</span>
+      <button class="refresh-btn" id="refreshBtn" type="button">Refresh</button>
     </div>
-    <div class="channels" id="channelList"></div>
   </div>
-</div>
+  <h1>Slick Deals Tracker</h1>
+  <p class="sub">Deal heat = current thumbs-up score. Click any card to open the Slickdeals post.</p>
+</header>
 
-<main id="days"></main>
+<main>
+  <div class="controls">
+    <div class="tabs" id="tabs">
+      <button class="tab-btn" data-hours="2">2 Hours</button>
+      <button class="tab-btn" data-hours="5">5 Hours</button>
+      <button class="tab-btn" data-hours="24">24 Hours</button>
+      <button class="tab-btn" data-hours="48">48 Hours</button>
+    </div>
+    <div class="layout" id="layout">
+      <span>Layout</span>
+      <button class="layout-btn" data-layout="tile">Tile</button>
+      <button class="layout-btn" data-layout="rows">Rows</button>
+    </div>
+    <div class="sort">
+      <span>Sort</span>
+      <button class="sort-btn" data-sort="date">Newest</button>
+      <button class="sort-btn" data-sort="rating">Rating</button>
+    </div>
+  </div>
 
-<div class="status" id="statusMsg" style="display:none;"></div>
+  <p class="count" id="count"></p>
+  <div class="grid" id="grid"></div>
+</main>
 
-<footer>
-  Matchup rank = combined AP Top 25 rank of both teams (lower is more marquee, unranked teams score 26).
-  &#11088; Time Slot Most Watchable Game = 50% combined AP rank (unranked teams count as 50) + 50% closest posted spread, blended within that time window. Nebraska overrides everything whenever it's playing in that window.
-  Odds via DraftKings &amp; FanDuel through SharpAPI. Schedule &amp; rankings via CollegeFootballData.com.
-  &#10024; Gemini Prediction Summary is AI-generated from current-season stats and posted odds -- informational only, not betting advice.
-</footer>
-
-<script src="picks-store.js"></script>
 <script>
-(function(){
-  const bar = document.querySelector('.nav-bar');
-  if (!bar) return;
-  const onScroll = () => bar.classList.toggle('stuck', window.scrollY > 2);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-})();
-</script>
-<script>
-const SPORT = 'cfb';
-const DATA_URL = 'data/dashboard.json';
-let SCORES = {};
+const DEALS_URL = 'deals.xml';
+// Expiration status lives in its own file, refreshed on its own schedule
+// (checking every deal's own page is much slower than the feed pull), and
+// is joined to deals.xml purely by matching <title> text.
+const EXPIRED_URL = 'expired.xml';
 
-function fmtAmerican(n) {
-  if (n === null || n === undefined || n === '') return null;
-  const num = Number(n);
-  if (Number.isNaN(num)) return null;
-  return num > 0 ? `+${num}` : `${num}`;
-}
+let allDeals = [];
+let activeHours = 2;
+let activeSort = 'date';
+let activeLayout = 'tile';
+let lastGeneratedIso = null;
 
-function fmtLine(n) {
-  if (n === null || n === undefined || n === '') return null;
-  const num = Number(n);
-  if (Number.isNaN(num)) return null;
-  return num > 0 ? `+${num}` : `${num}`;
-}
+const FAVORITES_KEY = 'slickdeals_favorites';
 
-function oddsCell(entry) {
-  if (!entry || (entry.line === undefined && entry.american === undefined)) {
-    return '<span class="empty-cell">—</span>';
-  }
-  const line = fmtLine(entry.line);
-  const am = fmtAmerican(entry.american);
-  const negCls = (typeof entry.american === 'number' && entry.american < 0) ? 'neg' : '';
-  if (line !== null && am !== null) return `${line}<span class="num num-am ${negCls}">(${am})</span>`;
-  if (am !== null) return `<span class="num ${negCls}">${am}</span>`;
-  if (line !== null) return line;
-  return '<span class="empty-cell">—</span>';
-}
-
-function rankBadge(rank) {
-  return rank ? `<span class="rank">#${rank}</span>` : `<span class="rank unranked">#--</span>`;
-}
-
-function kickoffTime(iso, tbd) {
-  if (tbd) return 'Time TBD';
+// favorites maps link -> full deal snapshot (title, thumbnail, rating, etc.)
+// so a favorited deal still renders correctly even after it ages out of
+// deals.xml and is no longer part of allDeals.
+function loadFavorites() {
   try {
-    const d = new Date(iso);
-    return d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
-  } catch (e) { return ''; }
+    const raw = JSON.parse(localStorage.getItem(FAVORITES_KEY) || 'null');
+    const map = new Map();
+    if (Array.isArray(raw)) {
+      // Legacy format from an earlier version: just an array of links, no
+      // snapshot data available yet. It'll self-heal once the deal is seen
+      // again in allDeals (see getFavoriteDeals).
+      raw.forEach(link => { if (typeof link === 'string') map.set(link, { link }); });
+    } else if (raw && typeof raw === 'object') {
+      Object.values(raw).forEach(deal => {
+        if (deal && deal.link) map.set(deal.link, deal);
+      });
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
 }
 
-function renderGame(g) {
-  const marquee = g.home_rank && g.away_rank;
-  const isPick = !!g.is_slot_pick;
-  const books = ['draftkings', 'fanduel'];
-  const bookLabel = { draftkings: 'DK', fanduel: 'FD' };
-  const bookCls = { draftkings: 'dk', fanduel: 'fd' };
+let favorites = loadFavorites();
 
-  const hasAnyOdds = books.some(b =>
-    Object.keys((g.odds?.[b]?.spread) || {}).length ||
-    Object.keys((g.odds?.[b]?.moneyline) || {}).length
-  );
+function saveFavorites() {
+  const obj = {};
+  favorites.forEach((deal, link) => { obj[link] = deal; });
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(obj));
+}
 
-  let rows = '';
-  books.forEach(b => {
-    const spread = g.odds?.[b]?.spread || {};
-    const ml = g.odds?.[b]?.moneyline || {};
-    rows += `<tr>
-      <td class="book ${bookCls[b]}">${bookLabel[b]}</td>
-      <td class="${pickCellClass(SPORT, g, 'spread', 'away')}">${oddsCell(spread.away)}</td>
-      <td class="${pickCellClass(SPORT, g, 'spread', 'home')}">${oddsCell(spread.home)}</td>
-      <td class="${pickCellClass(SPORT, g, 'moneyline', 'away')}">${oddsCell(ml.away)}</td>
-      <td class="${pickCellClass(SPORT, g, 'moneyline', 'home')}">${oddsCell(ml.home)}</td>
-    </tr>`;
+function escapeAttr(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+function toggleFavorite(link, isChecked) {
+  if (isChecked) {
+    const deal = allDeals.find(d => d.link === link);
+    favorites.set(link, deal || { link });
+  } else {
+    favorites.delete(link);
+  }
+  saveFavorites();
+  render();
+}
+
+function clearFavorites() {
+  favorites.clear();
+  saveFavorites();
+  render();
+}
+
+// Returns { deal, archived } for every favorite: live data (kept fresh in
+// storage) while the deal is still in the feed, or the last saved snapshot
+// once it ages out and disappears from deals.xml.
+function getFavoriteDeals() {
+  const result = [];
+  let changed = false;
+
+  favorites.forEach((storedDeal, link) => {
+    const live = allDeals.find(d => d.link === link);
+    if (live) {
+      if (JSON.stringify(live) !== JSON.stringify(storedDeal)) {
+        favorites.set(link, live);
+        changed = true;
+      }
+      result.push({ deal: live, archived: false });
+    } else {
+      result.push({ deal: storedDeal, archived: true });
+    }
   });
 
-  const oddsBlock = hasAnyOdds
-    ? `<table class="odds">
-        <thead><tr><th></th><th>Away Spd</th><th>Home Spd</th><th>Away ML</th><th>Home ML</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>`
-    : `<div class="no-odds">Odds not yet posted</div>`;
-
-  return `
-  <div class="card ${marquee ? 'marquee' : ''} ${isPick ? 'slot-pick' : ''}">
-    ${isPick ? '<div class="pick-banner">\u2b50 Time Slot Most Watchable Game</div>' : ''}
-    <div class="card-top">
-      <span class="score-badge">Pick Rank ${g.matchup_score}</span>
-      <span class="channel-pill">${g.channel}</span>
-    </div>
-    <div class="matchup">
-      <span class="team">${rankBadge(g.away_rank)} ${g.away_team}</span>
-      <span class="at">@</span>
-      <span class="team">${rankBadge(g.home_rank)} ${g.home_team}</span>
-    </div>
-    <div class="subline">
-      <span>${kickoffTime(g.start_time, g.start_time_tbd)}</span>
-      <span>${g.venue || ''}</span>
-      ${renderScoreLine(g, SCORES)}
-    </div>
-    ${oddsBlock}
-    ${renderPickToolbar(SPORT, g)}
-    ${renderGeminiBlock(g)}
-  </div>`;
+  if (changed) saveFavorites();
+  return result;
 }
 
-const SLOT_ICON = {
-  'Morning': '\u{1F305}',
-  'Noon': '\u2600\uFE0F',
-  'Afternoon': '\u{1F324}\uFE0F',
-  'Prime Time': '\u{1F306}',
-  'Late Night': '\u{1F319}',
-  'Time TBD': '\u2753'
-};
-
-function renderSlot(slot) {
-  return `
-  <div class="slot-block">
-    <div class="slot-heading">
-      <span class="slot-icon">${SLOT_ICON[slot.slot] || ''}</span>
-      <span class="slot-name">${slot.slot}</span>
-      <span class="slot-count">${slot.games.length} game${slot.games.length === 1 ? '' : 's'}</span>
-    </div>
-    <div class="grid">
-      ${slot.games.map(renderGame).join('')}
-    </div>
-  </div>`;
-}
-
-function renderDay(day) {
-  const d = new Date(day.date + 'T00:00:00');
-  const dateStr = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
-  return `
-  <section class="day-block">
-    <div class="day-heading">
-      <span class="weekday">${day.weekday}</span>
-      <span class="date">${dateStr}</span>
-      <span class="count">${day.game_count} game${day.game_count === 1 ? '' : 's'}</span>
-    </div>
-    ${day.time_slots.map(renderSlot).join('')}
-  </section>`;
-}
-
-function renderWeek(week) {
-  if (!week.days.length) {
-    return `
-    <section class="week-block">
-      <div class="week-heading"><span class="week-name">Week ${week.week}</span></div>
-      <div class="week-empty">No main-channel games found for this week yet — check back closer to kickoff.</div>
-    </section>`;
-  }
-  return `
-  <section class="week-block">
-    <div class="week-heading">
-      <span class="week-name">Week ${week.week}</span>
-      <span class="week-count">${week.total_games} game${week.total_games === 1 ? '' : 's'}</span>
-    </div>
-    ${week.days.map(renderDay).join('')}
-  </section>`;
-}
-
-async function init() {
-  const statusEl = document.getElementById('statusMsg');
+// Loads expired.xml and returns a Map of title -> expired boolean. Missing
+// or unparseable expired.xml just means "treat everything as not expired
+// yet" rather than a hard failure -- deals.xml is the source of truth for
+// which deals exist at all.
+async function loadExpiredMap() {
+  const bustUrl = `${EXPIRED_URL}?v=${Date.now()}`;
   try {
-    const res = await fetch(DATA_URL, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
-    SCORES = await fetchScores('cfb');
+    const res = await fetch(bustUrl, { cache: 'no-store' });
+    const text = await res.text();
+    const xml = new DOMParser().parseFromString(text, 'application/xml');
 
-    const weekNums = data.weeks.map(w => w.week);
-    document.getElementById('pageTitle').textContent =
-      weekNums.length > 1 ? `Weeks ${weekNums[0]}\u2013${weekNums[weekNums.length - 1]} \u2014 ${data.season}` : `Week ${weekNums[0]} \u2014 ${data.season}`;
-    document.getElementById('generatedAt').textContent = new Date(data.generated_at).toLocaleString();
-    document.getElementById('totalGames').textContent = data.weeks.reduce((n, w) => n + w.total_games, 0);
-    document.getElementById('channelList').innerHTML =
-      data.main_channels.map(c => `<span class="chan-pill">${c}</span>`).join('');
+    if (xml.querySelector('parsererror')) {
+      console.error('Failed to parse expired.xml');
+      return new Map();
+    }
 
-    const daysEl = document.getElementById('days');
-    if (!data.weeks.some(w => w.days.length)) {
-      statusEl.style.display = 'block';
-      statusEl.textContent = 'No main-channel games found for either week yet — check back closer to kickoff.';
+    const map = new Map();
+    xml.querySelectorAll('expiration').forEach(el => {
+      const title = (el.querySelector('title')?.textContent || '').trim();
+      const expired = (el.querySelector('expired')?.textContent || '').trim().toLowerCase() === 'true';
+      if (title) map.set(title, expired);
+    });
+    return map;
+  } catch (e) {
+    console.error('Failed to load expired.xml', e);
+    return new Map();
+  }
+}
+
+async function loadDeals() {
+  // Cache-bust both the browser cache and any CDN/proxy cache (e.g. GitHub
+  // Pages) by putting a unique query string on every request.
+  const bustUrl = `${DEALS_URL}?v=${Date.now()}`;
+  const [res, expiredMap] = await Promise.all([
+    fetch(bustUrl, { cache: 'no-store' }),
+    loadExpiredMap(),
+  ]);
+  const text = await res.text();
+  const xml = new DOMParser().parseFromString(text, 'application/xml');
+
+  const parseErr = xml.querySelector('parsererror');
+  if (parseErr) {
+    console.error('Failed to parse deals.xml', parseErr.textContent);
+    return [];
+  }
+
+  lastGeneratedIso = xml.documentElement.getAttribute('generated');
+  updateLastUpdatedLabel();
+
+  return Array.from(xml.querySelectorAll('deal')).map(el => {
+    const get = tag => (el.querySelector(tag)?.textContent || '').trim();
+    const rating = parseInt(get('rating'), 10);
+    const title = get('title');
+    return {
+      title,
+      link: get('link'),
+      thumbnail: get('thumbnail'),
+      description: get('description'),
+      rating: Number.isFinite(rating) ? rating : 0,
+      pubDateIso: get('pubDateIso'),
+      expired: expiredMap.get(title) === true,
+    };
+  }).filter(d => d.link && d.pubDateIso);
+}
+
+function heatClass(rating) {
+  if (rating >= 50) return 'hot';
+  if (rating >= 20) return 'warm';
+  return 'cool';
+}
+
+function heatColor(rating) {
+  if (rating >= 50) return 'var(--hot)';
+  if (rating >= 20) return 'var(--warm)';
+  return 'var(--cool)';
+}
+
+function relativeTime(iso) {
+  const then = new Date(iso).getTime();
+  const diffMin = Math.max(0, Math.round((Date.now() - then) / 60000));
+  if (diffMin < 1) return 'just now';
+  if (diffMin < 60) return `${diffMin}m ago`;
+  const diffHr = Math.floor(diffMin / 60);
+  if (diffHr < 24) return `${diffHr}h ${diffMin % 60}m ago`;
+  const diffDay = Math.floor(diffHr / 24);
+  return `${diffDay}d ${diffHr % 24}h ago`;
+}
+
+function updateLastUpdatedLabel() {
+  const el = document.getElementById('lastUpdated');
+  if (!lastGeneratedIso) {
+    el.textContent = 'Last updated: unknown';
+    return;
+  }
+  el.textContent = `Last updated: ${relativeTime(lastGeneratedIso)}`;
+}
+
+function cardHtml(d, opts = {}) {
+  const pct = Math.min(100, Math.max(6, (d.rating / 250) * 100));
+  const hClass = heatClass(d.rating);
+  const hColor = heatColor(d.rating);
+  const isFav = favorites.has(d.link);
+  // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
+  // this.parentElement -- replacing the parent would also wipe out the
+  // sibling .rating-pill sitting next to the image.
+  const thumbHtml = d.thumbnail
+    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onload="this.parentElement.style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
+    : `<div class="thumb-fallback">No Image</div>`;
+
+  return `
+    <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <div class="thumb-wrap">
+        ${thumbHtml}
+        <label class="fav-toggle" title="Favorite" onclick="event.stopPropagation();">
+          <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+          <span class="fav-star">★</span>
+        </label>
+        ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
+        <div class="rating-pill">▲ ${d.rating}</div>
+      </div>
+      <div class="body">
+        <div class="heat-row">
+          <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
+          <span class="heat-count">${d.rating} thumbs</span>
+        </div>
+        <p class="title">${d.title}</p>
+        <div class="meta">
+          <span>${relativeTime(d.pubDateIso)}${opts.archived ? ' · <span class="archived-tag">saved</span>' : ''}</span>
+          <span class="go">View deal ↗</span>
+        </div>
+      </div>
+    </a>
+
+  `;
+}
+
+function domainOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+function rowHtml(d, opts = {}) {
+  const isFav = favorites.has(d.link);
+  const thumbHtml = d.thumbnail
+    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;row-thumb-fallback&quot;>No Img</div>'">`
+    : `<div class="row-thumb-fallback">No Img</div>`;
+
+  return `
+    <a class="row-item${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
+      <div class="row-thumb-wrap">${thumbHtml}</div>
+      <span class="row-rating">▲ ${d.rating}</span>
+      <span class="row-title">${d.title}</span>
+      <span class="row-desc">${d.description ? d.description : '—'}</span>
+      <span class="row-url">${domainOf(d.link)}</span>
+      <span class="row-date">${relativeTime(d.pubDateIso)}${opts.archived ? ' · saved' : ''}</span>
+      <span class="row-expired ${d.expired ? 'yes' : 'no'}">${d.expired ? 'Expired' : 'Live'}</span>
+      <label class="row-fav-toggle" title="Favorite" onclick="event.stopPropagation();" style="position:absolute; left:-6px; top:-6px;">
+        <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
+        <span class="fav-star">★</span>
+      </label>
+    </a>
+  `;
+}
+
+function rowsHeaderHtml() {
+  return `
+    <div class="rows-header-row">
+      <span></span>
+      <span>Rating</span>
+      <span>Title</span>
+      <span>Description</span>
+      <span>URL</span>
+      <span>Pub Date</span>
+      <span>Expired</span>
+    </div>
+  `;
+}
+
+function rowsTableHtml(deals, opts = {}) {
+  return `
+    <div class="rows-wrap">
+      <div class="rows-table">
+        ${rowsHeaderHtml()}
+        ${deals.map(d => rowHtml(d, opts)).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function favRowsSectionHtml(favEntries) {
+  return `
+    <div class="rows-fav-section">
+      <div class="fav-box-header">
+        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
+        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
+      </div>
+      <div class="rows-wrap">
+        <div class="rows-table">
+          ${rowsHeaderHtml()}
+          ${favEntries.map(f => rowHtml(f.deal, { archived: f.archived })).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function favBoxHtml(favEntries) {
+  // Box grows one column-track wider per favorite (capped at 3) so a single
+  // favorite doesn't reserve a big empty area -- extra favorites beyond that
+  // just wrap onto additional rows inside the box, left to right.
+  const span = Math.min(favEntries.length, 3);
+
+  return `
+    <div class="fav-box" style="grid-column: span ${span};">
+      <div class="fav-box-header">
+        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
+        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
+      </div>
+      <div class="fav-box-items">
+        ${favEntries.map(f => cardHtml(f.deal, { archived: f.archived })).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function render() {
+  const cutoff = Date.now() - activeHours * 60 * 60 * 1000;
+  let visible = allDeals.filter(d => new Date(d.pubDateIso).getTime() >= cutoff);
+
+  visible.sort((a, b) => {
+    if (activeSort === 'rating') return b.rating - a.rating;
+    return new Date(b.pubDateIso) - new Date(a.pubDateIso);
+  });
+
+  const grid = document.getElementById('grid');
+  const count = document.getElementById('count');
+  count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
+
+  const favEntries = getFavoriteDeals();
+
+  grid.classList.toggle('rows-mode', activeLayout === 'rows');
+
+  if (activeLayout === 'rows') {
+    grid.classList.remove('grid');
+    const favSection = favEntries.length > 0 ? favRowsSectionHtml(favEntries) : '';
+    if (visible.length === 0) {
+      grid.innerHTML = favSection + `<div class="empty">No deals in this window yet. The feed updates every 15 minutes.</div>`;
       return;
     }
-    const renderBoard = () => { daysEl.innerHTML = data.weeks.map(renderWeek).join(''); };
-    renderBoard();
-    attachPickHandlers(daysEl, renderBoard);
-    attachGeminiHandlers(daysEl);
-  } catch (err) {
-    statusEl.style.display = 'block';
-    statusEl.textContent = `Couldn't load data/dashboard.json (${err.message}). Run scripts/build_dashboard.py first.`;
+    grid.innerHTML = favSection + rowsTableHtml(visible);
+    return;
   }
+
+  grid.classList.add('grid');
+  const favBox = favEntries.length > 0 ? favBoxHtml(favEntries) : '';
+
+  if (visible.length === 0) {
+    grid.innerHTML = favBox + `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
+    return;
+  }
+
+  grid.innerHTML = favBox + visible.map(cardHtml).join('');
 }
 
-initViewToggle();
-init();
+function setupControls() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    if (parseInt(btn.dataset.hours, 10) === activeHours) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      activeHours = parseInt(btn.dataset.hours, 10);
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  document.querySelectorAll('.layout-btn').forEach(btn => {
+    if (btn.dataset.layout === activeLayout) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      activeLayout = btn.dataset.layout;
+      document.querySelectorAll('.layout-btn').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    if (btn.dataset.sort === activeSort) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      activeSort = btn.dataset.sort;
+      document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b === btn));
+      render();
+    });
+  });
+
+  const refreshBtn = document.getElementById('refreshBtn');
+  refreshBtn.addEventListener('click', async () => {
+    refreshBtn.disabled = true;
+    refreshBtn.textContent = 'Refreshing…';
+    allDeals = await loadDeals();
+    render();
+    refreshBtn.disabled = false;
+    refreshBtn.textContent = 'Refresh';
+  });
+}
+
+(async function init() {
+  setupControls();
+  allDeals = await loadDeals();
+  render();
+
+  // Pick up new commits from the workflow without a manual reload.
+  setInterval(async () => {
+    allDeals = await loadDeals();
+    render();
+  }, 5 * 60 * 1000);
+
+  // Keep the "Last updated: Xm ago" label ticking even between fetches.
+  setInterval(updateLastUpdatedLabel, 30 * 1000);
+})();
 </script>
+
 </body>
 </html>
