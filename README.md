@@ -32,7 +32,7 @@ group so one never blocks the other:
 | Workflow | Trigger | Behavior |
 |---|---|---|
 | `.github/workflows/pull-deals.yml` | `repository_dispatch` (e.g. every ~15 min externally) or manual | Runs `pull_slickdeals.py`; cancels an in-progress run if a newer one starts, since each run is fast and cheap |
-| `.github/workflows/pull-expiration.yml` | `repository_dispatch` or manual | Runs `pull_slickexpiration.py`; queues rather than cancels, since a full per-deal expiration sweep can take a while |
+| `.github/workflows/pull-expiration.yml` | `repository_dispatch` or manual | Runs `pull_slickexpiration.py`; queues rather than cancels (a full sweep fetches every unexpired deal's page concurrently, in a couple of minutes) |
 
 Both commit their output file back to the repo, rebasing onto the other's
 push if needed to avoid non-fast-forward rejections.

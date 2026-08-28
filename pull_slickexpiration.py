@@ -6,7 +6,11 @@ result to expired.xml, keyed by <title>. This is intentionally split out
 from pull_slickdeals.py: this script visits every deal's own page (one
 request per unexpired deal), which is much slower and heavier than the
 single feed request pull_slickdeals.py makes, so it runs on its own
-schedule and never blocks new deals from showing up quickly.
+schedule and never blocks new deals from showing up quickly. Those page
+fetches run concurrently (see MAX_WORKERS below) so a full sweep finishes
+in a couple of minutes rather than the ~20 minutes a sequential sweep took
+over ~350 deals -- comfortably inside the external 15-minute trigger
+cadence instead of running long enough for runs to back up in the queue.
 
 While it's already on the deal's own page for the expiration check, it
 also scrapes the live vote count (Slickdeals' `dealScore` meta tag) and
@@ -36,6 +40,7 @@ Run standalone:
 import re
 import sys
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -44,6 +49,14 @@ import requests
 DEALS_PATH = Path(__file__).resolve().parent / "deals.xml"
 EXPIRED_PATH = Path(__file__).resolve().parent / "expired.xml"
 PAGE_REQUEST_TIMEOUT = 15
+# Deal pages are fetched concurrently rather than one at a time -- with
+# ~350 tracked deals, a sequential sweep takes ~20 minutes, longer than the
+# 15-minute external trigger cadence, so runs start backing up in the
+# queue. Fetching MAX_WORKERS pages in parallel (each still I/O-bound, so
+# threads are fine here) brings a full sweep down to a couple of minutes.
+# Keep this moderate -- too high risks looking like abusive traffic to
+# Slickdeals and getting rate-limited/blocked instead.
+MAX_WORKERS = 10
 EXPIRED_TAG_RE = re.compile(r'<meta\b[^>]*\bname=["\']expired["\'][^>]*>', re.IGNORECASE)
 EXPIRED_CONTENT_RE = re.compile(r'content=["\']([^"\']*)["\']')
 DEAL_SCORE_TAG_RE = re.compile(r'<meta\b[^>]*\bname=["\']dealScore["\'][^>]*>', re.IGNORECASE)
@@ -164,47 +177,61 @@ def fetch_deal_page(link):
 def refresh(deals, existing):
     """Check expiration (and current vote count) for every deal title not
     already known-expired, and drop entries whose title has aged out of
-    deals.xml."""
+    deals.xml.
+
+    Page fetches for titles that need checking run concurrently (see
+    MAX_WORKERS) since this is the slow part of the script -- one request
+    per deal, each waiting on Slickdeals' response.
+    """
     checked, newly_expired, dropped = 0, 0, 0
     result = {}
+    to_check = []
 
-    for title in deals:
+    for title, link in deals.items():
         entry = existing.get(title)
         if entry and entry.get("expired") == "true":
             # Already known expired -- deals don't un-expire, skip the
             # fetch. Its vote count stays frozen at whatever we last saw.
             result[title] = entry
             continue
+        to_check.append((title, link))
 
-        link = deals.get(title, "")
-        page = fetch_deal_page(link)
-        checked += 1
-
-        if page is None:
-            # Fetch failed -- carry forward whatever we had (or blanks if
-            # this is the first time we've seen this title) rather than
-            # guessing.
-            result[title] = entry or {"title": title, "expired": "false", "rating": ""}
-            continue
-
-        is_expired = page["expired"]
-        if is_expired:
-            newly_expired += 1
-
-        # Fall back to the previous rating if this page fetch didn't turn
-        # up a dealScore meta tag, so a transient parse miss doesn't blank
-        # out a vote count we already had.
-        rating = page["rating"]
-        if rating is None:
-            rating = entry.get("rating", "") if entry else ""
-        else:
-            rating = str(rating)
-
-        result[title] = {
-            "title": title,
-            "expired": "true" if is_expired else "false",
-            "rating": rating,
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        future_to_title = {
+            executor.submit(fetch_deal_page, link): title for title, link in to_check
         }
+        for future in as_completed(future_to_title):
+            title = future_to_title[future]
+            entry = existing.get(title)
+            page = future.result()
+            checked += 1
+
+            if page is None:
+                # Fetch failed, or the expired state couldn't be determined
+                # -- carry forward whatever we had (or blanks if this is
+                # the first time we've seen this title) rather than
+                # guessing.
+                result[title] = entry or {"title": title, "expired": "false", "rating": ""}
+                continue
+
+            is_expired = page["expired"]
+            if is_expired:
+                newly_expired += 1
+
+            # Fall back to the previous rating if this page fetch didn't
+            # turn up a dealScore meta tag, so a transient parse miss
+            # doesn't blank out a vote count we already had.
+            rating = page["rating"]
+            if rating is None:
+                rating = entry.get("rating", "") if entry else ""
+            else:
+                rating = str(rating)
+
+            result[title] = {
+                "title": title,
+                "expired": "true" if is_expired else "false",
+                "rating": rating,
+            }
 
     dropped = len(existing) - len(set(existing) & set(deals))
 
