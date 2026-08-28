@@ -14,8 +14,12 @@ front-end.
   not check expiration.
 - **`pull_slickexpiration.py`** checks each unexpired deal's own page for
   expiration and writes results to `expired.xml`, matched to `deals.xml`
-  by `<title>`. Splitting expiration out keeps the fast RSS pull
-  (one request) decoupled from the slower per-deal page-fetch check.
+  by `<title>`. While it's already on the page, it also scrapes the live
+  vote count (`dealScore`) and stores it in `<rating>`, so the front-end
+  can show an up-to-date count instead of the one-time snapshot captured
+  when the deal was first pulled from the RSS feed. Splitting expiration
+  out keeps the fast RSS pull (one request) decoupled from the slower
+  per-deal page-fetch check.
 - **`index.html`** is the front-end: sortable/filterable deal cards with
   heat-meter bars, thumbnails, rating pill badges, and expired banners.
   A favorites system stores full deal snapshots in `localStorage`.

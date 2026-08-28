@@ -8,14 +8,22 @@ request per unexpired deal), which is much slower and heavier than the
 single feed request pull_slickdeals.py makes, so it runs on its own
 schedule and never blocks new deals from showing up quickly.
 
+While it's already on the deal's own page for the expiration check, it
+also scrapes the live vote count (Slickdeals' `dealScore` meta tag) and
+stores it alongside the expiration flag. deals.xml only ever has the vote
+count as of the moment the deal was first pulled from the RSS feed, so
+this is the one place the tracker gets an updated count.
+
 Behavior:
   - Reads deals.xml to get the current (title -> link) set. deals.xml is
     read-only here; this script never writes to it.
   - Reads any existing expired.xml so already-expired deals aren't
     re-checked -- once a deal is marked expired it stays expired (deals
     don't come back from expired), which keeps request volume bounded.
+    Its vote count is left frozen at whatever was last captured too.
   - For every title in deals.xml not already known-expired, fetches the
-    deal's own page and looks for Slickdeals' expired-deal notice.
+    deal's own page, looks for Slickdeals' expired-deal notice, and pulls
+    the current vote count off the page.
   - Entries for titles no longer present in deals.xml (aged out after 48h)
     are dropped from expired.xml so it never grows unbounded.
   - Matching is by <title> rather than guid/link so the front-end can join
@@ -25,6 +33,7 @@ Run standalone:
     python pull_slickexpiration.py
 """
 
+import re
 import sys
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -36,6 +45,8 @@ DEALS_PATH = Path(__file__).resolve().parent / "deals.xml"
 EXPIRED_PATH = Path(__file__).resolve().parent / "expired.xml"
 EXPIRED_PHRASE = "Heads up, this deal has expired."
 PAGE_REQUEST_TIMEOUT = 15
+DEAL_SCORE_TAG_RE = re.compile(r'<meta\b[^>]*\bname=["\']dealScore["\'][^>]*>', re.IGNORECASE)
+DEAL_SCORE_CONTENT_RE = re.compile(r'content=["\'](-?\d+)["\']')
 
 
 def load_deals():
@@ -67,19 +78,41 @@ def load_existing_expired():
     for exp_el in tree.getroot().findall("expiration"):
         title_el = exp_el.find("title")
         expired_el = exp_el.find("expired")
+        rating_el = exp_el.find("rating")
         title = (title_el.text or "").strip() if title_el is not None else ""
         expired = (expired_el.text or "").strip() if expired_el is not None else ""
+        rating = (rating_el.text or "").strip() if rating_el is not None else ""
         if title:
-            existing[title] = {"title": title, "expired": expired}
+            existing[title] = {"title": title, "expired": expired, "rating": rating}
     return existing
 
 
-def check_expired(link):
-    """Visit a deal's own page and look for Slickdeals' expired-deal notice.
+def extract_rating(html):
+    """Pull the current vote count off a deal page's `dealScore` meta tag.
 
-    Returns True/False when the check succeeds, or None if the page couldn't
-    be fetched -- callers should leave the existing expired value untouched
-    in that case rather than guessing.
+    Returns an int, or None if the tag is missing or unparseable -- callers
+    should fall back to the previous known rating in that case rather than
+    guessing.
+    """
+    tag_match = DEAL_SCORE_TAG_RE.search(html)
+    if not tag_match:
+        return None
+    content_match = DEAL_SCORE_CONTENT_RE.search(tag_match.group(0))
+    if not content_match:
+        return None
+    try:
+        return int(content_match.group(1))
+    except ValueError:
+        return None
+
+
+def fetch_deal_page(link):
+    """Visit a deal's own page for its expiration state and current vote
+    count.
+
+    Returns {"expired": bool, "rating": int|None} when the fetch succeeds,
+    or None if the page couldn't be fetched -- callers should leave
+    existing values untouched in that case rather than guessing.
     """
     if not link:
         return None
@@ -92,36 +125,56 @@ def check_expired(link):
         resp.raise_for_status()
     except Exception:
         return None
-    return EXPIRED_PHRASE in resp.text
+    return {
+        "expired": EXPIRED_PHRASE in resp.text,
+        "rating": extract_rating(resp.text),
+    }
 
 
 def refresh(deals, existing):
-    """Check expiration for every deal title not already known-expired, and
-    drop entries whose title has aged out of deals.xml."""
+    """Check expiration (and current vote count) for every deal title not
+    already known-expired, and drop entries whose title has aged out of
+    deals.xml."""
     checked, newly_expired, dropped = 0, 0, 0
     result = {}
 
     for title in deals:
         entry = existing.get(title)
         if entry and entry.get("expired") == "true":
-            # Already known expired -- deals don't un-expire, skip the fetch.
+            # Already known expired -- deals don't un-expire, skip the
+            # fetch. Its vote count stays frozen at whatever we last saw.
             result[title] = entry
             continue
 
         link = deals.get(title, "")
-        is_expired = check_expired(link)
+        page = fetch_deal_page(link)
         checked += 1
 
-        if is_expired is None:
-            # Fetch failed -- carry forward whatever we had (or "false" if
+        if page is None:
+            # Fetch failed -- carry forward whatever we had (or blanks if
             # this is the first time we've seen this title) rather than
             # guessing.
-            result[title] = entry or {"title": title, "expired": "false"}
+            result[title] = entry or {"title": title, "expired": "false", "rating": ""}
             continue
 
+        is_expired = page["expired"]
         if is_expired:
             newly_expired += 1
-        result[title] = {"title": title, "expired": "true" if is_expired else "false"}
+
+        # Fall back to the previous rating if this page fetch didn't turn
+        # up a dealScore meta tag, so a transient parse miss doesn't blank
+        # out a vote count we already had.
+        rating = page["rating"]
+        if rating is None:
+            rating = entry.get("rating", "") if entry else ""
+        else:
+            rating = str(rating)
+
+        result[title] = {
+            "title": title,
+            "expired": "true" if is_expired else "false",
+            "rating": rating,
+        }
 
     dropped = len(existing) - len(set(existing) & set(deals))
 
@@ -134,7 +187,7 @@ def write_xml(expired_dict):
 
     for fields in expired_dict.values():
         exp_el = ET.SubElement(root, "expiration")
-        for tag in ("title", "expired"):
+        for tag in ("title", "expired", "rating"):
             child = ET.SubElement(exp_el, tag)
             child.text = fields.get(tag, "")
 
@@ -156,7 +209,7 @@ def main():
 
     print(
         f"deals.xml has {len(deals)} titles | "
-        f"checked {checked} pages for expiration ({newly_expired} newly expired) | "
+        f"checked {checked} pages for expiration + vote count ({newly_expired} newly expired) | "
         f"dropped {dropped} aged-out titles | "
         f"total stored: {len(final)}"
     )
