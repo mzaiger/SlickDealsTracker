@@ -5,11 +5,14 @@ on:
     types: [trigger-deals-pull]
   workflow_dispatch: {}
 
-# This workflow runs often (every 15 min, triggered externally) and each
-# run is fast/cheap, so if runs start backing up (e.g. a slow feed
-# response) we just cancel the older, now-stale run rather than letting a
-# queue build up. This is its own concurrency group, separate from
-# Expiration, so a busy Slickdeals run never blocks or gets blocked by it.
+# Deals + expiration/vote-count checking run back-to-back in one job on
+# the same 15-min trigger. The expiration sweep fetches every unexpired
+# deal's page concurrently (see MAX_WORKERS in pull_slickexpiration.py)
+# and finishes in a couple of minutes, so it comfortably fits inside a
+# single run -- no need for a second workflow/trigger to keep it separate
+# anymore. cancel-in-progress: true is safe here: if a run ever does take
+# too long and gets cancelled, nothing has been committed yet (the commit
+# step is last), so the next run just starts clean.
 concurrency:
   group: pull-slickdeals
   cancel-in-progress: true
@@ -35,19 +38,18 @@ jobs:
       - name: Pull latest deals
         run: python pull_slickdeals.py
 
+      - name: Check expiration + vote counts
+        run: python pull_slickexpiration.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add deals.xml
-          if git diff --cached --quiet -- deals.xml; then
-            echo "No changes to deals.xml -- skipping commit."
+          git add deals.xml expired.xml
+          if git diff --cached --quiet -- deals.xml expired.xml; then
+            echo "No changes to deals.xml or expired.xml -- skipping commit."
           else
-            git commit -m "Update deals.xml [skip ci]"
-            # Deals and Expiration run in separate concurrency groups, so
-            # they can push around the same time. Rebase onto whatever the
-            # other one just pushed before trying, so this doesn't get
-            # rejected as a non-fast-forward push.
+            git commit -m "Update deals.xml and expired.xml [skip ci]"
             git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)"
             git push
           fi
