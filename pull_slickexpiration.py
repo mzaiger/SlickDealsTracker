@@ -22,8 +22,8 @@ Behavior:
     don't come back from expired), which keeps request volume bounded.
     Its vote count is left frozen at whatever was last captured too.
   - For every title in deals.xml not already known-expired, fetches the
-    deal's own page, looks for Slickdeals' expired-deal notice, and pulls
-    the current vote count off the page.
+    deal's own page and reads Slickdeals' `expired` meta tag, plus the
+    current vote count off the `dealScore` meta tag.
   - Entries for titles no longer present in deals.xml (aged out after 48h)
     are dropped from expired.xml so it never grows unbounded.
   - Matching is by <title> rather than guid/link so the front-end can join
@@ -43,8 +43,9 @@ import requests
 
 DEALS_PATH = Path(__file__).resolve().parent / "deals.xml"
 EXPIRED_PATH = Path(__file__).resolve().parent / "expired.xml"
-EXPIRED_PHRASE = "Heads up, this deal has expired."
 PAGE_REQUEST_TIMEOUT = 15
+EXPIRED_TAG_RE = re.compile(r'<meta\b[^>]*\bname=["\']expired["\'][^>]*>', re.IGNORECASE)
+EXPIRED_CONTENT_RE = re.compile(r'content=["\']([^"\']*)["\']')
 DEAL_SCORE_TAG_RE = re.compile(r'<meta\b[^>]*\bname=["\']dealScore["\'][^>]*>', re.IGNORECASE)
 DEAL_SCORE_CONTENT_RE = re.compile(r'content=["\'](-?\d+)["\']')
 
@@ -87,6 +88,29 @@ def load_existing_expired():
     return existing
 
 
+def extract_expired(html):
+    """Read Slickdeals' own `expired` meta tag off a deal page.
+
+    Slickdeals renders its "this deal has expired" banner client-side with
+    JS, so it's never present in the server HTML `requests` sees -- but the
+    page's <head> already carries the flag as a plain meta tag, same as
+    dealScore. Returns True/False, or None if the tag is missing/unparseable
+    (caller should treat that as "couldn't determine" rather than "false").
+    """
+    tag_match = EXPIRED_TAG_RE.search(html)
+    if not tag_match:
+        return None
+    content_match = EXPIRED_CONTENT_RE.search(tag_match.group(0))
+    if not content_match:
+        return None
+    value = content_match.group(1).strip().lower()
+    if value in ("yes", "true", "1"):
+        return True
+    if value in ("no", "false", "0"):
+        return False
+    return None
+
+
 def extract_rating(html):
     """Pull the current vote count off a deal page's `dealScore` meta tag.
 
@@ -110,9 +134,10 @@ def fetch_deal_page(link):
     """Visit a deal's own page for its expiration state and current vote
     count.
 
-    Returns {"expired": bool, "rating": int|None} when the fetch succeeds,
-    or None if the page couldn't be fetched -- callers should leave
-    existing values untouched in that case rather than guessing.
+    Returns {"expired": bool, "rating": int|None} when the fetch succeeds
+    and the expired meta tag could be read, or None if the page couldn't be
+    fetched or the expired state couldn't be determined -- callers should
+    leave existing values untouched in that case rather than guessing.
     """
     if not link:
         return None
@@ -125,8 +150,13 @@ def fetch_deal_page(link):
         resp.raise_for_status()
     except Exception:
         return None
+
+    is_expired = extract_expired(resp.text)
+    if is_expired is None:
+        return None
+
     return {
-        "expired": EXPIRED_PHRASE in resp.text,
+        "expired": is_expired,
         "rating": extract_rating(resp.text),
     }
 
