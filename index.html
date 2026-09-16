@@ -1,1136 +1,1329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.5">
-<title>Slick Deals Tracker</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Poor Man's Frozen Meal Diet</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg:        #FFFFFF;
-    --panel:     #F2F7FD;
-    --line:      #D9E5F2;
-    --text:      #10233F;
-    --text-dim:  #64798E;
-    --blue:      #1B63E0;
-    --blue-deep: #0C3F94;
-    --cool:      #2FA8B8;
-    --warm:      #F2A93B;
-    --hot:       #E4572E;
-    --radius:    10px;
+  :root{
+    --frost: #EAF3F6;
+    --card: #FFFFFF;
+    --ink: #12232E;
+    --ink-soft: #4C6270;
+    --line: #D3E3E9;
+    --blue: #1E5F8C;
+    --blue-deep: #123B57;
+    --ice: #8FD9E8;
+    --good: #2C8C5E;
+    --warn: #C1443C;
   }
 
-  * { box-sizing: border-box; }
+  *{ box-sizing:border-box; }
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  body {
-    min-height: 100vh;
+  body{
+    margin:0;
+    background:var(--frost);
     background-image:
-      radial-gradient(circle at 12% 0%, rgba(27,99,224,0.07), transparent 45%),
-      radial-gradient(circle at 88% 6%, rgba(27,99,224,0.05), transparent 40%);
-  }
-
-  header {
-    padding: 40px 24px 20px;
-    max-width: 1700px;
-    margin: 0 auto;
-  }
-
-  .eyebrow-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 10px;
-  }
-
-  .eyebrow {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--blue);
-    margin: 0;
-  }
-
-  .updated-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: var(--text-dim);
-  }
-
-  .refresh-btn {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    color: var(--blue);
-    border-radius: 6px;
-    padding: 5px 10px;
-    font-family: inherit;
-    font-size: 11.5px;
-    cursor: pointer;
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-
-  .refresh-btn:hover { border-color: var(--blue); background: #E9F1FD; }
-  .refresh-btn:disabled { opacity: 0.5; cursor: default; }
-
-  h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    font-size: clamp(32px, 6vw, 52px);
-    line-height: 1;
-    margin: 0 0 8px;
-    color: var(--text);
-  }
-
-  .sub {
-    color: var(--text-dim);
-    font-size: 14px;
-    margin: 0;
-  }
-
-  main {
-    max-width: 1700px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-  }
-
-  .controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin: 8px 0 28px;
-    position: sticky;
-    top: 0;
-    padding: 16px 0;
-    background: linear-gradient(var(--bg) 78%, transparent);
-    z-index: 10;
-  }
-
-  .tabs {
-    display: flex;
-    gap: 6px;
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 4px;
-  }
-
-  .tab-btn {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: var(--text-dim);
-    background: transparent;
-    border: none;
-    border-radius: 999px;
-    padding: 9px 18px;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-
-  .tab-btn:hover { color: var(--text); }
-
-  .tab-btn.active {
-    background: var(--blue);
-    color: #FFFFFF;
-  }
-
-  .sort {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: var(--text-dim);
-  }
-
-  .sort-btn {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    color: var(--text-dim);
-    border-radius: 6px;
-    padding: 7px 12px;
-    font-family: inherit;
-    font-size: 12px;
-    cursor: pointer;
-    transition: border-color 0.15s ease, color 0.15s ease;
-  }
-
-  .sort-btn.active {
-    border-color: var(--blue);
-    color: var(--blue);
-  }
-
-  .layout {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: var(--text-dim);
-  }
-
-  .layout-btn {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    color: var(--text-dim);
-    border-radius: 6px;
-    padding: 7px 12px;
-    font-family: inherit;
-    font-size: 12px;
-    cursor: pointer;
-    transition: border-color 0.15s ease, color 0.15s ease;
-  }
-
-  .layout-btn.active {
-    border-color: var(--blue);
-    color: var(--blue);
-  }
-
-  .count {
-    font-family: 'IBM Plex Mono', monospace;
-    color: var(--text-dim);
-    font-size: 12px;
-    margin: -16px 0 20px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 16px;
-  }
-
-  .card {
-    display: block;
-    background: #FFFFFF;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 1px 2px rgba(16,35,63,0.04);
-    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .card:hover {
-    border-color: var(--blue);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(27,99,224,0.12);
-  }
-
-  .thumb-wrap {
-    position: relative;
-    aspect-ratio: 16 / 10;
-    background: var(--panel);
-    overflow: hidden;
-  }
-
-  .thumb-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  .thumb-fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-
-  .rating-pill {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(2px);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .expired-badge {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(16, 35, 63, 0.45);
-    z-index: 2;
-  }
-
-  .expired-badge span {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: #FFFFFF;
-    background: var(--hot);
-    padding: 6px 18px;
-    border-radius: 6px;
-    transform: rotate(-8deg);
-    box-shadow: 0 4px 14px rgba(228, 87, 46, 0.5);
-  }
-
-  .card.is-expired .thumb-wrap img {
-    filter: grayscale(60%);
-    opacity: 0.6;
-  }
-
-  .body { padding: 14px 16px 16px; }
-
-  .heat-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-
-  .heat-meter {
-    flex: 1;
-    height: 10px;
-    border-radius: 5px;
-    background: var(--line);
-    overflow: hidden;
-  }
-
-  .heat-count {
-    flex-shrink: 0;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-dim);
-    white-space: nowrap;
-  }
-
-  .heat-fill {
-    height: 100%;
-    border-radius: 5px;
-  }
-
-  .heat-fill.hot { box-shadow: 0 0 8px var(--hot); animation: pulse 1.8s ease-in-out infinite; }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.6; }
-  }
-
-  .title {
-    font-size: 14.5px;
-    line-height: 1.35;
-    font-weight: 500;
-    margin: 0 0 10px;
-    color: var(--text);
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11.5px;
-    color: var(--text-dim);
-  }
-
-  .meta .go {
-    color: var(--blue);
-  }
-
-  .archived-tag {
-    color: var(--text-dim);
-    font-style: italic;
-  }
-
-  .empty {
-    text-align: center;
-    padding: 80px 20px;
-    color: var(--text-dim);
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-  }
-
-  /* Favorite toggle (checkbox) on each card */
-  .fav-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(2px);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    cursor: pointer;
-  }
-
-  .fav-toggle input {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .fav-toggle .fav-star {
-    font-size: 23px;
-    line-height: 1;
-    color: var(--text-dim);
-    transition: color 0.15s ease, transform 0.15s ease;
-    pointer-events: none;
-  }
-
-  .fav-toggle input:checked ~ .fav-star {
-    color: var(--warm);
-    transform: scale(1.1);
-  }
-
-  /* Favorites box — sits as the first item inside the main grid */
-  .fav-box {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 12px 14px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .fav-box-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .fav-box-title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: var(--text);
-  }
-
-  .fav-box-count {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
-    color: var(--text-dim);
-    margin-left: 4px;
-  }
-
-  .clear-btn {
-    background: #FFFFFF;
-    border: 1px solid var(--line);
-    color: var(--hot);
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11.5px;
-    cursor: pointer;
-    transition: border-color 0.15s ease, background 0.15s ease;
-  }
-
-  .clear-btn:hover { border-color: var(--hot); background: #FDEEE9; }
-
-  /* Same card component as the main grid, just a slightly narrower min-width
-     (~90%) so multiple fit side by side inside the box before wrapping. */
-  .fav-box-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(234px, 1fr));
-    gap: 14px;
-  }
-
-  @media (max-width: 700px) {
-    .fav-box { grid-column: 1 / -1 !important; }
-  }
-
-  /* ---------- Rows layout ---------- */
-  .rows-fav-section {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 12px 14px 14px;
-    margin-bottom: 16px;
-  }
-
-  .rows-wrap { overflow-x: auto; }
-
-  .rows-table {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    min-width: 760px;
-  }
-
-  .rows-header-row,
-  .row-item {
-    display: grid;
-    grid-template-columns: 52px 64px minmax(160px, 1.3fr) minmax(200px, 2fr) 110px 110px 90px;
-    gap: 14px;
-    align-items: center;
-  }
-
-  .rows-header-row {
-    padding: 6px 14px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-  }
-
-  .row-item {
-    background: #FFFFFF;
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 8px 14px;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .row-item:hover {
-    border-color: var(--blue);
-    box-shadow: 0 4px 12px rgba(27,99,224,0.10);
-  }
-
-  .row-item.is-expired { opacity: 0.6; }
-
-  .row-thumb-wrap {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: var(--panel);
-    flex-shrink: 0;
-  }
-
-  .row-thumb-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .row-thumb-fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    text-align: center;
-  }
-
-  .row-fav-toggle {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-
-  .row-fav-toggle input {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-
-  .row-fav-toggle .fav-star {
-    font-size: 16px;
-    line-height: 1;
-    color: var(--line);
-    transition: color 0.15s ease, transform 0.15s ease;
-    pointer-events: none;
-  }
-
-  .row-fav-toggle input:checked ~ .fav-star {
-    color: var(--warm);
-    transform: scale(1.1);
-  }
-
-  .row-rating {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    font-weight: 500;
-  }
-
-  .row-title {
-    font-size: 13.5px;
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--text);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .row-desc {
-    font-size: 12px;
-    line-height: 1.35;
-    color: var(--text-dim);
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .row-url {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--blue);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .row-date {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--text-dim);
-    white-space: nowrap;
-  }
-
-  .row-expired {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    font-weight: 500;
-    text-align: center;
-    padding: 3px 8px;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
-
-  .row-expired.yes {
-    color: var(--hot);
-    background: #FDEEE9;
-  }
-
-  .row-expired.no {
-    color: var(--cool);
-    background: #EAF7F8;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .heat-fill.hot { animation: none; }
-    .card { transition: none; }
+      radial-gradient(circle at 10% 0%, rgba(143,217,232,0.35), transparent 45%),
+      radial-gradient(circle at 90% 15%, rgba(30,95,140,0.10), transparent 40%);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    padding:0 0 80px;
+  }
+
+  header{
+    max-width:1080px;
+    margin:0 auto;
+    padding:56px 24px 16px;
+  }
+
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.08em;
+    color:var(--blue);
+  }
+
+  h1{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:clamp(40px, 7vw, 64px);
+    letter-spacing:0.01em;
+    margin:6px 0 8px;
+    color:var(--blue-deep);
+    line-height:0.95;
+  }
+
+  .sub{
+    color:var(--ink-soft);
+    max-width:560px;
+    font-size:15px;
+    line-height:1.5;
+    margin:0 0 28px;
+  }
+
+  .controls-wrap{
+    display:flex;
+    justify-content:flex-start;
+  }
+
+  .controls{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    gap:20px;
+    max-width:600px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 24px;
+  }
+
+  .controls .field,
+  .controls .tolerance,
+  .controls button,
+  .controls .row-break{
+    order:var(--o-d);
+  }
+
+  .row-break{
+    flex-basis:100%;
+    width:0;
+    height:0;
+    margin:0;
+    padding:0;
+  }
+
+  .row-break.mobile-only{ display:none; }
+
+  @media (max-width:640px){
+    .controls{
+      max-width:365px;
+      padding:20px 16px;
+    }
+    .controls .field,
+    .controls .tolerance,
+    .controls button,
+    .controls .row-break{
+      order:var(--o-m);
+    }
+    .row-break.mobile-only{ display:block; }
+  }
+
+  .field label{
+    display:block;
+    font-size:11px;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+
+  .field input{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:20px;
+    font-weight:600;
+    color:var(--blue-deep);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:8px 12px;
+    width:120px;
+    background:var(--frost);
+  }
+
+  .field select{
+    font-family:'Inter', sans-serif;
+    font-size:12px;
+    font-weight:600;
+    color:var(--blue-deep);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:9px 10px;
+    width:210px;
+    background:var(--frost);
+    cursor:pointer;
+  }
+
+  .field select:focus{
+    outline:2px solid var(--blue);
+    outline-offset:1px;
+  }
+
+  .field input:focus{
+    outline:2px solid var(--blue);
+    outline-offset:1px;
+  }
+
+  .tolerance{
+    font-size:12px;
+    color:var(--ink-soft);
+    align-self:center;
+    padding-bottom:10px;
+    width:120px;
+  }
+
+  button#generate{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    background:var(--blue);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:13px 14px;
+    width:140px;
+    text-align:center;
+    cursor:pointer;
+    transition:background 0.15s ease;
+  }
+
+  button#generate:hover{ background:var(--blue-deep); }
+  button#generate:focus-visible{ outline:2px solid var(--blue-deep); outline-offset:2px; }
+
+  .pool-status{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  .calc-note{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:14px;
+    line-height:1.5;
+  }
+
+  .budget-summary{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    font-weight:600;
+    margin-top:10px;
+    padding:10px 14px;
+    border-radius:6px;
+    display:inline-block;
+  }
+
+  .budget-summary.in-range{
+    color:var(--good);
+    background:rgba(44,140,94,0.1);
+  }
+
+  .budget-summary.off-range{
+    color:var(--warn);
+    background:rgba(193,68,60,0.1);
+  }
+
+  .week-totals{
+    display:inline-flex;
+    flex-wrap:wrap;
+    gap:32px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:18px 24px;
+    margin-top:16px;
+    margin-bottom:8px;
+  }
+
+  .week-totals .total-item .label{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+  }
+
+  .week-totals .total-item .value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:24px;
+    font-weight:700;
+    color:var(--blue-deep);
+  }
+
+  main{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  #week{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:18px;
+    margin-top:14px;
+  }
+
+  .day-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px 18px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .day-name{
+    font-family:'Bebas Neue', sans-serif;
+    font-size:26px;
+    color:var(--blue-deep);
+    letter-spacing:0.02em;
+  }
+
+  .meal-row{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:12px;
+    padding:10px 0;
+    border-top:1px solid var(--line);
+  }
+
+  .meal-row:first-of-type{ border-top:none; }
+
+  .meal-info{ flex:1; min-width:0; }
+
+  .meal-slot{
+    font-size:11px;
+    color:var(--blue);
+    font-weight:600;
+    text-transform:lowercase;
+  }
+
+  .meal-name{
+    font-size:14px;
+    color:var(--ink);
+    line-height:1.35;
+    margin-top:2px;
+  }
+
+  .meal-serving{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:3px;
+  }
+
+  .meal-link{
+    font-size:11px;
+    color:var(--blue);
+    text-decoration:none;
+    margin-left:6px;
+    white-space:nowrap;
+  }
+
+  .meal-link:hover{ text-decoration:underline; }
+
+  .meal-cal{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:1px;
+  }
+
+  .meal-thumb-link{ flex-shrink:0; display:block; }
+
+  .meal-thumb{
+    width:90px;
+    height:auto;
+    max-height:150px;
+    border-radius:8px;
+    object-fit:contain;
+    display:block;
+    background:var(--card);
+  }
+
+  .meal-thumb-empty{
+    width:90px;
+    height:90px;
+    background:linear-gradient(135deg, var(--frost), var(--ice));
+    opacity:0.6;
+  }
+
+  .meal-view-link{
+    margin-top:3px;
+    white-space:nowrap;
+  }
+
+  .meal-view-link .meal-link{
+    margin-left:0;
+  }
+
+  .day-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+  }
+
+  .day-header-totals{
+    text-align:right;
+    flex-shrink:0;
+  }
+
+  .day-header-totals .value{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:16px;
+    font-weight:700;
+  }
+
+  .day-header-totals .price{
+    font-size:12px;
+    color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace;
+    margin-top:2px;
+  }
+
+  .value.in-range{ color:var(--good); }
+  .value.off-range{ color:var(--warn); }
+
+  .flag{
+    font-size:11px;
+    color:var(--warn);
+    margin-top:-6px;
+  }
+
+  .empty-state{
+    border:1px dashed var(--line);
+    border-radius:10px;
+    padding:40px 24px;
+    text-align:center;
+    color:var(--ink-soft);
+    margin-top:28px;
+  }
+
+  .tab-bar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+  }
+
+  .tab-btn{
+    font-family:'Inter', sans-serif;
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink-soft);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px 8px 0 0;
+    padding:10px 16px;
+    cursor:pointer;
+  }
+
+  .tab-btn.active{
+    color:var(--blue-deep);
+    background:var(--frost);
+    border-bottom:2px solid var(--blue);
+  }
+
+  .tab-btn:hover:not(.active){ color:var(--blue); }
+
+  .tab-clear{
+    color:var(--warn);
+    border-color:var(--warn);
+    background:var(--card);
+  }
+
+  .tab-clear:hover{ background:rgba(193,68,60,0.08); }
+
+  .regen-btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    color:var(--blue);
+    background:var(--frost);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:3px 7px;
+    margin-top:5px;
+    cursor:pointer;
+    text-transform:uppercase;
+  }
+
+  .regen-btn:hover{ background:var(--ice); border-color:var(--blue); }
+
+  .save-bar{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:24px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+  }
+
+  #save-bar-top{
+    margin-bottom:20px;
+  }
+
+  button#save-week,
+  button#save-week-top{
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:14px;
+    background:var(--blue-deep);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    padding:11px 18px;
+    cursor:pointer;
+  }
+
+  button#save-week:hover,
+  button#save-week-top:hover{ background:var(--blue); }
+  button#save-week:disabled,
+  button#save-week-top:disabled{ background:var(--line); color:var(--ink-soft); cursor:default; }
+
+  .save-note{
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
+  .save-confirmation{
+    font-size:13px;
+    font-weight:600;
+    color:var(--good);
+    background:rgba(44,140,94,0.1);
+    border-radius:6px;
+    padding:10px 14px;
+    margin-top:16px;
+    margin-bottom:16px;
+    display:block;
+    width:fit-content;
+  }
+
+  .tab-delete{
+    margin-left:8px;
+    color:var(--warn);
+    font-weight:700;
+    cursor:pointer;
+  }
+
+  .empty-state code{
+    font-family:'IBM Plex Mono', monospace;
+    background:var(--frost);
+    padding:2px 6px;
+    border-radius:4px;
   }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="eyebrow-row">
-    <p class="eyebrow">Slickdeals · Frontpage · Auto-refreshed every 15 min</p>
-    <div class="updated-row">
-      <span id="lastUpdated">Last updated: —</span>
-      <button class="refresh-btn" id="refreshBtn" type="button">Refresh</button>
+  <div class="kicker">FROZEN &middot; WEEKLY</div>
+  <h1>Poor Man's Frozen Meal Diet</h1>
+  <p class="sub">Seven days of meals pulled from the frozen aisle — 3 to 5 meals a day depending on your calorie target, each day landing within 250 calories of goal.</p>
+
+  <div class="controls-wrap">
+  <div class="controls">
+    <div class="field" style="--o-d:1; --o-m:1;">
+      <label for="weight">Weight (lbs)</label>
+      <input type="number" id="weight" value="180" min="50" max="600" step="1" />
     </div>
+    <div class="field" style="--o-d:2; --o-m:2;">
+      <label for="age">Age</label>
+      <input type="number" id="age" value="30" min="13" max="100" step="1" />
+    </div>
+    <div class="row-break mobile-only" style="--o-m:3;"></div>
+    <div class="field" style="--o-d:3; --o-m:4;">
+      <label for="activity-level">Activity level</label>
+      <select id="activity-level">
+        <option value="13">Sedentary (desk job, little exercise)</option>
+        <option value="14">Lightly active (light exercise 1-3x/wk)</option>
+        <option value="15" selected>Moderately active (exercise 3-5x/wk)</option>
+        <option value="17">Very active (hard exercise 6-7x/wk)</option>
+      </select>
+    </div>
+    <div class="row-break" style="--o-d:4; --o-m:5;"></div>
+    <div class="field" style="--o-d:5; --o-m:6;">
+      <label for="calories-burned">Calories burned / day</label>
+      <input type="number" id="calories-burned" value="2700" min="800" max="6000" step="10" />
+    </div>
+    <div class="field" style="--o-d:6; --o-m:7;">
+      <label for="lose-per-week">Lose / week (lbs)</label>
+      <input type="number" id="lose-per-week" value="1" min="0" max="5" step="0.25" />
+    </div>
+    <div class="row-break mobile-only" style="--o-m:8;"></div>
+    <div class="field" style="--o-d:7; --o-m:9;">
+      <label for="calorie-target">Daily calorie target</label>
+      <input type="number" id="calorie-target" value="1500" min="800" max="4000" step="50" />
+    </div>
+    <div class="tolerance" style="--o-d:8; --o-m:10;">&plusmn; 250 cal window</div>
+    <div class="row-break" style="--o-d:9; --o-m:11;"></div>
+    <div class="field" style="--o-d:10; --o-m:12;">
+      <label for="max-per-meal">Max per meal ($)</label>
+      <input type="number" id="max-per-meal" value="5.00" min="0" max="50" step="0.25" />
+    </div>
+    <button id="generate" style="--o-d:11; --o-m:13;">Generate week</button>
   </div>
-  <h1>Slick Deals Tracker</h1>
-  <p class="sub">Deal heat = current thumbs-up score. Click any card to open the Slickdeals post.</p>
+  </div>
+  <div class="pool-status" id="pool-status">Loading meal pool&hellip;</div>
+  <div class="budget-summary" id="budget-summary" style="display:none;"></div>
+  <div class="calc-note">* Calorie and price figures come from product/retailer data and may be out of date or inaccurate — always double-check at the store.</div>
 </header>
 
 <main>
-  <div class="controls">
-    <div class="tabs" id="tabs">
-      <button class="tab-btn" data-hours="2">2 Hours</button>
-      <button class="tab-btn" data-hours="5">5 Hours</button>
-      <button class="tab-btn" data-hours="24">24 Hours</button>
-      <button class="tab-btn" data-hours="48">48 Hours</button>
+  <div class="tab-bar" id="tab-bar"></div>
+  <div class="save-confirmation" id="save-confirmation" style="display:none;"></div>
+  <div class="save-bar" id="save-bar-top" style="display:none;">
+    <button id="save-week-top">Save this week</button>
+  </div>
+  <div class="week-totals" id="week-totals" style="display:none;">
+    <div class="total-item">
+      <div class="label">Total calories / week</div>
+      <div class="value" id="total-calories">0</div>
     </div>
-    <div class="layout" id="layout">
-      <span>Layout</span>
-      <button class="layout-btn" data-layout="tile">Tiles</button>
-      <button class="layout-btn" data-layout="rows">Rows</button>
-    </div>
-    <div class="sort">
-      <span>Sort</span>
-      <button class="sort-btn" data-sort="date">Newest</button>
-      <button class="sort-btn" data-sort="rating">Rating</button>
+    <div class="total-item">
+      <div class="label">Total cost / week</div>
+      <div class="value" id="total-cost">$0.00</div>
     </div>
   </div>
-
-  <p class="count" id="count"></p>
-  <div class="grid" id="grid"></div>
+  <div id="week"></div>
+  <div class="empty-state" id="empty-state" style="display:none;">
+    Meal pool not found yet. Run <code>build_meal_pool.py</code> (or wait for the weekly GitHub Action) to generate <code>candidate_pool.json</code>.
+  </div>
+  <div class="empty-state" id="prompt-state" style="display:none;">
+    Set your numbers above, then click <code>Generate week</code> to build this week's meals.
+  </div>
+  <div class="save-bar" id="save-bar" style="display:none;">
+    <button id="save-week">Save this week</button>
+    <span class="save-note" id="save-note">Saved weeks live in this browser and show up as tabs above.</span>
+  </div>
 </main>
 
 <script>
-const DEALS_URL = 'deals.xml';
-// Expiration status lives in its own file, refreshed on its own schedule
-// (checking every deal's own page is much slower than the feed pull), and
-// is joined to deals.xml purely by matching <title> text.
-const EXPIRED_URL = 'expired.xml';
+const TOLERANCE = 250;
+const DAY_NAMES = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 
-let allDeals = [];
-let activeHours = 2;
-let activeSort = 'date';
-let activeLayout = 'tile';
-let lastGeneratedIso = null;
+let pool = { generated_at: "", source: "", calories_source: "", breakfast: [], general: [] };
 
-const FAVORITES_KEY = 'slickdeals_favorites';
+// Live generated week (editable — supports per-meal regenerate).
+let currentWeek = [];
+let currentTargetGlobal = 1500;
+let activeBreakfastPool = [];
+let activeGeneralPool = [];
+let activeCapInfo = { capActive: false, maxPrice: 0, capFallback: false };
 
-// favorites maps link -> full deal snapshot (title, thumbnail, rating, etc.)
-// so a favorited deal still renders correctly even after it ages out of
-// deals.xml and is no longer part of allDeals.
-function loadFavorites() {
-  try {
-    const raw = JSON.parse(localStorage.getItem(FAVORITES_KEY) || 'null');
-    const map = new Map();
-    if (Array.isArray(raw)) {
-      // Legacy format from an earlier version: just an array of links, no
-      // snapshot data available yet. It'll self-heal once the deal is seen
-      // again in allDeals (see getFavoriteDeals).
-      raw.forEach(link => { if (typeof link === 'string') map.set(link, { link }); });
-    } else if (raw && typeof raw === 'object') {
-      Object.values(raw).forEach(deal => {
-        if (deal && deal.link) map.set(deal.link, deal);
-      });
+// Weeks the user has saved to cookies, plus which tab is showing.
+let savedWeeks = [];
+let activeTab = 'current';
+
+function setStorage(name, value){
+  try{
+    localStorage.setItem(name, value);
+    return true;
+  }catch(err){
+    console.warn(`Could not save "${name}" to this browser's storage.`, err);
+    return false;
+  }
+}
+
+function getStorage(name){
+  try{
+    return localStorage.getItem(name);
+  }catch(err){
+    return null;
+  }
+}
+
+function removeStorage(name){
+  try{ localStorage.removeItem(name); }catch(err){}
+}
+
+function loadSavedWeeks(){
+  const raw = getStorage('freezerSavedWeeks');
+  if(!raw) return;
+  try{ savedWeeks = JSON.parse(raw) || []; }catch(err){ savedWeeks = []; }
+}
+
+function persistSavedWeeks(){
+  setStorage('freezerSavedWeeks', JSON.stringify(savedWeeks));
+}
+
+function compactMeal(meal){
+  return {
+    name: meal.PRODUCT_NAME || meal.name || 'Unnamed item',
+    calories: getMealCalories(meal),
+    price: getMealPriceNumber(meal) || null,
+    servings: getMealServingsPerContainer(meal),
+    url: getMealUrl(meal),
+    instacart: getMealInstacartUrl(meal) || null,
+    image: getMealImage(meal) || null
+  };
+}
+
+// Applies the max-per-meal cap (if any) to the raw pool, same rule used at
+// generation time and again when restoring the persisted current week.
+function computeActivePools(maxPrice, capActiveRequested){
+  let breakfastPool = pool.breakfast;
+  let generalPool = pool.general;
+  let capFallback = false;
+  if(capActiveRequested){
+    const cappedBreakfast = pool.breakfast.filter(m => getMealPriceNumber(m) <= maxPrice);
+    const cappedGeneral = pool.general.filter(m => getMealPriceNumber(m) <= maxPrice);
+    if(cappedBreakfast.length && cappedGeneral.length >= 2){
+      breakfastPool = cappedBreakfast;
+      generalPool = cappedGeneral;
+    }else{
+      capFallback = true;
     }
-    return map;
-  } catch {
-    return new Map();
+  }
+  return { breakfastPool, generalPool, capFallback };
+}
+
+// The live/current week persists across reloads so the site doesn't rebuild
+// it every visit — only "Generate week" or a per-meal "regenerate" changes it.
+function persistCurrentWeek(){
+  if(!currentWeek || !currentWeek.length) return;
+  const payload = {
+    target: currentTargetGlobal,
+    capInfo: activeCapInfo,
+    days: currentWeek.map(day => {
+      const meals = {};
+      Object.keys(day.meals).forEach(slot => { meals[slot] = compactMeal(day.meals[slot]); });
+      return { dayName: day.dayName, total: day.total, inRange: day.inRange, slotOrder: day.slotOrder, meals };
+    })
+  };
+  setStorage('freezerCurrentWeek', JSON.stringify(payload));
+}
+
+function clearPersistedCurrentWeek(){
+  removeStorage('freezerCurrentWeek');
+}
+
+function restoreCurrentWeek(){
+  const raw = getStorage('freezerCurrentWeek');
+  if(!raw) return false;
+  let payload;
+  try{ payload = JSON.parse(raw); }catch(err){ return false; }
+  if(!payload || !Array.isArray(payload.days) || !payload.days.length) return false;
+
+  currentTargetGlobal = payload.target || 1500;
+  activeCapInfo = payload.capInfo || { capActive: false, maxPrice: 0, capFallback: false };
+  const pools = computeActivePools(activeCapInfo.maxPrice, activeCapInfo.capActive);
+  activeBreakfastPool = pools.breakfastPool;
+  activeGeneralPool = pools.generalPool;
+
+  currentWeek = payload.days.map(day => ({
+    dayName: day.dayName,
+    total: day.total,
+    inRange: day.inRange,
+    slotOrder: day.slotOrder,
+    meals: day.meals
+  }));
+
+  return true;
+}
+
+// Form inputs persist too, restored as-typed (no recalculation) so a manual
+// override to calories-burned or the daily target survives a reload.
+function saveFormData(){
+  const data = {
+    weight: document.getElementById('weight').value,
+    age: document.getElementById('age').value,
+    activityLevel: document.getElementById('activity-level').value,
+    loseRate: document.getElementById('lose-per-week').value,
+    caloriesBurned: document.getElementById('calories-burned').value,
+    calorieTarget: document.getElementById('calorie-target').value,
+    maxPerMeal: document.getElementById('max-per-meal').value
+  };
+  try{
+    setStorage('freezerFormData', JSON.stringify(data));
+  }catch(err){
+    console.warn('Could not save form data.', err);
   }
 }
 
-let favorites = loadFavorites();
-
-function saveFavorites() {
-  const obj = {};
-  favorites.forEach((deal, link) => { obj[link] = deal; });
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(obj));
-}
-
-function escapeAttr(str) {
-  return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
-
-function toggleFavorite(link, isChecked) {
-  if (isChecked) {
-    const deal = allDeals.find(d => d.link === link);
-    favorites.set(link, deal || { link });
-  } else {
-    favorites.delete(link);
+function loadFormData(){
+  const raw = getStorage('freezerFormData');
+  if(!raw) return false;
+  try{
+    const data = JSON.parse(raw);
+    if(data.weight !== undefined) document.getElementById('weight').value = data.weight;
+    if(data.age !== undefined) document.getElementById('age').value = data.age;
+    if(data.activityLevel !== undefined) document.getElementById('activity-level').value = data.activityLevel;
+    if(data.loseRate !== undefined) document.getElementById('lose-per-week').value = data.loseRate;
+    if(data.caloriesBurned !== undefined) document.getElementById('calories-burned').value = data.caloriesBurned;
+    if(data.calorieTarget !== undefined) document.getElementById('calorie-target').value = data.calorieTarget;
+    if(data.maxPerMeal !== undefined) document.getElementById('max-per-meal').value = data.maxPerMeal;
+    return true;
+  }catch(err){
+    return false;
   }
-  saveFavorites();
-  render();
 }
 
-function clearFavorites() {
-  favorites.clear();
-  saveFavorites();
-  render();
+function getMealCalories(meal){
+  if(typeof meal.calories === 'number') return meal.calories;
+  if(meal.calories && !isNaN(Number(meal.calories))) return Number(meal.calories);
+  if(meal.open_food_facts && typeof meal.open_food_facts.calories === 'number'){
+    return meal.open_food_facts.calories;
+  }
+  return 0;
 }
 
-// Returns { deal, archived } for every favorite: live data (kept fresh in
-// storage) while the deal is still in the feed, or the last saved snapshot
-// once it ages out and disappears from deals.xml.
-function getFavoriteDeals() {
+function getMealServingsPerContainer(meal){
+  if(meal.SERVINGS_PER_CONTAINER) return meal.SERVINGS_PER_CONTAINER;
+  if(meal.servings_per_container) return meal.servings_per_container;
+  if(meal.servings) return meal.servings;
+  if(meal.open_food_facts && meal.open_food_facts.servings_per_container){
+    return meal.open_food_facts.servings_per_container;
+  }
+  return 'N/A';
+}
+
+function getMealPrice(meal){
+  const price = meal.PRICE_CURRENT ?? meal.price ?? meal.PRICE_RETAIL;
+  if(price === undefined || price === null || price === 0 || price === '0') return 'N/A';
+  const num = parseFloat(price);
+  return isNaN(num) ? 'N/A' : `$${num.toFixed(2)}`;
+}
+
+function getMealUrl(meal){
+  return meal.PRODUCT_URL || meal.product_url || meal.url || (meal.open_food_facts ? meal.open_food_facts.url : '');
+}
+
+function getMealInstacartUrl(meal){
+  return meal.INSTACART_URL || meal.instacart_url || meal.instacart || '';
+}
+
+function getMealImage(meal){
+  return meal.image_url || meal.image || '';
+}
+
+function getMealPriceNumber(meal){
+  const raw = meal.PRICE_CURRENT ?? meal.price ?? meal.PRICE_RETAIL;
+  const num = parseFloat(raw);
+  return isNaN(num) ? 0 : num;
+}
+
+// Weight-based estimate: cal/lb/day multiplier varies with activity level,
+// then nudged down for age since resting metabolism slows gradually past 25.
+function recalcCaloriesBurned(){
+  const weight = parseFloat(document.getElementById('weight').value) || 0;
+  const age = parseFloat(document.getElementById('age').value) || 25;
+  const multiplier = parseFloat(document.getElementById('activity-level').value) || 15;
+  const ageFactor = Math.max(0.8, 1 - Math.max(0, age - 25) * 0.0025);
+  document.getElementById('calories-burned').value = Math.round(weight * multiplier * ageFactor);
+  recalcDailyTarget();
+}
+
+// weekly calories burned - 3500 cal per pound they want to lose = weekly target, / 7 = daily target
+function recalcDailyTarget(){
+  const burned = parseFloat(document.getElementById('calories-burned').value) || 0;
+  const loseRate = parseFloat(document.getElementById('lose-per-week').value) || 0;
+  const weeklyBurn = burned * 7;
+  const weeklyTarget = weeklyBurn - (3500 * loseRate);
+  const dailyTarget = Math.round(weeklyTarget / 7);
+  document.getElementById('calorie-target').value = dailyTarget;
+}
+
+async function loadPool(){
+  try{
+    const res = await fetch('candidate_pool.json', { cache: 'no-store' });
+    if(!res.ok) throw new Error('not found');
+    const rawData = await res.json();
+    
+    let items = Array.isArray(rawData) ? rawData : (rawData.general || []);
+
+    const totalCount = items.length;
+    // Drop confirmed-dead links (active === false). Items that are still
+    // unchecked (active === null/undefined) stay eligible — only a
+    // confirmed dead result excludes them.
+    items = items.filter(item => item.active !== false);
+    const deadCount = totalCount - items.length;
+
+    // Anything under this is too small to count as a real meal.
+    const MIN_MEAL_CALORIES = 150;
+    const tooSmallCount = items.filter(item => getMealCalories(item) < MIN_MEAL_CALORIES).length;
+    items = items.filter(item => getMealCalories(item) >= MIN_MEAL_CALORIES);
+
+    const breakfastItems = items.filter(item => 
+      (item.PRODUCT_NAME || item.name || '').toLowerCase().includes('breakfast') ||
+      item.CATEGORY === 'Frozen Breakfast' || item.category === 'Frozen Breakfast'
+    );
+
+    const generalItems = items.filter(item => 
+      !(item.PRODUCT_NAME || item.name || '').toLowerCase().includes('breakfast') &&
+      item.CATEGORY !== 'Frozen Breakfast' && item.category !== 'Frozen Breakfast'
+    );
+
+    // Fallback if no breakfast items found in dataset: default to N/A @ 400 cal
+    const fallbackBreakfast = [{
+      PRODUCT_NAME: 'N/A',
+      calories: 400,
+      PRICE_CURRENT: 0,
+      SERVINGS_PER_CONTAINER: 'N/A'
+    }];
+
+    pool = {
+      generated_at: new Date().toISOString(),
+      breakfast: breakfastItems.length ? breakfastItems : fallbackBreakfast,
+      general: generalItems
+    };
+
+    const status = document.getElementById('pool-status');
+    const dateStr = pool.generated_at ? new Date(pool.generated_at).toLocaleDateString() : 'recently';
+    const totalPoolSize = (pool.breakfast || []).length + (pool.general || []).length;
+    status.textContent = `Pool size: ${totalPoolSize.toLocaleString()} items (updated ${dateStr}).`;
+
+    document.getElementById('empty-state').style.display = 'none';
+    if(restoreCurrentWeek()){
+      activeTab = 'current';
+    }
+    renderTabs();
+    renderCurrentOrSaved();
+    updateSaveButton();
+  }catch(err){
+    document.getElementById('pool-status').textContent = '';
+    document.getElementById('prompt-state').style.display = 'none';
+    document.getElementById('empty-state').style.display = 'block';
+  }
+}
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Meal count scales with the daily calorie target:
+//  <=1400        -> 3 meals: breakfast, lunch, dinner
+//  1400-2000     -> 4 meals: + a late night meal (general pool)
+//  2000+         -> 5 meals: + a brunch too (drawn from the breakfast pool)
+// Slots are listed in the order they should render, chronologically.
+function getMealSlotsForTarget(target){
+  if(target <= 1400){
+    return { breakfastSlots: ['breakfast'], generalSlots: ['lunch', 'dinner'] };
+  }else if(target <= 2000){
+    return { breakfastSlots: ['breakfast'], generalSlots: ['lunch', 'dinner', 'late night'] };
+  }else{
+    return { breakfastSlots: ['breakfast', 'brunch'], generalSlots: ['lunch', 'dinner', 'late night'] };
+  }
+}
+
+function poolForSlot(slot){
+  return (slot === 'breakfast' || slot === 'brunch') ? activeBreakfastPool : activeGeneralPool;
+}
+
+// Pick `n` items from a pool, preferring distinct items but allowing repeats
+// if the pool is smaller than what's needed.
+function pickDistinct(poolArr, n){
+  if(poolArr.length >= n) return shuffle(poolArr).slice(0, n);
   const result = [];
-  let changed = false;
-
-  favorites.forEach((storedDeal, link) => {
-    const live = allDeals.find(d => d.link === link);
-    if (live) {
-      if (JSON.stringify(live) !== JSON.stringify(storedDeal)) {
-        favorites.set(link, live);
-        changed = true;
-      }
-      result.push({ deal: live, archived: false });
-    } else {
-      result.push({ deal: storedDeal, archived: true });
-    }
-  });
-
-  if (changed) saveFavorites();
+  for(let i = 0; i < n; i++){
+    result.push(poolArr[Math.floor(Math.random() * poolArr.length)]);
+  }
   return result;
 }
 
-// Loads expired.xml and returns a Map of title -> {expired, rating}.
-// `rating` is the vote count as of the last expiration check (fresher than
-// the one-time snapshot in deals.xml) and may be null if it wasn't
-// captured yet. Missing or unparseable expired.xml just means "treat
-// everything as not expired yet, no updated rating" rather than a hard
-// failure -- deals.xml is the source of truth for which deals exist at all.
-async function loadExpiredMap() {
-  const bustUrl = `${EXPIRED_URL}?v=${Date.now()}`;
-  try {
-    const res = await fetch(bustUrl, { cache: 'no-store' });
-    const text = await res.text();
-    const xml = new DOMParser().parseFromString(text, 'application/xml');
+// Randomly samples combinations of breakfast-pool items (for breakfastSlots)
+// and general-pool items (for generalSlots) and keeps the closest-to-target
+// combo found. Works for any slot count (3, 4, or 5 meals).
+function buildDay(target, breakfastPool, generalPool, breakfastSlots, generalSlots){
+  const low = target - TOLERANCE;
+  const high = target + TOLERANCE;
+  const bCount = breakfastSlots.length;
+  const gCount = generalSlots.length;
 
-    if (xml.querySelector('parsererror')) {
-      console.error('Failed to parse expired.xml');
-      return new Map();
+  let best = null;
+  const attempts = 600;
+  for(let i = 0; i < attempts; i++){
+    const bItems = pickDistinct(breakfastPool, bCount);
+    const gItems = pickDistinct(generalPool, gCount);
+    const sum = [...bItems, ...gItems].reduce((s, m) => s + getMealCalories(m), 0);
+    const dist = sum < low ? low - sum : (sum > high ? sum - high : 0);
+    if(!best || dist < best.dist){
+      best = { bItems, gItems, sum, dist };
     }
-
-    const map = new Map();
-    xml.querySelectorAll('expiration').forEach(el => {
-      const title = (el.querySelector('title')?.textContent || '').trim();
-      const expired = (el.querySelector('expired')?.textContent || '').trim().toLowerCase() === 'true';
-      const ratingRaw = (el.querySelector('rating')?.textContent || '').trim();
-      const rating = ratingRaw === '' ? null : parseInt(ratingRaw, 10);
-      if (title) map.set(title, { expired, rating: Number.isFinite(rating) ? rating : null });
-    });
-    return map;
-  } catch (e) {
-    console.error('Failed to load expired.xml', e);
-    return new Map();
-  }
-}
-
-async function loadDeals() {
-  // Cache-bust both the browser cache and any CDN/proxy cache (e.g. GitHub
-  // Pages) by putting a unique query string on every request.
-  const bustUrl = `${DEALS_URL}?v=${Date.now()}`;
-  const [res, expiredMap] = await Promise.all([
-    fetch(bustUrl, { cache: 'no-store' }),
-    loadExpiredMap(),
-  ]);
-  const text = await res.text();
-  const xml = new DOMParser().parseFromString(text, 'application/xml');
-
-  const parseErr = xml.querySelector('parsererror');
-  if (parseErr) {
-    console.error('Failed to parse deals.xml', parseErr.textContent);
-    return [];
+    if(dist === 0) break;
   }
 
-  lastGeneratedIso = xml.documentElement.getAttribute('generated');
-  updateLastUpdatedLabel();
+  const meals = {};
+  breakfastSlots.forEach((slot, idx) => { meals[slot] = best.bItems[idx]; });
+  generalSlots.forEach((slot, idx) => { meals[slot] = best.gItems[idx]; });
 
-  return Array.from(xml.querySelectorAll('deal')).map(el => {
-    const get = tag => (el.querySelector(tag)?.textContent || '').trim();
-    const feedRating = parseInt(get('rating'), 10);
-    const title = get('title');
-    const expInfo = expiredMap.get(title);
-    // expired.xml's rating is scraped live during the expiration check, so
-    // prefer it over deals.xml's rating, which is frozen at RSS-pull time.
-    const rating = (expInfo && Number.isFinite(expInfo.rating))
-      ? expInfo.rating
-      : (Number.isFinite(feedRating) ? feedRating : 0);
-    return {
-      title,
-      link: get('link'),
-      thumbnail: get('thumbnail'),
-      description: get('description'),
-      rating,
-      pubDateIso: get('pubDateIso'),
-      expired: expInfo?.expired === true,
-    };
-  }).filter(d => d.link && d.pubDateIso);
+  return {
+    meals,
+    slotOrder: [...breakfastSlots, ...generalSlots],
+    total: best.sum,
+    inRange: best.sum >= low && best.sum <= high
+  };
 }
 
-function heatClass(rating) {
-  if (rating >= 50) return 'hot';
-  if (rating >= 20) return 'warm';
-  return 'cool';
-}
-
-function heatColor(rating) {
-  if (rating >= 50) return 'var(--hot)';
-  if (rating >= 20) return 'var(--warm)';
-  return 'var(--cool)';
-}
-
-function relativeTime(iso) {
-  const then = new Date(iso).getTime();
-  const diffMin = Math.max(0, Math.round((Date.now() - then) / 60000));
-  if (diffMin < 1) return 'just now';
-  if (diffMin < 60) return `${diffMin}m ago`;
-  const diffHr = Math.floor(diffMin / 60);
-  if (diffHr < 24) return `${diffHr}h ${diffMin % 60}m ago`;
-  const diffDay = Math.floor(diffHr / 24);
-  return `${diffDay}d ${diffHr % 24}h ago`;
-}
-
-function updateLastUpdatedLabel() {
-  const el = document.getElementById('lastUpdated');
-  if (!lastGeneratedIso) {
-    el.textContent = 'Last updated: unknown';
+function generateWeek(){
+  document.getElementById('save-confirmation').style.display = 'none';
+  if(!pool.breakfast || !pool.general || !pool.breakfast.length || pool.general.length < 2){
+    document.getElementById('empty-state').style.display = 'block';
+    document.getElementById('prompt-state').style.display = 'none';
+    document.getElementById('week-totals').style.display = 'none';
+    document.getElementById('save-bar').style.display = 'none';
     return;
   }
-  el.textContent = `Last updated: ${relativeTime(lastGeneratedIso)}`;
+  document.getElementById('empty-state').style.display = 'none';
+
+  const target = parseInt(document.getElementById('calorie-target').value, 10) || 1500;
+  const maxPrice = parseFloat(document.getElementById('max-per-meal').value);
+  const capActive = !isNaN(maxPrice) && maxPrice > 0;
+
+  const { breakfastPool, generalPool, capFallback } = computeActivePools(maxPrice, capActive);
+
+  activeBreakfastPool = breakfastPool;
+  activeGeneralPool = generalPool;
+  currentTargetGlobal = target;
+  activeCapInfo = { capActive, maxPrice, capFallback };
+
+  const { breakfastSlots, generalSlots } = getMealSlotsForTarget(target);
+  currentWeek = DAY_NAMES.map(dayName => ({ dayName, ...buildDay(target, breakfastPool, generalPool, breakfastSlots, generalSlots) }));
+
+  activeTab = 'current';
+  renderTabs();
+  renderCurrentOrSaved();
+  updateSaveButton();
+  persistCurrentWeek();
 }
 
-function cardHtml(d, opts = {}) {
-  const pct = Math.min(100, Math.max(6, (d.rating / 250) * 100));
-  const hClass = heatClass(d.rating);
-  const hColor = heatColor(d.rating);
-  const isFav = favorites.has(d.link);
-  // NOTE: onerror replaces only the <img> itself (this.outerHTML), never
-  // this.parentElement -- replacing the parent would also wipe out the
-  // sibling .rating-pill sitting next to the image.
-  const thumbHtml = d.thumbnail
-    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onload="this.parentElement.style.aspectRatio=this.naturalWidth+'/'+this.naturalHeight" onerror="this.outerHTML='<div class=&quot;thumb-fallback&quot;>No Image</div>'">`
-    : `<div class="thumb-fallback">No Image</div>`;
-
-  return `
-    <a class="card${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
-      <div class="thumb-wrap">
-        ${thumbHtml}
-        <label class="fav-toggle" title="Favorite" onclick="event.stopPropagation();">
-          <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
-          <span class="fav-star">★</span>
-        </label>
-        ${d.expired ? '<div class="expired-badge"><span>Expired</span></div>' : ''}
-        <div class="rating-pill">▲ ${d.rating}</div>
-      </div>
-      <div class="body">
-        <div class="heat-row">
-          <div class="heat-meter"><div class="heat-fill ${hClass}" style="width:${pct}%; background:${hColor};"></div></div>
-          <span class="heat-count">${d.rating} thumbs</span>
-        </div>
-        <p class="title">${d.title}</p>
-        <div class="meta">
-          <span>${relativeTime(d.pubDateIso)}${opts.archived ? ' · <span class="archived-tag">saved</span>' : ''}</span>
-          <span class="go">View deal ↗</span>
-        </div>
-      </div>
-    </a>
-
-  `;
-}
-
-function domainOf(url) {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return url;
-  }
-}
-
-function rowHtml(d, opts = {}) {
-  const isFav = favorites.has(d.link);
-  const thumbHtml = d.thumbnail
-    ? `<img src="${d.thumbnail}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<div class=&quot;row-thumb-fallback&quot;>No Img</div>'">`
-    : `<div class="row-thumb-fallback">No Img</div>`;
-
-  return `
-    <a class="row-item${d.expired ? ' is-expired' : ''}" href="${d.link}" target="_blank" rel="noopener noreferrer">
-      <div class="row-thumb-wrap">${thumbHtml}</div>
-      <span class="row-rating">▲ ${d.rating}</span>
-      <span class="row-title">${d.title}</span>
-      <span class="row-desc">${d.description ? d.description : '—'}</span>
-      <span class="row-url">${domainOf(d.link)}</span>
-      <span class="row-date">${relativeTime(d.pubDateIso)}${opts.archived ? ' · saved' : ''}</span>
-      <span class="row-expired ${d.expired ? 'yes' : 'no'}">${d.expired ? 'Expired' : 'Live'}</span>
-      <label class="row-fav-toggle" title="Favorite" onclick="event.stopPropagation();" style="position:absolute; left:-6px; top:-6px;">
-        <input type="checkbox" ${isFav ? 'checked' : ''} onclick="event.stopPropagation();" onchange="toggleFavorite('${escapeAttr(d.link)}', this.checked)">
-        <span class="fav-star">★</span>
-      </label>
-    </a>
-  `;
-}
-
-function rowsHeaderHtml() {
-  return `
-    <div class="rows-header-row">
-      <span></span>
-      <span>Rating</span>
-      <span>Title</span>
-      <span>Description</span>
-      <span>URL</span>
-      <span>Pub Date</span>
-      <span>Expired</span>
-    </div>
-  `;
-}
-
-function rowsTableHtml(deals, opts = {}) {
-  return `
-    <div class="rows-wrap">
-      <div class="rows-table">
-        ${rowsHeaderHtml()}
-        ${deals.map(d => rowHtml(d, opts)).join('')}
-      </div>
-    </div>
-  `;
-}
-
-function favRowsSectionHtml(favEntries) {
-  return `
-    <div class="rows-fav-section">
-      <div class="fav-box-header">
-        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
-        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
-      </div>
-      <div class="rows-wrap">
-        <div class="rows-table">
-          ${rowsHeaderHtml()}
-          ${favEntries.map(f => rowHtml(f.deal, { archived: f.archived })).join('')}
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function favBoxHtml(favEntries) {
-  // Box grows one column-track wider per favorite (capped at 3) so a single
-  // favorite doesn't reserve a big empty area -- extra favorites beyond that
-  // just wrap onto additional rows inside the box, left to right.
-  const span = Math.min(favEntries.length, 3);
-
-  return `
-    <div class="fav-box" style="grid-column: span ${span};">
-      <div class="fav-box-header">
-        <span class="fav-box-title">★ Favorites<span class="fav-box-count">(${favEntries.length})</span></span>
-        <button class="clear-btn" type="button" onclick="clearFavorites()">Clear</button>
-      </div>
-      <div class="fav-box-items">
-        ${favEntries.map(f => cardHtml(f.deal, { archived: f.archived })).join('')}
-      </div>
-    </div>
-  `;
-}
-
-function render() {
-  const cutoff = Date.now() - activeHours * 60 * 60 * 1000;
-  let visible = allDeals.filter(d => new Date(d.pubDateIso).getTime() >= cutoff);
-
-  visible.sort((a, b) => {
-    if (activeSort === 'rating') return b.rating - a.rating;
-    return new Date(b.pubDateIso) - new Date(a.pubDateIso);
+function countOverCap(days, capActive, maxPrice){
+  if(!capActive) return 0;
+  let count = 0;
+  days.forEach(day => {
+    Object.values(day.meals).forEach(meal => {
+      if(getMealPriceNumber(meal) > maxPrice) count++;
+    });
   });
+  return count;
+}
 
-  const grid = document.getElementById('grid');
-  const count = document.getElementById('count');
-  count.textContent = `${visible.length} deal${visible.length === 1 ? '' : 's'} in the last ${activeHours}h`;
+function weekTotals(days){
+  let calories = 0, cost = 0;
+  days.forEach(day => {
+    calories += day.total;
+    cost += Object.values(day.meals).reduce((s, m) => s + getMealPriceNumber(m), 0);
+  });
+  return { calories, cost };
+}
 
-  const favEntries = getFavoriteDeals();
-
-  grid.classList.toggle('rows-mode', activeLayout === 'rows');
-
-  if (activeLayout === 'rows') {
-    grid.classList.remove('grid');
-    const favSection = favEntries.length > 0 ? favRowsSectionHtml(favEntries) : '';
-    if (visible.length === 0) {
-      grid.innerHTML = favSection + `<div class="empty">No deals in this window yet. The feed updates every 15 minutes.</div>`;
-      return;
-    }
-    grid.innerHTML = favSection + rowsTableHtml(visible);
+// Each meal is filtered against the max-per-meal cap before selection, rather
+// than checking the week's average against a +/- tolerance.
+function updateBudgetSummary(capActive, maxPrice, overCapCount, capFallback){
+  const summary = document.getElementById('budget-summary');
+  if(!capActive){
+    summary.style.display = 'none';
     return;
   }
 
-  grid.classList.add('grid');
-  const favBox = favEntries.length > 0 ? favBoxHtml(favEntries) : '';
+  summary.style.display = 'inline-block';
+  if(capFallback){
+    summary.className = 'budget-summary off-range';
+    summary.textContent = `Not enough meals priced at $${maxPrice.toFixed(2)} or under in the pool — showing the closest calorie matches instead, some may be over cap.`;
+  }else if(overCapCount > 0){
+    summary.className = 'budget-summary off-range';
+    summary.textContent = `${overCapCount} meal${overCapCount === 1 ? '' : 's'} this week landed over the $${maxPrice.toFixed(2)} cap.`;
+  }else{
+    summary.className = 'budget-summary in-range';
+    summary.textContent = `Every meal this week is at or under $${maxPrice.toFixed(2)}.`;
+  }
+}
 
-  if (visible.length === 0) {
-    grid.innerHTML = favBox + `<div class="empty" style="grid-column: 1 / -1;">No deals in this window yet. The feed updates every 15 minutes.</div>`;
+function mealRow(slot, meal, canRegenerate, dayIndex){
+  const row = document.createElement('div');
+  row.className = 'meal-row';
+  const url = getMealUrl(meal);
+  const instacartUrl = getMealInstacartUrl(meal);
+  const image = getMealImage(meal);
+  const calories = getMealCalories(meal);
+  const servingsPerContainer = getMealServingsPerContainer(meal);
+  const price = getMealPrice(meal);
+  const priceDisplay = price === 'N/A' ? price : `${price}*`;
+  const name = meal.PRODUCT_NAME || meal.name || 'Unnamed item';
+
+  const nameHtml = name;
+
+  const walmartLinkHtml = url
+    ? `<a class="meal-link" href="${url}" target="_blank" rel="noopener noreferrer">View on walmart.com &rarr;</a>`
+    : '';
+  const instacartLinkHtml = instacartUrl
+    ? `<a class="meal-link meal-link-instacart" href="${instacartUrl}" target="_blank" rel="noopener noreferrer">View on Instacart &rarr;</a>`
+    : '';
+  const viewLink = (walmartLinkHtml || instacartLinkHtml)
+    ? `<div class="meal-view-link">${walmartLinkHtml}${walmartLinkHtml && instacartLinkHtml ? ' &middot; ' : ''}${instacartLinkHtml}</div>`
+    : '';
+
+  const thumbImg = image
+    ? `<img class="meal-thumb" src="${image}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;meal-thumb meal-thumb-empty&quot;></div>';" />`
+    : `<div class="meal-thumb meal-thumb-empty"></div>`;
+  const thumb = url
+    ? `<a class="meal-thumb-link" href="${url}" target="_blank" rel="noopener noreferrer">${thumbImg}</a>`
+    : `<div class="meal-thumb-link">${thumbImg}</div>`;
+
+  const regenBtn = canRegenerate
+    ? `<button type="button" class="regen-btn" data-day="${dayIndex}" data-slot="${slot}" title="Swap this meal for another option">regenerate</button>`
+    : '';
+
+  row.innerHTML = `
+    ${thumb}
+    <div class="meal-info">
+      <div class="meal-slot">${slot}</div>
+      <div class="meal-name">${nameHtml}</div>
+      ${viewLink}
+      <div class="meal-serving">Serving: ${servingsPerContainer}</div>
+      ${regenBtn}
+    </div>
+    <div style="text-align:right;">
+      <div class="meal-cal">${calories} cal*</div>
+      <div style="font-size:12px; color:var(--ink-soft); margin-top:2px;">${priceDisplay}</div>
+    </div>
+  `;
+  return row;
+}
+
+function renderDayCard(dayName, day, target, editable, dayIndex){
+  const card = document.createElement('div');
+  card.className = 'day-card';
+
+  const totalPrice = Object.values(day.meals).reduce((sum, meal) => sum + getMealPriceNumber(meal), 0);
+  const priceStr = totalPrice > 0 ? `$${totalPrice.toFixed(2)}*` : 'N/A';
+
+  const header = document.createElement('div');
+  header.className = 'day-header';
+  header.innerHTML = `
+    <div class="day-name">${dayName}</div>
+    <div class="day-header-totals">
+      <div class="value ${day.inRange ? 'in-range' : 'off-range'}">${day.total} cal*</div>
+      <div class="price">${priceStr}</div>
+    </div>
+  `;
+  card.appendChild(header);
+
+  // Regenerate works on saved weeks too, as long as the meal pool itself
+  // has loaded — it's independent of whether this is the "live" tab.
+  const canRegenerate = !!(pool.breakfast && pool.breakfast.length && pool.general && pool.general.length);
+  day.slotOrder.forEach(slot => {
+    card.appendChild(mealRow(slot, day.meals[slot], canRegenerate, dayIndex));
+  });
+
+  if(!day.inRange){
+    const flag = document.createElement('div');
+    flag.className = 'flag';
+    flag.textContent = `Outside the ±250 window around ${target} — pool didn't have a closer combo today.`;
+    card.appendChild(flag);
+  }
+
+  return card;
+}
+
+// Draws whichever tab is active — the live editable week, or a saved
+// read-only snapshot — into #week, and updates totals/budget summary to match.
+function renderCurrentOrSaved(){
+  const weekEl = document.getElementById('week');
+  weekEl.innerHTML = '';
+
+  if(activeTab === 'current' && (!currentWeek || !currentWeek.length)){
+    document.getElementById('prompt-state').style.display = 'block';
+    document.getElementById('week-totals').style.display = 'none';
+    document.getElementById('save-bar').style.display = 'none';
+    document.getElementById('save-bar-top').style.display = 'none';
+    document.getElementById('budget-summary').style.display = 'none';
+    return;
+  }
+  document.getElementById('prompt-state').style.display = 'none';
+
+  let days, target, editable;
+  if(activeTab === 'current'){
+    days = currentWeek;
+    target = currentTargetGlobal;
+    editable = true;
+  }else{
+    const saved = savedWeeks[activeTab];
+    if(!saved){ activeTab = 'current'; days = currentWeek; target = currentTargetGlobal; editable = true; }
+    else{ days = saved.days; target = saved.target; editable = false; }
+  }
+
+  days.forEach((day, idx) => {
+    weekEl.appendChild(renderDayCard(day.dayName, day, target, editable, idx));
+  });
+
+  const totals = weekTotals(days);
+  document.getElementById('week-totals').style.display = 'inline-flex';
+  document.getElementById('total-calories').textContent = `${totals.calories.toLocaleString()}*`;
+  document.getElementById('total-cost').textContent = `$${totals.cost.toFixed(2)}*`;
+
+  document.getElementById('save-bar').style.display = editable ? 'flex' : 'none';
+  document.getElementById('save-bar-top').style.display = editable ? 'flex' : 'none';
+
+  if(editable){
+    updateBudgetSummary(activeCapInfo.capActive, activeCapInfo.maxPrice, countOverCap(days, activeCapInfo.capActive, activeCapInfo.maxPrice), activeCapInfo.capFallback);
+  }else{
+    document.getElementById('budget-summary').style.display = 'none';
+  }
+}
+
+// Returns the breakfast/general pools to draw from for a given cap setting —
+// used to regenerate meals on both the live week and any saved week.
+function poolsForCapInfo(capInfo){
+  if(!capInfo) return { breakfastPool: pool.breakfast, generalPool: pool.general };
+  return computeActivePools(capInfo.maxPrice, capInfo.capActive);
+}
+
+function regenerateMeal(dayIndex, slot){
+  if(activeTab === 'current'){
+    if(!currentWeek[dayIndex]) return;
+    const day = currentWeek[dayIndex];
+    const sourcePool = poolForSlot(slot);
+    if(!sourcePool || !sourcePool.length) return;
+
+    const used = Object.values(day.meals);
+    let choices = sourcePool.filter(m => !used.includes(m));
+    if(!choices.length) choices = sourcePool;
+
+    day.meals[slot] = choices[Math.floor(Math.random() * choices.length)];
+    day.total = Object.values(day.meals).reduce((s, m) => s + getMealCalories(m), 0);
+    const low = currentTargetGlobal - TOLERANCE;
+    const high = currentTargetGlobal + TOLERANCE;
+    day.inRange = day.total >= low && day.total <= high;
+
+    renderCurrentOrSaved();
+    persistCurrentWeek();
     return;
   }
 
-  grid.innerHTML = favBox + visible.map(cardHtml).join('');
+  // Saved week: pull from the pool/cap that was active when it was saved
+  // (older saves without a stored cap just use the full pool).
+  const saved = savedWeeks[activeTab];
+  if(!saved || !saved.days[dayIndex]) return;
+  const day = saved.days[dayIndex];
+  const { breakfastPool, generalPool } = poolsForCapInfo(saved.capInfo);
+  const sourcePool = (slot === 'breakfast' || slot === 'brunch') ? breakfastPool : generalPool;
+  if(!sourcePool || !sourcePool.length) return;
+
+  const usedNames = Object.values(day.meals).map(m => m.name);
+  let choices = sourcePool.filter(m => !usedNames.includes(m.PRODUCT_NAME || m.name));
+  if(!choices.length) choices = sourcePool;
+
+  day.meals[slot] = compactMeal(choices[Math.floor(Math.random() * choices.length)]);
+  day.total = Object.values(day.meals).reduce((s, m) => s + getMealCalories(m), 0);
+  const low = saved.target - TOLERANCE;
+  const high = saved.target + TOLERANCE;
+  day.inRange = day.total >= low && day.total <= high;
+
+  renderCurrentOrSaved();
+  persistSavedWeeks();
 }
 
-function setupControls() {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    if (parseInt(btn.dataset.hours, 10) === activeHours) btn.classList.add('active');
-    btn.addEventListener('click', () => {
-      activeHours = parseInt(btn.dataset.hours, 10);
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
-      render();
-    });
-  });
-
-  document.querySelectorAll('.layout-btn').forEach(btn => {
-    if (btn.dataset.layout === activeLayout) btn.classList.add('active');
-    btn.addEventListener('click', () => {
-      activeLayout = btn.dataset.layout;
-      document.querySelectorAll('.layout-btn').forEach(b => b.classList.toggle('active', b === btn));
-      render();
-    });
-  });
-
-  document.querySelectorAll('.sort-btn').forEach(btn => {
-    if (btn.dataset.sort === activeSort) btn.classList.add('active');
-    btn.addEventListener('click', () => {
-      activeSort = btn.dataset.sort;
-      document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b === btn));
-      render();
-    });
-  });
-
-  const refreshBtn = document.getElementById('refreshBtn');
-  refreshBtn.addEventListener('click', async () => {
-    refreshBtn.disabled = true;
-    refreshBtn.textContent = 'Refreshing…';
-    allDeals = await loadDeals();
-    render();
-    refreshBtn.disabled = false;
-    refreshBtn.textContent = 'Refresh';
+function updateSaveButton(){
+  const label = `Save as Week ${savedWeeks.length + 1}`;
+  const disabled = !(currentWeek && currentWeek.length === DAY_NAMES.length);
+  [document.getElementById('save-week'), document.getElementById('save-week-top')].forEach(btn => {
+    if(!btn) return;
+    btn.textContent = label;
+    btn.disabled = disabled;
   });
 }
 
-(async function init() {
-  setupControls();
-  allDeals = await loadDeals();
-  render();
+function saveCurrentWeek(){
+  if(!currentWeek || currentWeek.length !== DAY_NAMES.length) return;
 
-  // Pick up new commits from the workflow without a manual reload.
-  setInterval(async () => {
-    allDeals = await loadDeals();
-    render();
-  }, 5 * 60 * 1000);
+  const label = `Week ${savedWeeks.length + 1}`;
+  const days = currentWeek.map(day => {
+    const meals = {};
+    Object.keys(day.meals).forEach(slot => { meals[slot] = compactMeal(day.meals[slot]); });
+    return { dayName: day.dayName, total: day.total, inRange: day.inRange, slotOrder: day.slotOrder, meals };
+  });
 
-  // Keep the "Last updated: Xm ago" label ticking even between fetches.
-  setInterval(updateLastUpdatedLabel, 30 * 1000);
-})();
+  savedWeeks.push({ label, target: currentTargetGlobal, capInfo: activeCapInfo, savedAt: new Date().toISOString(), days });
+  persistSavedWeeks();
+
+  // Saving clears the live builder back to blank, ready for a new week —
+  // but we land on the just-saved tab first so its totals/meals stay visible.
+  currentWeek = [];
+  clearPersistedCurrentWeek();
+  activeTab = savedWeeks.length - 1;
+
+  renderTabs();
+  renderCurrentOrSaved();
+  updateSaveButton();
+
+  const confirmation = document.getElementById('save-confirmation');
+  confirmation.textContent = `Saved as ${label} — find it in the tabs above.`;
+  confirmation.style.display = 'block';
+}
+
+function renderTabs(){
+  const bar = document.getElementById('tab-bar');
+  bar.innerHTML = '';
+
+  const currentBtn = document.createElement('button');
+  currentBtn.type = 'button';
+  currentBtn.className = 'tab-btn' + (activeTab === 'current' ? ' active' : '');
+  currentBtn.textContent = 'This week';
+  currentBtn.addEventListener('click', () => { activeTab = 'current'; renderTabs(); renderCurrentOrSaved(); });
+  bar.appendChild(currentBtn);
+
+  savedWeeks.forEach((week, idx) => {
+    const tab = document.createElement('button');
+    tab.type = 'button';
+    tab.className = 'tab-btn' + (activeTab === idx ? ' active' : '');
+    tab.innerHTML = `${week.label}<span class="tab-delete" title="Delete this saved week">&times;</span>`;
+    tab.addEventListener('click', (e) => {
+      if(e.target.classList.contains('tab-delete')){
+        savedWeeks.splice(idx, 1);
+        persistSavedWeeks();
+        activeTab = 'current';
+        renderTabs();
+        renderCurrentOrSaved();
+        updateSaveButton();
+        return;
+      }
+      activeTab = idx;
+      renderTabs();
+      renderCurrentOrSaved();
+    });
+    bar.appendChild(tab);
+  });
+
+  if(savedWeeks.length){
+    const clearBtn = document.createElement('button');
+    clearBtn.type = 'button';
+    clearBtn.className = 'tab-btn tab-clear';
+    clearBtn.textContent = 'Clear weeks';
+    clearBtn.addEventListener('click', () => {
+      if(!confirm('Delete all saved weeks from this browser?')) return;
+      savedWeeks = [];
+      persistSavedWeeks();
+      activeTab = 'current';
+      renderTabs();
+      renderCurrentOrSaved();
+      updateSaveButton();
+    });
+    bar.appendChild(clearBtn);
+  }
+}
+
+document.getElementById('generate').addEventListener('click', generateWeek);
+document.getElementById('weight').addEventListener('input', () => { recalcCaloriesBurned(); saveFormData(); });
+document.getElementById('age').addEventListener('input', () => { recalcCaloriesBurned(); saveFormData(); });
+document.getElementById('activity-level').addEventListener('change', () => { recalcCaloriesBurned(); saveFormData(); });
+document.getElementById('lose-per-week').addEventListener('input', () => { recalcDailyTarget(); saveFormData(); });
+document.getElementById('calories-burned').addEventListener('input', () => { recalcDailyTarget(); saveFormData(); });
+document.getElementById('calorie-target').addEventListener('input', saveFormData);
+document.getElementById('max-per-meal').addEventListener('input', saveFormData);
+document.getElementById('save-week').addEventListener('click', saveCurrentWeek);
+document.getElementById('save-week-top').addEventListener('click', saveCurrentWeek);
+document.getElementById('week').addEventListener('click', (e) => {
+  const btn = e.target.closest('.regen-btn');
+  if(!btn) return;
+  regenerateMeal(parseInt(btn.dataset.day, 10), btn.dataset.slot);
+});
+
+loadSavedWeeks();
+renderTabs();
+if(!loadFormData()){
+  recalcCaloriesBurned();
+}
+saveFormData();
+loadPool();
 </script>
 
 </body>
