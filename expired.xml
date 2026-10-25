@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<expirations generated="2026-10-25T15:52:45.099287+00:00">
+<expirations generated="2026-10-25T16:07:42.351129+00:00">
   <expiration>
     <title>42-Ct Ferrero Rocher Gourmet Hazelnut Milk Chocolate (18.5-Oz) $13.70 w/ S&amp;S</title>
     <expired>true</expired>
@@ -14,6 +14,11 @@
     <title>GORDITA 7' x 8' Happy Halloween Pumpkin Garage Door Cover Banner $8.50 &amp; More</title>
     <expired>true</expired>
     <rating>26</rating>
+  </expiration>
+  <expiration>
+    <title>Prime Members: Onforu 36W Solar Outdoor Motion Sensor LED Lights $19.50 + Free S&amp;H</title>
+    <expired>true</expired>
+    <rating>23</rating>
   </expiration>
   <expiration>
     <title>2-Pk Elfew Beginner Watercolor Workbooks w/ Paint Set &amp; Brush, Animals &amp; Flowers $8.50</title>
@@ -34,6 +39,11 @@
     <title>78.7" Huuger Height-Adjustable Console Table w/ 4 AC Outlets, 2x USB-A &amp; 2x USB-C Ports $45 + Free S&amp;H</title>
     <expired>true</expired>
     <rating>35</rating>
+  </expiration>
+  <expiration>
+    <title>Camco Heavy Duty Wheel Dock w/ Rope Handle $5.30</title>
+    <expired>true</expired>
+    <rating>46</rating>
   </expiration>
   <expiration>
     <title>Captain Toad Treasure Tracker (Nintendo Switch Digital Code) $17.20</title>
@@ -211,39 +221,24 @@
     <rating>38</rating>
   </expiration>
   <expiration>
-    <title>Ryobi ONE+ HP 18V Brushless Cordless 5" Random Orbit Sander w/ 4Ah Battery $119 + Free S&amp;H</title>
+    <title>Walgreens Photo: Same Day Custom Wall Décor 70% Off + Free Pickup</title>
     <expired>false</expired>
-    <rating>30</rating>
+    <rating>54</rating>
   </expiration>
   <expiration>
-    <title>2-Pc Klein Tools Classic Klaw Pump Pliers Set $25 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>26</rating>
-  </expiration>
-  <expiration>
-    <title>Vesgantti 7 Seater Sectional Modular Memory Foam Couch (Various) $650 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>213</rating>
-  </expiration>
-  <expiration>
-    <title>Flowtron 1-Acre 40W UV Outdoor Electric Bug Zapper $35 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>198</rating>
-  </expiration>
-  <expiration>
-    <title>Happrun Native 1080p Bluetooth Projector $30 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>286</rating>
-  </expiration>
-  <expiration>
-    <title>11" GE Smart Bluetooth Digital Scale w/ BMI &amp; Body Fat Percentage (Black) $20</title>
+    <title>Star Trek Youth Halloween Costumes: Spock (Small) $4.50, Captain Kirk (Medium) $2.70</title>
     <expired>false</expired>
     <rating>27</rating>
   </expiration>
   <expiration>
-    <title>Walgreens Photo: Same Day Custom Wall Décor 70% Off + Free Pickup</title>
+    <title>Ekouaer Women's Pajama/Lounge Set w/ Crop Top &amp; Flare Pants (Black) $10</title>
     <expired>false</expired>
-    <rating>52</rating>
+    <rating>32</rating>
+  </expiration>
+  <expiration>
+    <title>Ryobi ONE+ HP 18V Brushless Cordless 5" Random Orbit Sander w/ 4Ah Battery $119 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>31</rating>
   </expiration>
   <expiration>
     <title>VEVOR 2-Way 180° Articulating Borescope w/ 0.15" Lens, 5" IPS Screen $72.10 + Free S&amp;H</title>
@@ -251,14 +246,39 @@
     <rating>35</rating>
   </expiration>
   <expiration>
-    <title>Ekouaer Women's Pajama/Lounge Set w/ Crop Top &amp; Flare Pants (Black) $10</title>
+    <title>11" GE Smart Bluetooth Digital Scale w/ BMI &amp; Body Fat Percentage (Black) $20</title>
     <expired>false</expired>
-    <rating>31</rating>
+    <rating>28</rating>
   </expiration>
   <expiration>
-    <title>Energy Speakers: 2x CF-70 Floors + CC-10 Center + 2x CB-20 Bookshelves + C10 Sub $499 + Free S&amp;H</title>
+    <title>Flowtron 1-Acre 40W UV Outdoor Electric Bug Zapper $35 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>36</rating>
+    <rating>203</rating>
+  </expiration>
+  <expiration>
+    <title>Happrun Native 1080p Bluetooth Projector $30 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>289</rating>
+  </expiration>
+  <expiration>
+    <title>Vesgantti 7 Seater Sectional Modular Memory Foam Couch (Various) $650 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>213</rating>
+  </expiration>
+  <expiration>
+    <title>2-Pc Klein Tools Classic Klaw Pump Pliers Set $25 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
+    <title>Invitation Only: Pokémon TCG 30th Celebration Elite Trainer Box $60 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>792</rating>
+  </expiration>
+  <expiration>
+    <title>2-Pk DEWALT 20V MAX Lithium-Ion 5.0Ah Batteries w/ Charger $99 + Free S&amp;H Orders $150+</title>
+    <expired>false</expired>
+    <rating>44</rating>
   </expiration>
   <expiration>
     <title>RockAuto Auto Parts Sitewide Discount Coupon 5% Off + S&amp;H (Valid thru 11/20)</title>
@@ -266,14 +286,29 @@
     <rating>42</rating>
   </expiration>
   <expiration>
-    <title>2-Ct DeWALT 20V MAX 5Ah Lithium Ion Battery Kit $85.50 + Free S&amp;H w/ Prime</title>
+    <title>Select Accounts: 48-Pk 1.5-Oz Cheez-It Cheese Crackers (White Cheddar) $16.30 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>42</rating>
+    <rating>38</rating>
   </expiration>
   <expiration>
-    <title>2-Pk DEWALT 20V MAX Lithium-Ion 5.0Ah Batteries w/ Charger $99 + Free S&amp;H Orders $150+</title>
+    <title>Energy Speakers: 2x CF-70 Floors + CC-10 Center + 2x CB-20 Bookshelves + C10 Sub $499 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>42</rating>
+    <rating>36</rating>
+  </expiration>
+  <expiration>
+    <title>EGO Power+ 880 CFM Cordless Electric Leaf Blower w/ 2x 4.0AH Batteries &amp; Charger $307 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>57</rating>
+  </expiration>
+  <expiration>
+    <title>2-Ct DeWALT 20V MAX 5Ah Lithium Ion Battery Kit $85.50 + Free S&amp;H w/ Prime</title>
+    <expired>false</expired>
+    <rating>44</rating>
+  </expiration>
+  <expiration>
+    <title>Braun Series 3 310s Wet &amp; Dry Rechargeable Electric Shaver + $10 Walgreens Cash $28.80 + Free Pickup</title>
+    <expired>false</expired>
+    <rating>56</rating>
   </expiration>
   <expiration>
     <title>Star Wars Outlaws Gold Edition (Nintendo Switch 2, Game-Key Card) $30</title>
@@ -281,54 +316,19 @@
     <rating>47</rating>
   </expiration>
   <expiration>
-    <title>Invitation Only: Pokémon TCG 30th Celebration Elite Trainer Box $60 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>789</rating>
-  </expiration>
-  <expiration>
-    <title>Braun Series 3 310s Wet &amp; Dry Rechargeable Electric Shaver + $10 Walgreens Cash $28.80 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>55</rating>
-  </expiration>
-  <expiration>
-    <title>EGO Power+ 880 CFM Cordless Electric Leaf Blower w/ 2x 4.0AH Batteries &amp; Charger $307 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>55</rating>
-  </expiration>
-  <expiration>
     <title>Target Stores: 12-Pk 12-Oz Sodas (Coca-Cola, Pepsi, Sprite, Dr. Pepper &amp; More) Buy 3, Get 40% Off + Free Pickup</title>
     <expired>false</expired>
     <rating>51</rating>
   </expiration>
   <expiration>
-    <title>13.5-Oz Original Recipe Chex Mix Snack Mix (Traditional, Family Size) $2.75 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>54</rating>
-  </expiration>
-  <expiration>
-    <title>Logitech G305 LIGHTSPEED Wireless Hero 12K Sensor Gaming Mouse (Various) $30</title>
-    <expired>false</expired>
-    <rating>41</rating>
-  </expiration>
-  <expiration>
     <title>1.01-Oz Medicube Zero Exosome Shot 2000 PPM Spicule Facial Serum $11.30 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>32</rating>
+    <rating>33</rating>
   </expiration>
   <expiration>
-    <title>Select Accts: 12-Pk 14-Oz Core Power Fairlife 26g Protein Shake (Chocolate) $23.15 w/ S&amp;S + Free S&amp;H</title>
+    <title>13.5-Oz Original Recipe Chex Mix Snack Mix (Traditional, Family Size) $2.75 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>91</rating>
-  </expiration>
-  <expiration>
-    <title>DeWALT 20V MAX Corded / Cordless Air Inflator (Tool Only, DCC020IB) $100.50 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
-    <rating>49</rating>
-  </expiration>
-  <expiration>
-    <title>2-Pc Milwaukee SHOCKWAVE Magnetic Nut Driver + 5-Pc Hex Bit Holder &amp; Carabiner $18.45 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>39</rating>
+    <rating>55</rating>
   </expiration>
   <expiration>
     <title>6-Pk Amazon Basics Scrub Sponges (Heavy Duty) $2.25 w/ S&amp;S</title>
@@ -336,19 +336,19 @@
     <rating>50</rating>
   </expiration>
   <expiration>
-    <title>24-Oz Owala Stainless Steel Straw Tumbler (Various) $15 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>44</rating>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: 48-Pk 1.5-Oz Cheez-It Cheese Crackers (White Cheddar) $16.30 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>37</rating>
-  </expiration>
-  <expiration>
     <title>Prime Members: 4-Pk BONLION Solar Hanging Lanterns Outdoor LED Lights (Warm White) $23.45 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>20</rating>
+    <rating>21</rating>
+  </expiration>
+  <expiration>
+    <title>2-Pc Milwaukee SHOCKWAVE Magnetic Nut Driver + 5-Pc Hex Bit Holder &amp; Carabiner $18.45 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>39</rating>
+  </expiration>
+  <expiration>
+    <title>Logitech G305 LIGHTSPEED Wireless Hero 12K Sensor Gaming Mouse (Various) $30</title>
+    <expired>false</expired>
+    <rating>41</rating>
   </expiration>
   <expiration>
     <title>$50 Nintendo eShop eGift Card (Email Delivery) $45</title>
@@ -356,49 +356,29 @@
     <rating>34</rating>
   </expiration>
   <expiration>
+    <title>Select Accts: 12-Pk 14-Oz Core Power Fairlife 26g Protein Shake (Chocolate) $23.15 w/ S&amp;S + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>95</rating>
+  </expiration>
+  <expiration>
+    <title>24-Oz Owala Stainless Steel Straw Tumbler (Various) $15 + Free Pickup</title>
+    <expired>false</expired>
+    <rating>44</rating>
+  </expiration>
+  <expiration>
     <title>DeWALT Keyring Bit Holder Set for 1/4" Hex Bits $13.50</title>
-    <expired>false</expired>
-    <rating>55</rating>
-  </expiration>
-  <expiration>
-    <title>302-Pc Kobalt Metric &amp; SAE Mechanics Tool Set w/ Hard Case $99 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>69</rating>
-  </expiration>
-  <expiration>
-    <title>Merrell Mid-Season Sale on Sale Shoes, Clothing, &amp; Accessories 30% Off + Free S&amp;H on $75+</title>
     <expired>false</expired>
     <rating>57</rating>
   </expiration>
   <expiration>
-    <title>GRACE KARIN Women's Floral Long Sleeve Sweetheart Neck A-Line Maxi Dress $15.50</title>
+    <title>DeWALT 20V MAX Corded / Cordless Air Inflator (Tool Only, DCC020IB) $100.50 + Free S&amp;H w/ Prime</title>
     <expired>false</expired>
-    <rating>42</rating>
+    <rating>48</rating>
   </expiration>
   <expiration>
-    <title>SCOKC 10x32 Compact Waterproof Monocular Telescope (2 Colors) $29.45 + Free S&amp;H</title>
+    <title>302-Pc Kobalt Metric &amp; SAE Mechanics Tool Set w/ Hard Case $99 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>20</rating>
-  </expiration>
-  <expiration>
-    <title>Middle-earth: 2-Game Shadow of War + Shadow of Mordor Bundle (PC Key) $4.70</title>
-    <expired>false</expired>
-    <rating>63</rating>
-  </expiration>
-  <expiration>
-    <title>Gostwo RFID Blocking Bifold Money Clip Wallet w/ ID Window (Various Colors) $5</title>
-    <expired>false</expired>
-    <rating>23</rating>
-  </expiration>
-  <expiration>
-    <title>StatGear 10" Surviv-All Fixed-Blade Bowie Knife w/ Sheath $20</title>
-    <expired>false</expired>
-    <rating>35</rating>
-  </expiration>
-  <expiration>
-    <title>LEGO Lord of the Rings (PC Digital Download) $2.50</title>
-    <expired>false</expired>
-    <rating>92</rating>
+    <rating>70</rating>
   </expiration>
   <expiration>
     <title>Maybelline Color Sensational Cream Finish Lipstick (Various Shades) from $4.25</title>
@@ -406,14 +386,29 @@
     <rating>25</rating>
   </expiration>
   <expiration>
+    <title>GRACE KARIN Women's Floral Long Sleeve Sweetheart Neck A-Line Maxi Dress $15.50</title>
+    <expired>false</expired>
+    <rating>42</rating>
+  </expiration>
+  <expiration>
     <title>Select Stores: 1-Pair 18" Milwaukee Cut Level 3 Resistant Protective Arm Sleeves $5.80 (In-Store Only)</title>
     <expired>false</expired>
     <rating>80</rating>
   </expiration>
   <expiration>
-    <title>GetHigh.EXE (PCDD/Epic Games) Free to Claim (Valid thru 11/2)</title>
+    <title>StatGear 10" Surviv-All Fixed-Blade Bowie Knife w/ Sheath $20</title>
     <expired>false</expired>
-    <rating>122</rating>
+    <rating>35</rating>
+  </expiration>
+  <expiration>
+    <title>SCOKC 10x32 Compact Waterproof Monocular Telescope (2 Colors) $29.45 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>20</rating>
+  </expiration>
+  <expiration>
+    <title>Gostwo RFID Blocking Bifold Money Clip Wallet w/ ID Window (Various Colors) $5</title>
+    <expired>false</expired>
+    <rating>23</rating>
   </expiration>
   <expiration>
     <title>6-Pk Racokky Motion Sensor Under Cabinet Lights w/ Remote &amp; Charging Station $24 + Free S&amp;H</title>
@@ -421,19 +416,34 @@
     <rating>24</rating>
   </expiration>
   <expiration>
-    <title>JBL Live Buds 3 True Wireless Earbuds w/ ANC &amp; Smart Touchscreen Case $115 + Free S&amp;H</title>
+    <title>LEGO Lord of the Rings (PC Digital Download) $2.50</title>
     <expired>false</expired>
-    <rating>31</rating>
+    <rating>92</rating>
   </expiration>
   <expiration>
-    <title>31" Diamond Visions Grabber Tool $2 + Free Pickup</title>
+    <title>Middle-earth: 2-Game Shadow of War + Shadow of Mordor Bundle (PC Key) $4.70</title>
     <expired>false</expired>
-    <rating>55</rating>
+    <rating>63</rating>
+  </expiration>
+  <expiration>
+    <title>GetHigh.EXE (PCDD/Epic Games) Free to Claim (Valid thru 11/2)</title>
+    <expired>false</expired>
+    <rating>122</rating>
+  </expiration>
+  <expiration>
+    <title>Merrell Mid-Season Sale on Sale Shoes, Clothing, &amp; Accessories 30% Off + Free S&amp;H on $75+</title>
+    <expired>false</expired>
+    <rating>58</rating>
   </expiration>
   <expiration>
     <title>Ice Cream Hero (PC Digital Download) Free</title>
     <expired>false</expired>
-    <rating>218</rating>
+    <rating>219</rating>
+  </expiration>
+  <expiration>
+    <title>JBL Live Buds 3 True Wireless Earbuds w/ ANC &amp; Smart Touchscreen Case $115 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>31</rating>
   </expiration>
   <expiration>
     <title>6-Pk 23-Oz Frank's RedHot Buffalo Wings Hot Sauce $17.40 w/ S&amp;S</title>
@@ -446,9 +456,14 @@
     <rating>23</rating>
   </expiration>
   <expiration>
-    <title>Streamlight MicroStream USB 250 Lumen Rechargeable Flashlight $28.25</title>
+    <title>31" Diamond Visions Grabber Tool $2 + Free Pickup</title>
     <expired>false</expired>
-    <rating>28</rating>
+    <rating>57</rating>
+  </expiration>
+  <expiration>
+    <title>Costco Members: Star Fox (Switch 2): Physical $53 or Digital $43 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>99</rating>
   </expiration>
   <expiration>
     <title>Phomemo D30 Bluetooth Mini Thermal Label Maker Printer (3 Colors) $8</title>
@@ -456,9 +471,9 @@
     <rating>36</rating>
   </expiration>
   <expiration>
-    <title>Costco Members: Star Fox (Switch 2): Physical $53 or Digital $43 + Free S&amp;H</title>
+    <title>Streamlight MicroStream USB 250 Lumen Rechargeable Flashlight $28.25</title>
     <expired>false</expired>
-    <rating>99</rating>
+    <rating>29</rating>
   </expiration>
   <expiration>
     <title>15.3-Oz Dove Serum+ Dewy Shower Oil Body Wash (Coconut &amp; Geranium Oil) $8.55 w/ S&amp;S</title>
@@ -471,24 +486,14 @@
     <rating>30</rating>
   </expiration>
   <expiration>
+    <title>120-Ct Gain Dryer Sheets Plus Wrinkle Release (Moonlight Breeze Scent) 4 for $13.40</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
     <title>Braun Sensian 7 Forehead 3-in-1 Non-Contact Infrared Thermometer $10</title>
     <expired>false</expired>
-    <rating>69</rating>
-  </expiration>
-  <expiration>
-    <title>S-Union 20" Lighted Battery Artificial Maple Tree w/ 24 LEDs $10.50 &amp; More</title>
-    <expired>false</expired>
-    <rating>19</rating>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 14-Ct Amazon Basic Care Omeprazole 20mg Delayed Release Tablets $2.10 w/ S&amp;S &amp; More</title>
-    <expired>false</expired>
-    <rating>47</rating>
-  </expiration>
-  <expiration>
-    <title>NIIMBOT D110 Bluetooth Label Printer Machine (White) $8</title>
-    <expired>false</expired>
-    <rating>30</rating>
+    <rating>72</rating>
   </expiration>
   <expiration>
     <title>Roundtrip Nonstop Flights: Las Vegas, NV (LAS) to/from Dallas, TX (DFW) $97 (Travel Nov '26 - April '27)</title>
@@ -496,19 +501,9 @@
     <rating>30</rating>
   </expiration>
   <expiration>
-    <title>Ekouaer Women's Long Sleeve Fitted Top (Various) $5</title>
-    <expired>false</expired>
-    <rating>45</rating>
-  </expiration>
-  <expiration>
     <title>Street Fighter 6: Standard Edition (PlayStation 5) $16</title>
     <expired>false</expired>
     <rating>38</rating>
-  </expiration>
-  <expiration>
-    <title>120-Ct Gain Dryer Sheets Plus Wrinkle Release (Moonlight Breeze Scent) 4 for $13.40</title>
-    <expired>false</expired>
-    <rating>28</rating>
   </expiration>
   <expiration>
     <title>Wymulot Halloween Giant Hairy Spider Decorations (2 Styles) $7</title>
@@ -516,9 +511,29 @@
     <rating>27</rating>
   </expiration>
   <expiration>
-    <title>Black Sheep (4K Ultra HD) $16</title>
+    <title>NIIMBOT D110 Bluetooth Label Printer Machine (White) $8</title>
     <expired>false</expired>
-    <rating>28</rating>
+    <rating>30</rating>
+  </expiration>
+  <expiration>
+    <title>Select Accts: 14-Ct Amazon Basic Care Omeprazole 20mg Delayed Release Tablets $2.10 w/ S&amp;S &amp; More</title>
+    <expired>false</expired>
+    <rating>47</rating>
+  </expiration>
+  <expiration>
+    <title>S-Union 20" Lighted Battery Artificial Maple Tree w/ 24 LEDs $10.50 &amp; More</title>
+    <expired>false</expired>
+    <rating>19</rating>
+  </expiration>
+  <expiration>
+    <title>SABLUTE RGB Backlit Gaming Keyboard &amp; Mouse Combo w/ Wrist Rest $16.80</title>
+    <expired>false</expired>
+    <rating>20</rating>
+  </expiration>
+  <expiration>
+    <title>Ekouaer Women's Long Sleeve Fitted Top (Various) $5</title>
+    <expired>false</expired>
+    <rating>45</rating>
   </expiration>
   <expiration>
     <title>Schick Intuition Sensitive Skin Women's Razor w/ 4 Blade Refills &amp; Organic Aloe $9.60 w/ S&amp;S</title>
@@ -531,14 +546,9 @@
     <rating>25</rating>
   </expiration>
   <expiration>
-    <title>Gourmia Slim 20-Bar Espresso Machine w/ LCD Screen $87.80 + Free S&amp;H</title>
+    <title>Black Sheep (4K Ultra HD) $16</title>
     <expired>false</expired>
-    <rating>27</rating>
-  </expiration>
-  <expiration>
-    <title>SABLUTE RGB Backlit Gaming Keyboard &amp; Mouse Combo w/ Wrist Rest $16.80</title>
-    <expired>false</expired>
-    <rating>19</rating>
+    <rating>28</rating>
   </expiration>
   <expiration>
     <title>Walker's Gel Ear Pads for Razor &amp; XCEL Hearing Protection Earmuffs $10.80</title>
@@ -546,9 +556,9 @@
     <rating>34</rating>
   </expiration>
   <expiration>
-    <title>adidas Men's Future Icons 3-Stripes Hoodie (Black or White) $27.60 + Free S&amp;H</title>
+    <title>Gourmia Slim 20-Bar Espresso Machine w/ LCD Screen $87.80 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>29</rating>
+    <rating>27</rating>
   </expiration>
   <expiration>
     <title>CRAFTSMAN High-Visibility Folding Utility Knife w/ Drop-Down Blade Storage $8</title>
@@ -556,19 +566,19 @@
     <rating>32</rating>
   </expiration>
   <expiration>
-    <title>10" Intex Dura-Beam Standard Twin Downy Air Mattress (No Pump) $11.45</title>
+    <title>7MAGIC Sonic Electric Toothbrush w/ 8 Heads (4 Colors) $10.50</title>
     <expired>false</expired>
-    <rating>33</rating>
-  </expiration>
-  <expiration>
-    <title>adidas Men's Adifom Iiinfinity Casual Slide Sandals (Red) $14.95</title>
-    <expired>false</expired>
-    <rating>24</rating>
+    <rating>28</rating>
   </expiration>
   <expiration>
     <title>3-Pk 64-Oz Armor All Ultra Shine Car Wash &amp; Wax $14.15 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>27</rating>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
+    <title>adidas Men's Future Icons 3-Stripes Hoodie (Black or White) $27.60 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>29</rating>
   </expiration>
   <expiration>
     <title>36-Pc WORKPRO Mini Electric Screwdriver Set $20 + Free S&amp;H</title>
@@ -576,9 +586,19 @@
     <rating>26</rating>
   </expiration>
   <expiration>
-    <title>adidas App: adidas Men's Cloudfoam Cuxxion Sock Shoes (Black / White / Grey) $29.40 + Free S&amp;H</title>
+    <title>adidas Men's Adifom Iiinfinity Casual Slide Sandals (Red) $14.95</title>
     <expired>false</expired>
-    <rating>32</rating>
+    <rating>24</rating>
+  </expiration>
+  <expiration>
+    <title>10" Intex Dura-Beam Standard Twin Downy Air Mattress (No Pump) $11.45</title>
+    <expired>false</expired>
+    <rating>33</rating>
+  </expiration>
+  <expiration>
+    <title>808-Pc LEGO Speed Champions Mercedes-AMG G 63 &amp; SL 63 Building Toys $27</title>
+    <expired>false</expired>
+    <rating>39</rating>
   </expiration>
   <expiration>
     <title>18-Oz Billie Women's Body Lotion (4 Scents) $4.50 w/ S&amp;S</title>
@@ -586,29 +606,9 @@
     <rating>26</rating>
   </expiration>
   <expiration>
-    <title>808-Pc LEGO Speed Champions Mercedes-AMG G 63 &amp; SL 63 Building Toys $27</title>
+    <title>adidas App: adidas Men's Cloudfoam Cuxxion Sock Shoes (Black / White / Grey) $29.40 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>38</rating>
-  </expiration>
-  <expiration>
-    <title>7MAGIC Sonic Electric Toothbrush w/ 8 Heads (4 Colors) $10.50</title>
-    <expired>false</expired>
-    <rating>28</rating>
-  </expiration>
-  <expiration>
-    <title>15.5-Oz Amazon Grocery Canned Garbanzo Beans $0.65 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>60</rating>
-  </expiration>
-  <expiration>
-    <title>GXCROR Windproof Balaclava Ski Mask w/ Fleece-Like Lining &amp; Breathable Mesh $6.50</title>
-    <expired>false</expired>
-    <rating>18</rating>
-  </expiration>
-  <expiration>
-    <title>Klein Tools 11-in-1 Blackout Impact-Rated Multi-Bit Screwdriver/Nut Driver $20 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>48</rating>
+    <rating>32</rating>
   </expiration>
   <expiration>
     <title>Nike Women's In-season Trainer 14 Shoes (Rose Gold/Metallic Rose Gold/Soft Pearl/Pearl White) $36 + Free S&amp;H</title>
@@ -621,19 +621,24 @@
     <rating>24</rating>
   </expiration>
   <expiration>
+    <title>15.5-Oz Amazon Grocery Canned Garbanzo Beans $0.65 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>60</rating>
+  </expiration>
+  <expiration>
     <title>100-Pk PARTH iMPEX 3.5"x2" "You Parked Like an Idiot" Business Cards $5 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>26</rating>
-  </expiration>
-  <expiration>
-    <title>14.5-Oz Amazon Grocery Diced Tomatoes (No Salt Added) $0.65 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>58</rating>
-  </expiration>
-  <expiration>
-    <title>SABRE RED Maximum Strength OC Pepper Spray w/ Finger Grip &amp; Quick-Release Keychain $7.40</title>
-    <expired>false</expired>
     <rating>27</rating>
+  </expiration>
+  <expiration>
+    <title>Klein Tools 11-in-1 Blackout Impact-Rated Multi-Bit Screwdriver/Nut Driver $20 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>GXCROR Windproof Balaclava Ski Mask w/ Fleece-Like Lining &amp; Breathable Mesh $6.50</title>
+    <expired>false</expired>
+    <rating>18</rating>
   </expiration>
   <expiration>
     <title>8-Ct SWCANDY Aromatherapy Shower Steamers $3</title>
@@ -641,22 +646,12 @@
     <rating>48</rating>
   </expiration>
   <expiration>
-    <title>Mora Pets Self-Warming Cat &amp; Dog Bed w/ Removable Washable Cover (Various Sizes) from $17.40</title>
+    <title>14.5-Oz Amazon Grocery Diced Tomatoes (No Salt Added) $0.65 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>31</rating>
+    <rating>60</rating>
   </expiration>
   <expiration>
-    <title>Costco Members: 2-Pc Champion Kids' Hoodie/Jogger Set $15 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>77</rating>
-  </expiration>
-  <expiration>
-    <title>5000mAh VONUV 15W Magnetic Wireless Slim Power Bank (Various) $14</title>
-    <expired>false</expired>
-    <rating>52</rating>
-  </expiration>
-  <expiration>
-    <title>5.5-Cup Zojirushi NW-QAC10 Induction Rice Cooker $243.55 + Free S&amp;H</title>
+    <title>SABRE RED Maximum Strength OC Pepper Spray w/ Finger Grip &amp; Quick-Release Keychain $7.40</title>
     <expired>false</expired>
     <rating>27</rating>
   </expiration>
@@ -666,14 +661,34 @@
     <rating>64</rating>
   </expiration>
   <expiration>
+    <title>5000mAh VONUV 15W Magnetic Wireless Slim Power Bank (Various) $14</title>
+    <expired>false</expired>
+    <rating>52</rating>
+  </expiration>
+  <expiration>
+    <title>Costco Members: 2-Pc Champion Kids' Hoodie/Jogger Set $15 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>77</rating>
+  </expiration>
+  <expiration>
+    <title>Mora Pets Self-Warming Cat &amp; Dog Bed w/ Removable Washable Cover (Various Sizes) from $17.40</title>
+    <expired>false</expired>
+    <rating>31</rating>
+  </expiration>
+  <expiration>
     <title>MLB The Show 26 (PS5) $28.85 + Free Pickup</title>
     <expired>false</expired>
     <rating>55</rating>
   </expiration>
   <expiration>
+    <title>5.5-Cup Zojirushi NW-QAC10 Induction Rice Cooker $243.55 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>27</rating>
+  </expiration>
+  <expiration>
     <title>44mm Casio MRW200H Men's Analog Watch (Beige/Black) $24.80</title>
     <expired>false</expired>
-    <rating>43</rating>
+    <rating>44</rating>
   </expiration>
   <expiration>
     <title>Wolverine Men's Kent Wedge 6" Work Boot $60 + Free S&amp;H</title>
@@ -691,49 +706,9 @@
     <rating>59</rating>
   </expiration>
   <expiration>
-    <title>24-Ct Surface Mopping Microfiber Pad Refills for PowerMop from $19.35</title>
-    <expired>false</expired>
-    <rating>19</rating>
-  </expiration>
-  <expiration>
     <title>48" LG B6 OLED AI 4K 120Hz Smart webOS TV (2026) $700 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>67</rating>
-  </expiration>
-  <expiration>
-    <title>Thunderbolts Men's Graphic Tee Shirt (Group Poster, Select Sizes) $4.25</title>
-    <expired>false</expired>
-    <rating>74</rating>
-  </expiration>
-  <expiration>
-    <title>DRAGON QUEST I &amp; II HD-2D Remake (Various Systems) $35</title>
-    <expired>false</expired>
-    <rating>75</rating>
-  </expiration>
-  <expiration>
-    <title>David's Bridal The Edit Studio Spaghetti Strap Sheath Dress (Select Colors) $14 &amp; More</title>
-    <expired>false</expired>
-    <rating>44</rating>
-  </expiration>
-  <expiration>
-    <title>Osaki Titan Ultra 2 3D Massage Chair (Black or Brown) $1099 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>120</rating>
-  </expiration>
-  <expiration>
-    <title>Edifier MR3 Bluetooth 5.4 Powered Studio Monitor Speakers (Pair; Black or White) $88 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>40</rating>
-  </expiration>
-  <expiration>
-    <title>Crocs Women's Kadee II Flip Sandals (Black) $10 + Free S&amp;H on $35+</title>
-    <expired>false</expired>
-    <rating>21</rating>
-  </expiration>
-  <expiration>
-    <title>Prime Members: Onforu 36W Solar Outdoor Motion Sensor LED Lights $19.50 + Free S&amp;H</title>
-    <expired>true</expired>
-    <rating>23</rating>
   </expiration>
   <expiration>
     <title>12-Pk 3.25-Oz Brunswick Golden Smoked Herring Fillets $17.55 w/ S&amp;S</title>
@@ -741,29 +716,64 @@
     <rating>38</rating>
   </expiration>
   <expiration>
+    <title>24-Ct Surface Mopping Microfiber Pad Refills for PowerMop from $19.35</title>
+    <expired>false</expired>
+    <rating>19</rating>
+  </expiration>
+  <expiration>
     <title>The Adventures of Elliot: The Millennium Tales (Switch 2 or PS5) $45 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>21</rating>
   </expiration>
   <expiration>
-    <title>OGHom 1000W 2-in-1 Portable Handheld Clothes Steamer &amp; Iron $17 + Free S&amp;H</title>
+    <title>Osaki Titan Ultra 2 3D Massage Chair (Black or Brown) $1099 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>43</rating>
+    <rating>122</rating>
   </expiration>
   <expiration>
-    <title>Mikolo G2 LAT Pull Down Machine Multifunction Cable Set w/ Flip-up Footplate $166 + Free S&amp;H</title>
+    <title>DRAGON QUEST I &amp; II HD-2D Remake (Various Systems) $35</title>
+    <expired>false</expired>
+    <rating>75</rating>
+  </expiration>
+  <expiration>
+    <title>Crocs Women's Kadee II Flip Sandals (Black) $10 + Free S&amp;H on $35+</title>
+    <expired>false</expired>
+    <rating>21</rating>
+  </expiration>
+  <expiration>
+    <title>Thunderbolts Men's Graphic Tee Shirt (Group Poster, Select Sizes) $4.25</title>
+    <expired>false</expired>
+    <rating>74</rating>
+  </expiration>
+  <expiration>
+    <title>0.4-Oz Amazon Grocery Dried Parsley Flakes $0.75 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>26</rating>
   </expiration>
   <expiration>
-    <title>Waterdrop TSB-UF 9-Stage Under-Sink Water Filter System w/ Stainless Steel Faucet $114 + Free S&amp;H</title>
+    <title>Edifier MR3 Bluetooth 5.4 Powered Studio Monitor Speakers (Pair; Black or White) $88 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>37</rating>
+    <rating>41</rating>
+  </expiration>
+  <expiration>
+    <title>OGHom 1000W 2-in-1 Portable Handheld Clothes Steamer &amp; Iron $17 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>45</rating>
   </expiration>
   <expiration>
     <title>JUSTFASHIONNOW Women's Long Sleeve Tunic Sweater (select sizes/colors) $4.80</title>
     <expired>false</expired>
     <rating>45</rating>
+  </expiration>
+  <expiration>
+    <title>6-Pk Men's Fleece Lined Joggers w/ Zip Pockets $23 &amp; More + Free S&amp;H w/ Prime</title>
+    <expired>false</expired>
+    <rating>43</rating>
+  </expiration>
+  <expiration>
+    <title>Waterdrop TSB-UF 9-Stage Under-Sink Water Filter System w/ Stainless Steel Faucet $114 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>38</rating>
   </expiration>
   <expiration>
     <title>Reef &amp; Teva Footwear: Reef Men's Swellsole Neso Shoes (various) $35 &amp; More + Free S&amp;H w/ Prime</title>
@@ -776,29 +786,24 @@
     <rating>21</rating>
   </expiration>
   <expiration>
-    <title>789-Ct NITEEN Hydrocolloid Pimple Patches Variety Pack (8 Sizes) $5</title>
-    <expired>false</expired>
-    <rating>30</rating>
-  </expiration>
-  <expiration>
     <title>Select Accounts: 14.75-Oz Amazon Grocery Canned Cream Style Corn $0.65 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>27</rating>
   </expiration>
   <expiration>
-    <title>0.4-Oz Amazon Grocery Dried Parsley Flakes $0.75 w/ S&amp;S</title>
+    <title>David's Bridal The Edit Studio Spaghetti Strap Sheath Dress (Select Colors) $14 &amp; More</title>
+    <expired>false</expired>
+    <rating>44</rating>
+  </expiration>
+  <expiration>
+    <title>789-Ct NITEEN Hydrocolloid Pimple Patches Variety Pack (8 Sizes) $5</title>
+    <expired>false</expired>
+    <rating>30</rating>
+  </expiration>
+  <expiration>
+    <title>Mikolo G2 LAT Pull Down Machine Multifunction Cable Set w/ Flip-up Footplate $166 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>26</rating>
-  </expiration>
-  <expiration>
-    <title>6-Pk Men's Fleece Lined Joggers w/ Zip Pockets $23 &amp; More + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
-    <rating>43</rating>
-  </expiration>
-  <expiration>
-    <title>24-Pk 8-Oz Contadina Tomato Sauce $12.70 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>28</rating>
   </expiration>
   <expiration>
     <title>BISSELL Pet Hair Eraser Turbo Rewind Lightweight Vacuum w/ Tangle-Free Brush Roll (Blue) $130 + Free S&amp;H</title>
@@ -806,7 +811,37 @@
     <rating>20</rating>
   </expiration>
   <expiration>
+    <title>24-Pk 8-Oz Contadina Tomato Sauce $12.70 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
+    <title>Crocs Men's or Women's Classic Clog Shoes (5 Colors) $22.50 + Free S&amp;H on $45</title>
+    <expired>false</expired>
+    <rating>36</rating>
+  </expiration>
+  <expiration>
+    <title>Goodyear Wrangler Authority 115S All-Terrain Light Truck &amp; SUV Tire (275/60R20) $186 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>40</rating>
+  </expiration>
+  <expiration>
     <title>DURATECH 49-IN-1 Mini Precision Electric SAE Screwdriver Set $20</title>
+    <expired>false</expired>
+    <rating>23</rating>
+  </expiration>
+  <expiration>
+    <title>Harry Potter and Fantastic Beasts 11-Film Collection (4K Ultra HD Blu-ray) $89.50 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>20</rating>
+  </expiration>
+  <expiration>
+    <title>The Old Man and the Sea: The Hemingway Library Edition (Hardcover) $9.80</title>
+    <expired>false</expired>
+    <rating>23</rating>
+  </expiration>
+  <expiration>
+    <title>DeWALT 7-1/4" 24T Circular Saw Blade $8</title>
     <expired>false</expired>
     <rating>23</rating>
   </expiration>
@@ -816,59 +851,9 @@
     <rating>24</rating>
   </expiration>
   <expiration>
-    <title>The Old Man and the Sea: The Hemingway Library Edition (Hardcover) $9.80</title>
-    <expired>false</expired>
-    <rating>23</rating>
-  </expiration>
-  <expiration>
-    <title>Goodyear Wrangler Authority 115S All-Terrain Light Truck &amp; SUV Tire (275/60R20) $186 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>40</rating>
-  </expiration>
-  <expiration>
-    <title>Harry Potter and Fantastic Beasts 11-Film Collection (4K Ultra HD Blu-ray) $89.50 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>20</rating>
-  </expiration>
-  <expiration>
-    <title>Crocs Men's or Women's Classic Clog Shoes (5 Colors) $22.50 + Free S&amp;H on $45</title>
-    <expired>false</expired>
-    <rating>36</rating>
-  </expiration>
-  <expiration>
     <title>The Rogue Prince of Persia (Nintendo Switch) $19.95</title>
     <expired>false</expired>
     <rating>32</rating>
-  </expiration>
-  <expiration>
-    <title>DeWALT 7-1/4" 24T Circular Saw Blade $8</title>
-    <expired>false</expired>
-    <rating>23</rating>
-  </expiration>
-  <expiration>
-    <title>TECKNET Wired 8 Button 12800 DPI Optical RGB Gaming Mouse $11.20</title>
-    <expired>false</expired>
-    <rating>26</rating>
-  </expiration>
-  <expiration>
-    <title>Harbor Freight Stores: 9" QUINN Linesman Pliers $6 (In-Store Purchase)</title>
-    <expired>false</expired>
-    <rating>37</rating>
-  </expiration>
-  <expiration>
-    <title>Prime Members: 2-Pc Saccison Dog Grooming Slicker Brush &amp; Stainless Steel Comb $5 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>27</rating>
-  </expiration>
-  <expiration>
-    <title>28-Pk 1.375-Oz Miss Vickie's Kettle Cooked Potato Chips (Variety) $17.55 or less w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>31</rating>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 32-Pk Cottonelle 1-Ply Toilet Paper Family Mega Rolls (Ultra Clean) $22.60 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>46</rating>
   </expiration>
   <expiration>
     <title>Day of the Dead (Collector's Edition 4K Ultra HD + Blu-ray) $32.50</title>
@@ -876,9 +861,39 @@
     <rating>36</rating>
   </expiration>
   <expiration>
-    <title>Bendon Coloring &amp; Activity Books: Hello Kitty, Bluey, Paw Patrol &amp; More $1 each + Free Pickup</title>
+    <title>Prime Members: 2-Pc Saccison Dog Grooming Slicker Brush &amp; Stainless Steel Comb $5 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>27</rating>
+  </expiration>
+  <expiration>
+    <title>Harbor Freight Stores: 9" QUINN Linesman Pliers $6 (In-Store Purchase)</title>
+    <expired>false</expired>
+    <rating>37</rating>
+  </expiration>
+  <expiration>
+    <title>TECKNET Wired 8 Button 12800 DPI Optical RGB Gaming Mouse $11.20</title>
+    <expired>false</expired>
+    <rating>26</rating>
+  </expiration>
+  <expiration>
+    <title>360-Day RedPocket Prepaid Wireless Phone Plan: Unlimited Talk / Text + 200MB Data $30 + Free S&amp;H (New or Renew)</title>
+    <expired>false</expired>
+    <rating>41</rating>
+  </expiration>
+  <expiration>
+    <title>Bendon Coloring &amp; Activity Books: Hello Kitty, Bluey, Paw Patrol &amp; More $1 each + Free Pickup</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
+    <title>Nike Women's Court Vision Low Shoes (Light Orewood Brown/Light Orewood Brown/White) $36 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>23</rating>
+  </expiration>
+  <expiration>
+    <title>Select Accts: 32-Pk Cottonelle 1-Ply Toilet Paper Family Mega Rolls (Ultra Clean) $22.60 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>46</rating>
   </expiration>
   <expiration>
     <title>Clarks Men's Bushacre 2 Chukka Boots (Beeswax) $43 + Free S&amp;H</title>
@@ -891,29 +906,9 @@
     <rating>39</rating>
   </expiration>
   <expiration>
-    <title>360-Day RedPocket Prepaid Wireless Phone Plan: Unlimited Talk / Text + 200MB Data $30 + Free S&amp;H (New or Renew)</title>
+    <title>EPOS Gaming: H3 Hybrid $20, H3Pro Hybrid Gaming Headset $32 &amp; More + Free S&amp;H w/ Prime</title>
     <expired>false</expired>
-    <rating>40</rating>
-  </expiration>
-  <expiration>
-    <title>65W UGREEN Nexode Air USB C GaN Wall Charger + 3.3' Cable $24</title>
-    <expired>false</expired>
-    <rating>50</rating>
-  </expiration>
-  <expiration>
-    <title>Nike Women's Court Vision Low Shoes (Light Orewood Brown/Light Orewood Brown/White) $36 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>23</rating>
-  </expiration>
-  <expiration>
-    <title>Avia Men's Commend 2 Running Sneakers (Black or White) $15</title>
-    <expired>false</expired>
-    <rating>31</rating>
-  </expiration>
-  <expiration>
-    <title>Addtam 6-Outlet Power Strip Surge Protector w/ 4 USB Charging Ports $10 &amp; More</title>
-    <expired>false</expired>
-    <rating>33</rating>
+    <rating>30</rating>
   </expiration>
   <expiration>
     <title>42mm Glycine Men's Combat Sub Automatic Watch (Blue or Black) $360 + Free S&amp;H</title>
@@ -921,24 +916,29 @@
     <rating>23</rating>
   </expiration>
   <expiration>
-    <title>EPOS Gaming: H3 Hybrid $20, H3Pro Hybrid Gaming Headset $32 &amp; More + Free S&amp;H w/ Prime</title>
+    <title>Billabong Men's Full-Zip Mock Neck Sherpa Jacket (select sizes/colors) $19 + Free S&amp;H w/ Prime</title>
     <expired>false</expired>
-    <rating>30</rating>
+    <rating>22</rating>
   </expiration>
   <expiration>
-    <title>32 Degrees Men's Sweater Knit Crew Top (Various Colors) $8 + Free S&amp;H on $23.75+</title>
+    <title>65W UGREEN Nexode Air USB C GaN Wall Charger + 3.3' Cable $24</title>
     <expired>false</expired>
-    <rating>28</rating>
+    <rating>50</rating>
   </expiration>
   <expiration>
-    <title>The Thing (1982, Blu-ray) $7</title>
+    <title>Addtam 6-Outlet Power Strip Surge Protector w/ 4 USB Charging Ports $10 &amp; More</title>
+    <expired>false</expired>
+    <rating>33</rating>
+  </expiration>
+  <expiration>
+    <title>28-Pk 1.375-Oz Miss Vickie's Kettle Cooked Potato Chips (Variety) $17.55 or less w/ S&amp;S</title>
     <expired>false</expired>
     <rating>31</rating>
   </expiration>
   <expiration>
-    <title>JOOLA Tyson McGuffin Magnus CAS Pickleball Paddle (Gold) $20 &amp; More</title>
+    <title>Avia Men's Commend 2 Running Sneakers (Black or White) $15</title>
     <expired>false</expired>
-    <rating>28</rating>
+    <rating>31</rating>
   </expiration>
   <expiration>
     <title>15.6" LOVEVOOK Laptop Backpack w/ Tumbler Holder (Beige-Black-Brown) $15</title>
@@ -951,14 +951,19 @@
     <rating>22</rating>
   </expiration>
   <expiration>
-    <title>Billabong Men's Full-Zip Mock Neck Sherpa Jacket (select sizes/colors) $19 + Free S&amp;H w/ Prime</title>
-    <expired>false</expired>
-    <rating>22</rating>
-  </expiration>
-  <expiration>
     <title>Texas Instruments TI-84 Evo Graphing Calculator $79 or Less + Free S&amp;H</title>
     <expired>false</expired>
     <rating>35</rating>
+  </expiration>
+  <expiration>
+    <title>32 Degrees Men's Sweater Knit Crew Top (Various Colors) $8 + Free S&amp;H on $23.75+</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
+    <title>The Thing (1982, Blu-ray) $7</title>
+    <expired>false</expired>
+    <rating>31</rating>
   </expiration>
   <expiration>
     <title>Under Armour 1/2 Gallon Sideline Jug $14.40</title>
@@ -966,24 +971,9 @@
     <rating>31</rating>
   </expiration>
   <expiration>
-    <title>16-Oz Contigo Byron 2.0 Stainless Steel Insulated Travel Mug (Pansy) 2 for $19.50 + Free S&amp;H</title>
+    <title>JOOLA Tyson McGuffin Magnus CAS Pickleball Paddle (Gold) $20 &amp; More</title>
     <expired>false</expired>
-    <rating>56</rating>
-  </expiration>
-  <expiration>
-    <title>4-Pk Energizer MAX AAA Alkaline Batteries $2.30</title>
-    <expired>false</expired>
-    <rating>54</rating>
-  </expiration>
-  <expiration>
-    <title>Menards: Michelin Pro Plus Silicone 26" &amp; 19" Windshield Wiper Blades $9 + 11% Rebate Credit &amp; More + Free Pickup</title>
-    <expired>false</expired>
-    <rating>32</rating>
-  </expiration>
-  <expiration>
-    <title>3-Pack Nerf Mini Foam Sports Ball Set (Spiral Football, Soccer, Basketball) $12</title>
-    <expired>false</expired>
-    <rating>36</rating>
+    <rating>28</rating>
   </expiration>
   <expiration>
     <title>16-Qt Tramontina Gourmet Stainless Steel Stock Pot w/ Lid $55.95 + Free S&amp;H</title>
@@ -991,24 +981,49 @@
     <rating>40</rating>
   </expiration>
   <expiration>
+    <title>3-Pack Nerf Mini Foam Sports Ball Set (Spiral Football, Soccer, Basketball) $12</title>
+    <expired>false</expired>
+    <rating>36</rating>
+  </expiration>
+  <expiration>
+    <title>16-Oz Contigo Byron 2.0 Stainless Steel Insulated Travel Mug (Pansy) 2 for $19.50 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>56</rating>
+  </expiration>
+  <expiration>
+    <title>Menards: Michelin Pro Plus Silicone 26" &amp; 19" Windshield Wiper Blades $9 + 11% Rebate Credit &amp; More + Free Pickup</title>
+    <expired>false</expired>
+    <rating>32</rating>
+  </expiration>
+  <expiration>
+    <title>Logitech G305 LIGHTSPEED Wireless Hero 12K Sensor Gaming Mouse (Black) $29.50</title>
+    <expired>false</expired>
+    <rating>40</rating>
+  </expiration>
+  <expiration>
+    <title>4-Pk Energizer MAX AAA Alkaline Batteries $2.30</title>
+    <expired>false</expired>
+    <rating>54</rating>
+  </expiration>
+  <expiration>
     <title>6-Pk RoomHacks 88L Water-Resistant Foldable Storage Moving Bags w/ Dual Zippers $15</title>
     <expired>false</expired>
     <rating>36</rating>
   </expiration>
   <expiration>
-    <title>Logitech G305 LIGHTSPEED Wireless Hero 12K Sensor Gaming Mouse (Black) $29.50</title>
+    <title>Bosch 12V Flexiclick 5-In-1 Cordless Multi-Head Electric Screwdriver Drill Set $141.55 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>39</rating>
+    <rating>22</rating>
   </expiration>
   <expiration>
-    <title>24-Pc Protado Wooden Dinosaur Matching Game w/ Smooth-Edged Memory Tiles $6</title>
+    <title>Crocs Classic Clogs (Various): Kids' Sizes $15, Toddler Sizes $12.50</title>
     <expired>false</expired>
-    <rating>21</rating>
+    <rating>42</rating>
   </expiration>
   <expiration>
-    <title>DEWALT DCF913B 20V MAX 3/8" Cordless Impact Wrench w/ Hog Ring Anvil (Tool Only) $109 + Free S&amp;H on $150+</title>
+    <title>68" Ebern Designs Chenille Fabric Loveseat Sofa (Green) $149 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>31</rating>
+    <rating>36</rating>
   </expiration>
   <expiration>
     <title>Corduroy: Giant Board Book $6.70</title>
@@ -1016,7 +1031,27 @@
     <rating>86</rating>
   </expiration>
   <expiration>
-    <title>Bosch 12V Flexiclick 5-In-1 Cordless Multi-Head Electric Screwdriver Drill Set $141.55 + Free S&amp;H</title>
+    <title>DEWALT DCF913B 20V MAX 3/8" Cordless Impact Wrench w/ Hog Ring Anvil (Tool Only) $109 + Free S&amp;H on $150+</title>
+    <expired>false</expired>
+    <rating>31</rating>
+  </expiration>
+  <expiration>
+    <title>24-Pc Protado Wooden Dinosaur Matching Game w/ Smooth-Edged Memory Tiles $6</title>
+    <expired>false</expired>
+    <rating>21</rating>
+  </expiration>
+  <expiration>
+    <title>EagleStone Automatic Bubble Machine w/ 2.4GHz Remote, LED Lights &amp; Music (3 Colors) $14.30</title>
+    <expired>false</expired>
+    <rating>23</rating>
+  </expiration>
+  <expiration>
+    <title>242-Pc CRAFTSMAN VERSASTACK SAE &amp; Metric Mechanics Tool Set w/ Case $99 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>45</rating>
+  </expiration>
+  <expiration>
+    <title>Toro Flex-Force 60V 10 Ah Lithium-Ion Battery w/ LED Fuel Gauge $200 + Free Pickup</title>
     <expired>false</expired>
     <rating>22</rating>
   </expiration>
@@ -1026,49 +1061,9 @@
     <rating>38</rating>
   </expiration>
   <expiration>
-    <title>68" Ebern Designs Chenille Fabric Loveseat Sofa (Green) $149 + Free S&amp;H</title>
+    <title>WNH Cordless Lower Back Adjustable Massager w/ Heat, Vibration &amp; Touch Controls $33.40 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>36</rating>
-  </expiration>
-  <expiration>
-    <title>Crocs Classic Clogs (Various): Kids' Sizes $15, Toddler Sizes $12.50</title>
-    <expired>false</expired>
-    <rating>42</rating>
-  </expiration>
-  <expiration>
-    <title>Toro Flex-Force 60V 10 Ah Lithium-Ion Battery w/ LED Fuel Gauge $200 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>22</rating>
-  </expiration>
-  <expiration>
-    <title>EagleStone Automatic Bubble Machine w/ 2.4GHz Remote, LED Lights &amp; Music (3 Colors) $14.30</title>
-    <expired>false</expired>
-    <rating>23</rating>
-  </expiration>
-  <expiration>
-    <title>32GB CONODO Bluetooth MP3 Player w/ 1.8" Screen &amp; FM Radio $16.50 &amp; More</title>
-    <expired>false</expired>
-    <rating>42</rating>
-  </expiration>
-  <expiration>
-    <title>Roundtrip Nonstop Flight: San Francisco, CA to/from Phoenix, AZ $117 (Travel Dec '26 to Apr '27)</title>
-    <expired>false</expired>
-    <rating>28</rating>
-  </expiration>
-  <expiration>
-    <title>242-Pc CRAFTSMAN VERSASTACK SAE &amp; Metric Mechanics Tool Set w/ Case $99 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>45</rating>
-  </expiration>
-  <expiration>
-    <title>Casio Women's Digital Watch w/ LED Light, Stopwatch &amp; 5-Year Battery (Grey/Pink) $16.15</title>
-    <expired>false</expired>
-    <rating>30</rating>
-  </expiration>
-  <expiration>
-    <title>58-Pc LEGO Star Wars The Mandalorian &amp; Grogu's Speeder Bike Building Toy $7</title>
-    <expired>false</expired>
-    <rating>38</rating>
+    <rating>32</rating>
   </expiration>
   <expiration>
     <title>Select Accounts: 16-Oz Nature's Eats Pecan Pieces $6.15 w/ S&amp;S</title>
@@ -1076,24 +1071,29 @@
     <rating>49</rating>
   </expiration>
   <expiration>
-    <title>14-Oz Contigo SnapSeal Insulated Stainless Steel Water Bottle (Denim Champagne) $12.30</title>
-    <expired>false</expired>
-    <rating>36</rating>
-  </expiration>
-  <expiration>
-    <title>WNH Cordless Lower Back Adjustable Massager w/ Heat, Vibration &amp; Touch Controls $33.40 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>32</rating>
-  </expiration>
-  <expiration>
     <title>3-Pk 6.6' UGREEN 240W Fast Charging USB C Cable $19</title>
     <expired>false</expired>
     <rating>47</rating>
   </expiration>
   <expiration>
-    <title>Camco Heavy Duty Wheel Dock w/ Rope Handle $5.30</title>
-    <expired>true</expired>
-    <rating>46</rating>
+    <title>Casio Women's Digital Watch w/ LED Light, Stopwatch &amp; 5-Year Battery (Grey/Pink) $16.15</title>
+    <expired>false</expired>
+    <rating>30</rating>
+  </expiration>
+  <expiration>
+    <title>32GB CONODO Bluetooth MP3 Player w/ 1.8" Screen &amp; FM Radio $16.50 &amp; More</title>
+    <expired>false</expired>
+    <rating>43</rating>
+  </expiration>
+  <expiration>
+    <title>58-Pc LEGO Star Wars The Mandalorian &amp; Grogu's Speeder Bike Building Toy $7</title>
+    <expired>false</expired>
+    <rating>38</rating>
+  </expiration>
+  <expiration>
+    <title>14-Oz Contigo SnapSeal Insulated Stainless Steel Water Bottle (Denim Champagne) $12.30</title>
+    <expired>false</expired>
+    <rating>36</rating>
   </expiration>
   <expiration>
     <title>771-Pc LEGO Botanical Collection Succulents Building Set $33</title>
@@ -1101,24 +1101,19 @@
     <rating>47</rating>
   </expiration>
   <expiration>
+    <title>8.9" Smasiagon Kids' Magnetic Drawing Board w/ 3 Adjustable Configurations $10.60</title>
+    <expired>false</expired>
+    <rating>46</rating>
+  </expiration>
+  <expiration>
+    <title>Roundtrip Nonstop Flight: San Francisco, CA to/from Phoenix, AZ $117 (Travel Dec '26 to Apr '27)</title>
+    <expired>false</expired>
+    <rating>28</rating>
+  </expiration>
+  <expiration>
     <title>13.6" Apple MacBook Air Laptop (2026): M5 Chip, 24GB RAM, 1TB SSD (Various) $1599 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>30</rating>
-  </expiration>
-  <expiration>
-    <title>4' Insignia 20W USB-C to Lightning Coiled Car Charger Kit for Apple iPhone/iPad $3 or Less + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>92</rating>
-  </expiration>
-  <expiration>
-    <title>27.6" x 59" NILUOH Non-Slip Quilted Couch Cover for Dogs w/ Soft Flannel (5 Colors) $15</title>
-    <expired>false</expired>
-    <rating>27</rating>
-  </expiration>
-  <expiration>
-    <title>JIYANG Solar Automatic Plant Watering Kit w/ 12 Timer Modes for 20-30 Plant Pots $15</title>
-    <expired>false</expired>
-    <rating>31</rating>
   </expiration>
   <expiration>
     <title>adidas Men's Ultraboost 5X Running Shoes (Core Black / Core Black / Cloud White) $58.80 + Free S&amp;H</title>
@@ -1126,14 +1121,9 @@
     <rating>132</rating>
   </expiration>
   <expiration>
-    <title>8.9" Smasiagon Kids' Magnetic Drawing Board w/ 3 Adjustable Configurations $10.60</title>
+    <title>27.6" x 59" NILUOH Non-Slip Quilted Couch Cover for Dogs w/ Soft Flannel (5 Colors) $15</title>
     <expired>false</expired>
-    <rating>45</rating>
-  </expiration>
-  <expiration>
-    <title>VALANCH Men's Lightweight Short Sleeve Quick-Dry Golf Polo Shirt (Size XL-3XL) $12 &amp; More</title>
-    <expired>false</expired>
-    <rating>28</rating>
+    <rating>27</rating>
   </expiration>
   <expiration>
     <title>Pyle 8-Channel Studio Audio Mixer w/ Bluetooth, USB Recording &amp; DSP Effects $81 + Free S&amp;H</title>
@@ -1143,17 +1133,22 @@
   <expiration>
     <title>G Gradual Men's Long Sleeve 1/4-Zip Golf Pullover Shirt w/ Moisture-Wicking Fabric $17.80</title>
     <expired>false</expired>
+    <rating>29</rating>
+  </expiration>
+  <expiration>
+    <title>VALANCH Men's Lightweight Short Sleeve Quick-Dry Golf Polo Shirt (Size XL-3XL) $12 &amp; More</title>
+    <expired>false</expired>
     <rating>28</rating>
   </expiration>
   <expiration>
-    <title>11.5' x 11.5' Ever Advanced Pop-Up Screen House Gazebo Tent w/ 3-Minute Setup $130</title>
+    <title>4' Insignia 20W USB-C to Lightning Coiled Car Charger Kit for Apple iPhone/iPad $3 or Less + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>35</rating>
+    <rating>92</rating>
   </expiration>
   <expiration>
-    <title>3-Pk Men's Waffle-Knit Thermal Henley Pullover Hoodie $18 &amp; More + Free S&amp;H w/ Prime</title>
+    <title>JIYANG Solar Automatic Plant Watering Kit w/ 12 Timer Modes for 20-30 Plant Pots $15</title>
     <expired>false</expired>
-    <rating>53</rating>
+    <rating>33</rating>
   </expiration>
   <expiration>
     <title>Refurbished: Ninja Luxe Café Premier Series Espresso Machine $250 + Free S&amp;H w/ Prime</title>
@@ -1161,9 +1156,14 @@
     <rating>300</rating>
   </expiration>
   <expiration>
-    <title>KRTALS Magnetic MagSafe Phone Card Holder w/ RFID Blocking (Various Colors) $6</title>
+    <title>3-Pk Men's Waffle-Knit Thermal Henley Pullover Hoodie $18 &amp; More + Free S&amp;H w/ Prime</title>
     <expired>false</expired>
-    <rating>52</rating>
+    <rating>53</rating>
+  </expiration>
+  <expiration>
+    <title>4-Ct uniball Zento Gel Pens (0.7mm Medium Point, Black Ink) $5.30 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>44</rating>
   </expiration>
   <expiration>
     <title>PowerA Slim Case for Nintendo Switch 2 $15</title>
@@ -1171,9 +1171,14 @@
     <rating>50</rating>
   </expiration>
   <expiration>
-    <title>Serif Affinity iPad App Lifetime Licenses: Photo 2, Designer 2 or Publisher 2 Free</title>
+    <title>11.5' x 11.5' Ever Advanced Pop-Up Screen House Gazebo Tent w/ 3-Minute Setup $130</title>
     <expired>false</expired>
-    <rating>79</rating>
+    <rating>35</rating>
+  </expiration>
+  <expiration>
+    <title>6-Pk HONGTEYA UV Protection Cooling Neck Gaiter (Various) $4.30</title>
+    <expired>false</expired>
+    <rating>48</rating>
   </expiration>
   <expiration>
     <title>LEGO Countdown to Christmas 12-Ct 48-Pc Mini Jigsaw Advent Puzzles $20</title>
@@ -1181,9 +1186,19 @@
     <rating>34</rating>
   </expiration>
   <expiration>
-    <title>6-Pk HONGTEYA UV Protection Cooling Neck Gaiter (Various) $4.30</title>
+    <title>Odrey 4K UHD Front Dashcam w/ 5G $20.90</title>
     <expired>false</expired>
-    <rating>47</rating>
+    <rating>45</rating>
+  </expiration>
+  <expiration>
+    <title>Serif Affinity iPad App Lifetime Licenses: Photo 2, Designer 2 or Publisher 2 Free</title>
+    <expired>false</expired>
+    <rating>79</rating>
+  </expiration>
+  <expiration>
+    <title>6-Pk 284-Sheet Cottonelle Ultra Clean 1-Ply Mega Roll Toilet Paper $5.65 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>37</rating>
   </expiration>
   <expiration>
     <title>128GB ORICO Dual Port USB-C / USB-A Flash Drive (Silver) $15</title>
@@ -1191,14 +1206,9 @@
     <rating>44</rating>
   </expiration>
   <expiration>
-    <title>6-Pk 284-Sheet Cottonelle Ultra Clean 1-Ply Mega Roll Toilet Paper $5.65 w/ S&amp;S</title>
+    <title>KRTALS Magnetic MagSafe Phone Card Holder w/ RFID Blocking (Various Colors) $6</title>
     <expired>false</expired>
-    <rating>38</rating>
-  </expiration>
-  <expiration>
-    <title>4-Ct uniball Zento Gel Pens (0.7mm Medium Point, Black Ink) $5.30 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>44</rating>
+    <rating>52</rating>
   </expiration>
   <expiration>
     <title>FEELLIFE Plantar Fasciitis Relief Arch Support Gel Shoe Insoles $13</title>
@@ -1211,54 +1221,9 @@
     <rating>59</rating>
   </expiration>
   <expiration>
-    <title>Odrey 4K UHD Front Dashcam w/ 5G $20.90</title>
-    <expired>false</expired>
-    <rating>45</rating>
-  </expiration>
-  <expiration>
-    <title>3-Pc TOPFEEL German High Carbon Steel Kitchen Knife Set $19.35 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>48</rating>
-  </expiration>
-  <expiration>
     <title>Select Costco Stores: 40-Oz Neutrogena Rainbath Shower Gel (Ocean Mist) $10 (In-Store Only)</title>
     <expired>false</expired>
     <rating>47</rating>
-  </expiration>
-  <expiration>
-    <title>Select Accounts: Greenworks 60V Electric Leaf Blower w/ 2.5Ah Battery &amp; Charger $98 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>55</rating>
-  </expiration>
-  <expiration>
-    <title>Greenworks 80V 750CFM Brushless Leaf Blower w/ 2.5Ah Battery &amp; 4A Charger $127.50 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>37</rating>
-  </expiration>
-  <expiration>
-    <title>32-Oz Starbucks Refreshers Concentrate (Strawberry Acai) $7</title>
-    <expired>false</expired>
-    <rating>43</rating>
-  </expiration>
-  <expiration>
-    <title>3-Pk 32-Oz Amazon Fresh 35% Less Sodium Chicken Broth $3.30 w/ S&amp;S &amp; More</title>
-    <expired>false</expired>
-    <rating>48</rating>
-  </expiration>
-  <expiration>
-    <title>Just Dance 2026 Edition Limited Edition (Nintendo Switch, Code in Box) $15</title>
-    <expired>false</expired>
-    <rating>63</rating>
-  </expiration>
-  <expiration>
-    <title>Pyle 48" Under Desk Cable Management Tray (20 lb Capacity) $27</title>
-    <expired>false</expired>
-    <rating>92</rating>
-  </expiration>
-  <expiration>
-    <title>25" LG UltraGear G5 1920x1080 200Hz 1ms IPS Gaming Monitor $79 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>62</rating>
   </expiration>
   <expiration>
     <title>Costco Members: 2-Pk $50 Panera Bread eGift Card (Email Delivery) $80</title>
@@ -1266,14 +1231,49 @@
     <rating>46</rating>
   </expiration>
   <expiration>
+    <title>3-Pc TOPFEEL German High Carbon Steel Kitchen Knife Set $19.35 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>Select Accounts: Greenworks 60V Electric Leaf Blower w/ 2.5Ah Battery &amp; Charger $98 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>55</rating>
+  </expiration>
+  <expiration>
+    <title>Pyle 48" Under Desk Cable Management Tray (20 lb Capacity) $27</title>
+    <expired>false</expired>
+    <rating>92</rating>
+  </expiration>
+  <expiration>
+    <title>3-Pk 32-Oz Amazon Fresh 35% Less Sodium Chicken Broth $3.30 w/ S&amp;S &amp; More</title>
+    <expired>false</expired>
+    <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>32-Oz Starbucks Refreshers Concentrate (Strawberry Acai) $7</title>
+    <expired>false</expired>
+    <rating>43</rating>
+  </expiration>
+  <expiration>
+    <title>Just Dance 2026 Edition Limited Edition (Nintendo Switch, Code in Box) $15</title>
+    <expired>false</expired>
+    <rating>63</rating>
+  </expiration>
+  <expiration>
+    <title>25" LG UltraGear G5 1920x1080 200Hz 1ms IPS Gaming Monitor $79 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>62</rating>
+  </expiration>
+  <expiration>
     <title>2-Pk 6.6' 60W Ainope USB-C to USB-C Right Angle Fast Charging Cable $5</title>
     <expired>false</expired>
     <rating>111</rating>
   </expiration>
   <expiration>
-    <title>25-Oz Crown Maple Organic Bourbon Barrel Aged Maple Syrup $17</title>
+    <title>Greenworks 80V 750CFM Brushless Leaf Blower w/ 2.5Ah Battery &amp; 4A Charger $127.50 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>81</rating>
+    <rating>37</rating>
   </expiration>
   <expiration>
     <title>18-Pc Kobalt 8" Magnetic Screwdriver Set $20 + Free S&amp;H</title>
@@ -1286,19 +1286,14 @@
     <rating>85</rating>
   </expiration>
   <expiration>
+    <title>25-Oz Crown Maple Organic Bourbon Barrel Aged Maple Syrup $17</title>
+    <expired>false</expired>
+    <rating>81</rating>
+  </expiration>
+  <expiration>
     <title>2-Pack Tughlax Rechargeable LED Flashlights w/ LCD Battery Display &amp; Zoomable Beam $18</title>
     <expired>false</expired>
-    <rating>64</rating>
-  </expiration>
-  <expiration>
-    <title>Banelu Small Crossbody Sling Bag (Black) $8.50</title>
-    <expired>false</expired>
-    <rating>38</rating>
-  </expiration>
-  <expiration>
-    <title>Gaialoop Memory Foam Roll Up Sleeping Mat (72"x24"x3") $42 &amp; More + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>52</rating>
+    <rating>65</rating>
   </expiration>
   <expiration>
     <title>3-Pack Martin Acoustic Guitar Strings (Superior Performance 92/8 Medium) $12</title>
@@ -1306,9 +1301,9 @@
     <rating>33</rating>
   </expiration>
   <expiration>
-    <title>BOSGAME P6 Neo Mini PC: Ryzen 7 6800H, Radeon 680M, 24GB RAM, 512GB SSD $446 + Free S&amp;H</title>
+    <title>Gaialoop Memory Foam Roll Up Sleeping Mat (72"x24"x3") $42 &amp; More + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>79</rating>
+    <rating>52</rating>
   </expiration>
   <expiration>
     <title>Meifigno Magsafe Suction Mount Metal Car Phone Holder $10</title>
@@ -1316,9 +1311,19 @@
     <rating>44</rating>
   </expiration>
   <expiration>
-    <title>adidas Men's Essentials Loose-Fit 3 Bar Logo French Terry Hoodie $19.20 + Free S&amp;H</title>
+    <title>Us / Get Out Double Feature (4K UHD + Blu-ray + Digital) $15</title>
     <expired>false</expired>
-    <rating>117</rating>
+    <rating>53</rating>
+  </expiration>
+  <expiration>
+    <title>Banelu Small Crossbody Sling Bag (Black) $8.50</title>
+    <expired>false</expired>
+    <rating>38</rating>
+  </expiration>
+  <expiration>
+    <title>BOSGAME P6 Neo Mini PC: Ryzen 7 6800H, Radeon 680M, 24GB RAM, 512GB SSD $446 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>79</rating>
   </expiration>
   <expiration>
     <title>Legend (2-Disc Special Edition: Theatrical Cut + Director's Cut, Blu-ray) $17</title>
@@ -1331,24 +1336,14 @@
     <rating>51</rating>
   </expiration>
   <expiration>
-    <title>Us / Get Out Double Feature (4K UHD + Blu-ray + Digital) $15</title>
-    <expired>false</expired>
-    <rating>53</rating>
-  </expiration>
-  <expiration>
-    <title>Prime Members: StepTastic Men's &amp; Women's High Arch Support Inserts $12 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>252</rating>
-  </expiration>
-  <expiration>
     <title>9-Pack READY TO LOVE Women's Soft Lace Lingerie (various colors) $10.20</title>
     <expired>false</expired>
     <rating>55</rating>
   </expiration>
   <expiration>
-    <title>15" DCK 58V Brushless Cordless String Trimmer w/ 4.0Ah Battery &amp; 5A Charger $55 &amp; More + Free S&amp;H</title>
+    <title>adidas Men's Essentials Loose-Fit 3 Bar Logo French Terry Hoodie $19.20 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>85</rating>
+    <rating>117</rating>
   </expiration>
   <expiration>
     <title>Casio W-738H Digital Sports Watch $34.40</title>
@@ -1356,19 +1351,14 @@
     <rating>45</rating>
   </expiration>
   <expiration>
-    <title>4-Cam ELYSOO 2K/4MP Home Security Solar Camera System w/ 64GB Local Storage $130 + Free S&amp;H</title>
+    <title>Prime Members: StepTastic Men's &amp; Women's High Arch Support Inserts $12 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>309</rating>
+    <rating>252</rating>
   </expiration>
   <expiration>
-    <title>Select Walgreen's Stores: Maybelline Color Sensational Lipstick (Select Colors) 2 for Free + Free Pickup $10+ Orders</title>
+    <title>15" DCK 58V Brushless Cordless String Trimmer w/ 4.0Ah Battery &amp; 5A Charger $55 &amp; More + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>56</rating>
-  </expiration>
-  <expiration>
-    <title>Citizen Men's Sport Casual 3-Hand Eco-Drive Watch w/ Black Leather Strap $165.25 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>45</rating>
+    <rating>85</rating>
   </expiration>
   <expiration>
     <title>Linkin Park: Minutes to Midnight (Audio CD w/ AutoRip MP3) $9.20</title>
@@ -1376,14 +1366,14 @@
     <rating>39</rating>
   </expiration>
   <expiration>
-    <title>LEXIVON Digital Angle Finder Gauges: 5" (LX-DAF5) $17, 7" (LX-DAF7) $19.70 &amp; More</title>
+    <title>Select Walgreen's Stores: Maybelline Color Sensational Lipstick (Select Colors) 2 for Free + Free Pickup $10+ Orders</title>
     <expired>false</expired>
-    <rating>96</rating>
+    <rating>56</rating>
   </expiration>
   <expiration>
-    <title>Pudolla Men's Stretch Golf Pants w/ Pockets (Select Sizes &amp; Colors) $15</title>
+    <title>4-Cam ELYSOO 2K/4MP Home Security Solar Camera System w/ 64GB Local Storage $130 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>168</rating>
+    <rating>309</rating>
   </expiration>
   <expiration>
     <title>Select Accts: 10-Ct The Honest Company Multi-Use Baby Wipes (Pattern Play) $0.90 w/ S&amp;S</title>
@@ -1391,24 +1381,24 @@
     <rating>28</rating>
   </expiration>
   <expiration>
-    <title>Capcom Fighting Collection 2 (Switch) $25</title>
-    <expired>false</expired>
-    <rating>78</rating>
-  </expiration>
-  <expiration>
-    <title>PITTSBURGH Serpentine Belt Tool Kit $15 (In-Store or $9 S&amp;H</title>
-    <expired>false</expired>
-    <rating>46</rating>
-  </expiration>
-  <expiration>
-    <title>Refurbished: 45" INNOCN DQHD 120Hz Ultrawide Curved Gaming Monitor $289 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>54</rating>
-  </expiration>
-  <expiration>
     <title>10-Pack 6-Oz Kool-Aid Ghoul-Aid Zom-Berry Drink Pouches $2.50 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>Pudolla Men's Stretch Golf Pants w/ Pockets (Select Sizes &amp; Colors) $15</title>
+    <expired>false</expired>
+    <rating>171</rating>
+  </expiration>
+  <expiration>
+    <title>Citizen Men's Sport Casual 3-Hand Eco-Drive Watch w/ Black Leather Strap $165.25 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>45</rating>
+  </expiration>
+  <expiration>
+    <title>LEXIVON Digital Angle Finder Gauges: 5" (LX-DAF5) $17, 7" (LX-DAF7) $19.70 &amp; More</title>
+    <expired>false</expired>
+    <rating>96</rating>
   </expiration>
   <expiration>
     <title>Select Accts: 5-Pack Jack &amp; Pup 6" Bully Sticks $9.70 w/ S&amp;S</title>
@@ -1416,9 +1406,29 @@
     <rating>55</rating>
   </expiration>
   <expiration>
+    <title>PITTSBURGH Serpentine Belt Tool Kit $15 (In-Store or $9 S&amp;H</title>
+    <expired>false</expired>
+    <rating>46</rating>
+  </expiration>
+  <expiration>
     <title>24-Pk 6.8-Oz Fever-Tree Premium Club Soda $16.65 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>32</rating>
+  </expiration>
+  <expiration>
+    <title>Capcom Fighting Collection 2 (Switch) $25</title>
+    <expired>false</expired>
+    <rating>78</rating>
+  </expiration>
+  <expiration>
+    <title>21-Pc DeWALT Black and Gold Oxide Coated HSS Twist Drill Bit Set $18</title>
+    <expired>false</expired>
+    <rating>91</rating>
+  </expiration>
+  <expiration>
+    <title>4-Pk Energizer 3V CR2032 Lithium Coin Batteries $3.50 Free S&amp;H w/ Amazon Prime</title>
+    <expired>false</expired>
+    <rating>93</rating>
   </expiration>
   <expiration>
     <title>50-Ct Heyface Compressed Disposable Washcloths $5.50 w/ S&amp;S</title>
@@ -1426,34 +1436,14 @@
     <rating>60</rating>
   </expiration>
   <expiration>
-    <title>40-Ct 1-Oz Ruffles Potato Chips (Original) $9.60 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>125</rating>
-  </expiration>
-  <expiration>
-    <title>4-Pk Energizer 3V CR2032 Lithium Coin Batteries $3.50 Free S&amp;H w/ Amazon Prime</title>
-    <expired>false</expired>
-    <rating>91</rating>
-  </expiration>
-  <expiration>
     <title>New Balance Men's Fresh Foam 520 v9 Running Shoes (various colors) $49 + Free S/H</title>
     <expired>false</expired>
     <rating>59</rating>
   </expiration>
   <expiration>
-    <title>1.1-Quart Stanley Classic Vacuum Bottle w/ Handle (Hammertone Green) $23</title>
+    <title>Refurbished: 45" INNOCN DQHD 120Hz Ultrawide Curved Gaming Monitor $289 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>105</rating>
-  </expiration>
-  <expiration>
-    <title>Rocky Horror Picture Show (Blu-ray + Digital) $13</title>
-    <expired>false</expired>
-    <rating>33</rating>
-  </expiration>
-  <expiration>
-    <title>21-Pc DeWALT Black and Gold Oxide Coated HSS Twist Drill Bit Set $18</title>
-    <expired>false</expired>
-    <rating>91</rating>
+    <rating>54</rating>
   </expiration>
   <expiration>
     <title>Prime Members: Rivmount Touchscreen Winter Gloves (Black) from $6.90 + Free S&amp;H</title>
@@ -1466,14 +1456,19 @@
     <rating>87</rating>
   </expiration>
   <expiration>
-    <title>8" CRAFTSMAN Cutting pliers $10</title>
+    <title>1.1-Quart Stanley Classic Vacuum Bottle w/ Handle (Hammertone Green) $23</title>
     <expired>false</expired>
-    <rating>77</rating>
+    <rating>105</rating>
   </expiration>
   <expiration>
-    <title>The Power of Habit: Why We Do What We Do in Life and Business (eBook) $2</title>
+    <title>Rocky Horror Picture Show (Blu-ray + Digital) $13</title>
     <expired>false</expired>
-    <rating>132</rating>
+    <rating>34</rating>
+  </expiration>
+  <expiration>
+    <title>40-Ct 1-Oz Ruffles Potato Chips (Original) $9.60 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>125</rating>
   </expiration>
   <expiration>
     <title>12-Pair toolant Nitrile Coated Work Gloves (White &amp; Black) from $11</title>
@@ -1491,14 +1486,14 @@
     <rating>36</rating>
   </expiration>
   <expiration>
+    <title>8" CRAFTSMAN Cutting pliers $10</title>
+    <expired>false</expired>
+    <rating>77</rating>
+  </expiration>
+  <expiration>
     <title>Outlast Trinity (PC Digital Download) $4 &amp; More</title>
     <expired>false</expired>
     <rating>42</rating>
-  </expiration>
-  <expiration>
-    <title>Tomb Raider: Definitive Survivor Trilogy (Xbox One / Series X|S) $5</title>
-    <expired>false</expired>
-    <rating>83</rating>
   </expiration>
   <expiration>
     <title>25-Oz Amazon Grocery Smoked BBQ Rub $3.50 w/ S&amp;S</title>
@@ -1511,14 +1506,14 @@
     <rating>37</rating>
   </expiration>
   <expiration>
-    <title>Basic Machines and How They Work (Kindle eBook) $1</title>
+    <title>Tomb Raider: Definitive Survivor Trilogy (Xbox One / Series X|S) $5</title>
     <expired>false</expired>
-    <rating>62</rating>
+    <rating>83</rating>
   </expiration>
   <expiration>
-    <title>LEGO: Jurassic World (PCDD/Steam Key) $1.25</title>
+    <title>Seesii 1HP 4755 GPH Submersible Water Pump w/ 23' Hose $48 + fREE s&amp;h</title>
     <expired>false</expired>
-    <rating>79</rating>
+    <rating>88</rating>
   </expiration>
   <expiration>
     <title>TriggerPoint The Grid Foam Roller (Camo) $10 + Free S&amp;H w/ Prime</title>
@@ -1531,29 +1526,19 @@
     <rating>45</rating>
   </expiration>
   <expiration>
+    <title>The Power of Habit: Why We Do What We Do in Life and Business (eBook) $2</title>
+    <expired>false</expired>
+    <rating>132</rating>
+  </expiration>
+  <expiration>
     <title>NEXPOW 12V 1000A Car Jump Starter, up to 7L Gas / 5.5L Diesel $25 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>49</rating>
   </expiration>
   <expiration>
-    <title>Assassin’s Creed Shadows (Switch 2, Game-Key Card) $30</title>
+    <title>LEGO: Jurassic World (PCDD/Steam Key) $1.25</title>
     <expired>false</expired>
-    <rating>37</rating>
-  </expiration>
-  <expiration>
-    <title>12-Oz Tzumi Puree Warming Stainless Steel Coffee Mug w/ Anti-Spill Lid (Various) $20 + Free S&amp;H on $39+</title>
-    <expired>false</expired>
-    <rating>54</rating>
-  </expiration>
-  <expiration>
-    <title>Apple Mac Studio Desktop (2026): M5 Max, 36GB RAM, 512GB SSD $2000 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>66</rating>
-  </expiration>
-  <expiration>
-    <title>Casio G-Shock Men's Digital Watch (DW9052-1V) $48.55 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>48</rating>
+    <rating>79</rating>
   </expiration>
   <expiration>
     <title>2-Pk J-B Weld Original Steel Reinforced Epoxy $10.25</title>
@@ -1561,19 +1546,24 @@
     <rating>58</rating>
   </expiration>
   <expiration>
-    <title>PAW Patrol Chase &amp; Marshall Toddler Fleece Slip-On Sneakers (Limited Sizes) $4.45</title>
+    <title>Apple Mac Studio Desktop (2026): M5 Max, 36GB RAM, 512GB SSD $2000 + Free Pickup</title>
     <expired>false</expired>
-    <rating>34</rating>
+    <rating>66</rating>
   </expiration>
   <expiration>
-    <title>Jorgensen 4" 300-Lb Light Duty Steel Bar Clamp $6 + Free S&amp;H</title>
+    <title>Assassin’s Creed Shadows (Switch 2, Game-Key Card) $30</title>
     <expired>false</expired>
-    <rating>51</rating>
+    <rating>37</rating>
   </expiration>
   <expiration>
-    <title>10-Pk Panasonic CR2032 3V Lithium Coin Cell Batteries $6.50</title>
+    <title>Casio G-Shock Men's Digital Watch (DW9052-1V) $48.55 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>118</rating>
+    <rating>49</rating>
+  </expiration>
+  <expiration>
+    <title>12-Oz Tzumi Puree Warming Stainless Steel Coffee Mug w/ Anti-Spill Lid (Various) $20 + Free S&amp;H on $39+</title>
+    <expired>false</expired>
+    <rating>54</rating>
   </expiration>
   <expiration>
     <title>Astylish Women's Long Sleeve Button Up Blouse (Various) $5</title>
@@ -1583,12 +1573,12 @@
   <expiration>
     <title>Prime Members: 3-Pc YTL Makeup Cosmetic Travel Bag Set (Various) from $7.20 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>39</rating>
+    <rating>40</rating>
   </expiration>
   <expiration>
-    <title>Kobalt Hard Shell Knee Pads $10 + Free S&amp;H</title>
+    <title>10-Pk Panasonic CR2032 3V Lithium Coin Cell Batteries $6.50</title>
     <expired>false</expired>
-    <rating>69</rating>
+    <rating>118</rating>
   </expiration>
   <expiration>
     <title>50' UBERFLEX 1/4" 3100 PSI Pressure Washer Hose $35 + Free S&amp;H</title>
@@ -1596,24 +1586,19 @@
     <rating>59</rating>
   </expiration>
   <expiration>
-    <title>The North Face Berkeley Crossbody Bag (Black/Mineral Gold) $24.75</title>
+    <title>Jorgensen 4" 300-Lb Light Duty Steel Bar Clamp $6 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>48</rating>
+    <rating>51</rating>
   </expiration>
   <expiration>
-    <title>Seesii 1HP 4755 GPH Submersible Water Pump w/ 23' Hose $48 + fREE s&amp;h</title>
+    <title>PAW Patrol Chase &amp; Marshall Toddler Fleece Slip-On Sneakers (Limited Sizes) $4.45</title>
     <expired>false</expired>
-    <rating>88</rating>
+    <rating>34</rating>
   </expiration>
   <expiration>
-    <title>50.2mm Casio Men's G-Shock Sport Watch w/ Resin Strap $78.30 + Free S&amp;H</title>
+    <title>Basic Machines and How They Work (Kindle eBook) $1</title>
     <expired>false</expired>
-    <rating>40</rating>
-  </expiration>
-  <expiration>
-    <title>34.56-Oz SEEQ Clear Whey Isolate 22g Protein Powder (Strawberry Lemonade) $25.60 w/ S&amp;S + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>39</rating>
+    <rating>62</rating>
   </expiration>
   <expiration>
     <title>2x 250W Energy Connoisseur CF-50 Floorstanding Speakers $179 + Free S&amp;H</title>
@@ -1621,9 +1606,34 @@
     <rating>33</rating>
   </expiration>
   <expiration>
+    <title>The North Face Berkeley Crossbody Bag (Black/Mineral Gold) $24.75</title>
+    <expired>false</expired>
+    <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>Kobalt Hard Shell Knee Pads $10 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>69</rating>
+  </expiration>
+  <expiration>
+    <title>Under Armour Men's UA Pursuit 4 Running Shoes (4 Colors) $36.70 + Free Pickup</title>
+    <expired>false</expired>
+    <rating>51</rating>
+  </expiration>
+  <expiration>
+    <title>50.2mm Casio Men's G-Shock Sport Watch w/ Resin Strap $78.30 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>40</rating>
+  </expiration>
+  <expiration>
     <title>Crocs: Extra 50% Off Select Styles: Men’s Saturday Slide $12.50, Women's Rio Flip $10 &amp; More + Free S&amp;H on $35+</title>
     <expired>false</expired>
     <rating>50</rating>
+  </expiration>
+  <expiration>
+    <title>34.56-Oz SEEQ Clear Whey Isolate 22g Protein Powder (Strawberry Lemonade) $25.60 w/ S&amp;S + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>39</rating>
   </expiration>
   <expiration>
     <title>Sam's Club Members: $25 Taco Bell eGift Card (Email Delivery) $20</title>
@@ -1638,27 +1648,7 @@
   <expiration>
     <title>UGREEN MagFlow Foldable 25W Qi2 Wireless Charger $30</title>
     <expired>false</expired>
-    <rating>33</rating>
-  </expiration>
-  <expiration>
-    <title>Select Accts: 18-Ct Zicam Ultra Cold Remedy Zinc Rapidmelts (Orange Cream) $4.35 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>75</rating>
-  </expiration>
-  <expiration>
-    <title>Marvel Champions The Card Game: Fear No Evil Expansion $42.40 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>31</rating>
-  </expiration>
-  <expiration>
-    <title>Under Armour Men's UA Pursuit 4 Running Shoes (4 Colors) $36.70 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>51</rating>
-  </expiration>
-  <expiration>
-    <title>2-Pc All-Clad HA1 Expert Nonstick 8" + 10" Fry Pan Set $69.95 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>42</rating>
+    <rating>34</rating>
   </expiration>
   <expiration>
     <title>Spider-Man Men's Graphic Sweatpants w/ Embroidered Patch (Grey) $7.90</title>
@@ -1666,9 +1656,14 @@
     <rating>46</rating>
   </expiration>
   <expiration>
-    <title>4-Pk Towmax Self Retracting Ratchet Straps Set (Red) $44 + Free S&amp;H</title>
+    <title>Marvel Champions The Card Game: Fear No Evil Expansion $42.40 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>97</rating>
+    <rating>31</rating>
+  </expiration>
+  <expiration>
+    <title>2-Pc All-Clad HA1 Expert Nonstick 8" + 10" Fry Pan Set $69.95 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>42</rating>
   </expiration>
   <expiration>
     <title>Beautiful Colorblock Acrylic Tumblers: 4-Pk 14-Oz $4.65, 4-Pk 22-Oz $5.35</title>
@@ -1676,49 +1671,9 @@
     <rating>45</rating>
   </expiration>
   <expiration>
-    <title>Arlo Essential 2nd Gen Indoor Security Camera: 2K $13, HD $10</title>
-    <expired>false</expired>
-    <rating>57</rating>
-  </expiration>
-  <expiration>
     <title>Home Accents 8" Halloween Classics Battery Operated LED Skull $7 &amp; More + Free Pickup</title>
     <expired>false</expired>
     <rating>50</rating>
-  </expiration>
-  <expiration>
-    <title>ThermoMaven Propane Blow Torch w/ One-Touch Max Fire $23.90 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>56</rating>
-  </expiration>
-  <expiration>
-    <title>21" Greenworks 80V Self-Propelled Lawn Mower w/ 4.0Ah Battery &amp; Charger $350 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>54</rating>
-  </expiration>
-  <expiration>
-    <title>Costco Members: EGYPTIAN MAGIC All Purpose Skin Cream Set $25 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>43</rating>
-  </expiration>
-  <expiration>
-    <title>Under Armour Men's Edge LTHR Training Shoes (Black) $34.95 + Free S&amp;H on $49+</title>
-    <expired>false</expired>
-    <rating>32</rating>
-  </expiration>
-  <expiration>
-    <title>Prime Members: ERYTLLY 87" Bird Feeding Station w/ Suet Cage &amp; Tube Feeder $25.40 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>32</rating>
-  </expiration>
-  <expiration>
-    <title>4-Pc DeWALT Magnetic Screwdriver Set (DWHT65200) $10</title>
-    <expired>false</expired>
-    <rating>53</rating>
-  </expiration>
-  <expiration>
-    <title>40-Oz Owala Stainless Steel Straw Tumbler (Various Colors) $20 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>57</rating>
   </expiration>
   <expiration>
     <title>5-Pc Ecarke 12000 PSI Grease Gun Coupler Kit w/ Quick-Release &amp; 90° Adapter $12</title>
@@ -1726,9 +1681,49 @@
     <rating>28</rating>
   </expiration>
   <expiration>
-    <title>Ben Sherman Men's Polarized Sunglasses (Various Styles/Colors) $18 + Free S&amp;H</title>
+    <title>21" Greenworks 80V Self-Propelled Lawn Mower w/ 4.0Ah Battery &amp; Charger $350 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>40</rating>
+    <rating>54</rating>
+  </expiration>
+  <expiration>
+    <title>Select Accts: 18-Ct Zicam Ultra Cold Remedy Zinc Rapidmelts (Orange Cream) $4.35 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>76</rating>
+  </expiration>
+  <expiration>
+    <title>4-Pk Towmax Self Retracting Ratchet Straps Set (Red) $44 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>98</rating>
+  </expiration>
+  <expiration>
+    <title>Arlo Essential 2nd Gen Indoor Security Camera: 2K $13, HD $10</title>
+    <expired>false</expired>
+    <rating>57</rating>
+  </expiration>
+  <expiration>
+    <title>ThermoMaven Propane Blow Torch w/ One-Touch Max Fire $23.90 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>56</rating>
+  </expiration>
+  <expiration>
+    <title>Costco Members: EGYPTIAN MAGIC All Purpose Skin Cream Set $25 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>43</rating>
+  </expiration>
+  <expiration>
+    <title>40-Oz Owala Stainless Steel Straw Tumbler (Various Colors) $20 + Free Pickup</title>
+    <expired>false</expired>
+    <rating>57</rating>
+  </expiration>
+  <expiration>
+    <title>Prime Members: ERYTLLY 87" Bird Feeding Station w/ Suet Cage &amp; Tube Feeder $25.40 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>32</rating>
+  </expiration>
+  <expiration>
+    <title>Under Armour Men's Edge LTHR Training Shoes (Black) $34.95 + Free S&amp;H on $49+</title>
+    <expired>false</expired>
+    <rating>32</rating>
   </expiration>
   <expiration>
     <title>3-Pc Klein Tools Magnetic Color-Coded Power Nut Setter Set $16</title>
@@ -1736,14 +1731,14 @@
     <rating>50</rating>
   </expiration>
   <expiration>
-    <title>Dr Pepper Men's Graphic Woven Resort Shirt (Maroon, Various Sizes) $6.55</title>
+    <title>275-Pc LEGO Speed Champions Ferrari SF-24 F1 Race Car Building Set (77242) $15.40</title>
     <expired>false</expired>
-    <rating>49</rating>
+    <rating>72</rating>
   </expiration>
   <expiration>
-    <title>iVANKY 4-in-1 45W GaN Retractable Wall Charger w/ 2x Built-In USB-C Cables $12.30</title>
+    <title>Ben Sherman Men's Polarized Sunglasses (Various Styles/Colors) $18 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>52</rating>
+    <rating>40</rating>
   </expiration>
   <expiration>
     <title>Crocs Men's or Women's Classic Cozzzy Slippers (Various) $22.50 + Free S&amp;H on $35+</title>
@@ -1751,9 +1746,14 @@
     <rating>74</rating>
   </expiration>
   <expiration>
-    <title>275-Pc LEGO Speed Champions Ferrari SF-24 F1 Race Car Building Set (77242) $15.40</title>
+    <title>Dr Pepper Men's Graphic Woven Resort Shirt (Maroon, Various Sizes) $6.55</title>
     <expired>false</expired>
-    <rating>72</rating>
+    <rating>49</rating>
+  </expiration>
+  <expiration>
+    <title>4-Pc DeWALT Magnetic Screwdriver Set (DWHT65200) $10</title>
+    <expired>false</expired>
+    <rating>53</rating>
   </expiration>
   <expiration>
     <title>adidas Excelerator Lunch Bag (Gradient Flash Aqua/White) $10.65</title>
@@ -1761,19 +1761,14 @@
     <rating>36</rating>
   </expiration>
   <expiration>
+    <title>iVANKY 4-in-1 45W GaN Retractable Wall Charger w/ 2x Built-In USB-C Cables $12.30</title>
+    <expired>false</expired>
+    <rating>52</rating>
+  </expiration>
+  <expiration>
     <title>13.6" Apple MacBook Air (2026): M5 Chip, 16GB RAM, 1TB SSD $1399 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>68</rating>
-  </expiration>
-  <expiration>
-    <title>30" x 54" Lacoste Heritage Supima Cotton Bath Towel (Various Colors) $13 + Free Pickup</title>
-    <expired>false</expired>
-    <rating>41</rating>
-  </expiration>
-  <expiration>
-    <title>Flashforge Creator 5 4-Toolheads Multi-Color 3D Printer $488.85 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>252</rating>
   </expiration>
   <expiration>
     <title>24-Pc VEVOR Metric &amp; SAE Combination Ratcheting Wrench Set $42.20 + Free S&amp;H</title>
@@ -1781,24 +1776,29 @@
     <rating>46</rating>
   </expiration>
   <expiration>
-    <title>Nike Men's Air Max Torch 4 Shoes (Anthracite/Black/Metallic Silver) $59.95 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>61</rating>
-  </expiration>
-  <expiration>
     <title>Pre-Order: Evercade Nexus + Banjo Kazooie Double Pack &amp; Data East Arcade 2 $200 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>44</rating>
   </expiration>
   <expiration>
+    <title>30" x 54" Lacoste Heritage Supima Cotton Bath Towel (Various Colors) $13 + Free Pickup</title>
+    <expired>false</expired>
+    <rating>41</rating>
+  </expiration>
+  <expiration>
+    <title>Nike Men's Air Max Torch 4 Shoes (Anthracite/Black/Metallic Silver) $59.95 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>61</rating>
+  </expiration>
+  <expiration>
+    <title>Flashforge Creator 5 4-Toolheads Multi-Color 3D Printer $488.85 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>252</rating>
+  </expiration>
+  <expiration>
     <title>0.17-Oz Maybelline SuperStay Teddy Tint Lip Tint from 2 for $0.75 + Free Pickup on $10+</title>
     <expired>false</expired>
     <rating>65</rating>
-  </expiration>
-  <expiration>
-    <title>1KG Polymaker Panchroma Silk PLA 1.75mm 3D Printer Filament (2 Colors) $15.20 or less w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>47</rating>
   </expiration>
   <expiration>
     <title>New Mint Mobile Customers: 256GB Google Pixel 11 + 12-Mo Unlimited Plan $579 + Free S&amp;H</title>
@@ -1811,19 +1811,14 @@
     <rating>61</rating>
   </expiration>
   <expiration>
+    <title>1KG Polymaker Panchroma Silk PLA 1.75mm 3D Printer Filament (2 Colors) $15.20 or less w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>47</rating>
+  </expiration>
+  <expiration>
     <title>24-ct 0.8-oz Lemonhead Hard Lemon Candy 3 for $12.75 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>102</rating>
-  </expiration>
-  <expiration>
-    <title>Crocs Adult Baya Clogs (Select Colors) $21.25 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>62</rating>
-  </expiration>
-  <expiration>
-    <title>Seller Refurb: Intel ARC A750 8GB GDDR6 Graphics Card $159 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>98</rating>
   </expiration>
   <expiration>
     <title>Skechers Men's Cankton Steel Toe Lace Up (Black/Charcoal) $49 + Free S&amp;H</title>
@@ -1831,14 +1826,9 @@
     <rating>38</rating>
   </expiration>
   <expiration>
-    <title>Select Accts: 32-Oz Amazon Grocery Chicken Broth $0.95 w/ S&amp;S</title>
+    <title>Crocs Adult Baya Clogs (Select Colors) $21.25 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>58</rating>
-  </expiration>
-  <expiration>
-    <title>UA Velociti SPD 5 Men's Running Shoes (Academy / Team Royal / Metallic Silver) $53.45 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>69</rating>
+    <rating>62</rating>
   </expiration>
   <expiration>
     <title>Insignia All-in-One Travel Adapter w/ 2x USB Ports $5 + Free S&amp;H</title>
@@ -1846,19 +1836,39 @@
     <rating>73</rating>
   </expiration>
   <expiration>
-    <title>4-Pk Linkind A19 E26 9W RGBTW Color Changing Smart LED Light Bulbs $15</title>
+    <title>Select Accts: 32-Oz Amazon Grocery Chicken Broth $0.95 w/ S&amp;S</title>
     <expired>false</expired>
-    <rating>86</rating>
+    <rating>58</rating>
   </expiration>
   <expiration>
-    <title>9.2-Ch Onkyo TX-NR7100 AV Receiver $599 + Free S&amp;H</title>
+    <title>Seller Refurb: Intel ARC A750 8GB GDDR6 Graphics Card $159 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>458</rating>
+    <rating>98</rating>
   </expiration>
   <expiration>
     <title>3-Port TALIX 20000mAh 140W USB-C Power Bank (2x USB-C + USB-A) $39 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>57</rating>
+  </expiration>
+  <expiration>
+    <title>4-Pk Linkind A19 E26 9W RGBTW Color Changing Smart LED Light Bulbs $15</title>
+    <expired>false</expired>
+    <rating>86</rating>
+  </expiration>
+  <expiration>
+    <title>Crocs Men's or Women's Baya Clog Shoes (various) $20</title>
+    <expired>false</expired>
+    <rating>89</rating>
+  </expiration>
+  <expiration>
+    <title>UA Velociti SPD 5 Men's Running Shoes (Academy / Team Royal / Metallic Silver) $53.45 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>69</rating>
+  </expiration>
+  <expiration>
+    <title>Craftsman Versastack Rolling Tool Box Tower (17" x 31" x 20") $99 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>69</rating>
   </expiration>
   <expiration>
     <title>5-Pk BOOJO Men's Athletic Gym Shorts (Large Only) $14.40</title>
@@ -1871,19 +1881,14 @@
     <rating>278</rating>
   </expiration>
   <expiration>
-    <title>Craftsman Versastack Rolling Tool Box Tower (17" x 31" x 20") $99 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>69</rating>
-  </expiration>
-  <expiration>
     <title>The Mummy Trilogy (4K Ultra HD + Blu-ray + Digital) $20</title>
     <expired>false</expired>
     <rating>68</rating>
   </expiration>
   <expiration>
-    <title>Crocs Men's or Women's Baya Clog Shoes (various) $20</title>
+    <title>9.2-Ch Onkyo TX-NR7100 AV Receiver $599 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>88</rating>
+    <rating>458</rating>
   </expiration>
   <expiration>
     <title>37.7mm Casio Vintage Stainless Steel Watch w/ LED Illumination &amp; Stopwatch $24.80</title>
@@ -1891,29 +1896,9 @@
     <rating>41</rating>
   </expiration>
   <expiration>
-    <title>3-Pk Artmarry Halloween Flameless LED Pillar Candles w/ 10-Key Remote $5</title>
-    <expired>false</expired>
-    <rating>88</rating>
-  </expiration>
-  <expiration>
-    <title>Energy Speaker Bundle: 2x RC-70 Floors + RC-LCR Center + 2x RC-10 Bookshelf $749 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>125</rating>
-  </expiration>
-  <expiration>
-    <title>51.3mm Casio Men's AE1500WH Series Illuminator Digital Sport Watch (Green) $21.55</title>
-    <expired>false</expired>
-    <rating>73</rating>
-  </expiration>
-  <expiration>
     <title>Beautyrest Cool Touch Heated Mattress Pad (Twin XL) $14.40 + Free S&amp;H on $50+</title>
     <expired>false</expired>
     <rating>32</rating>
-  </expiration>
-  <expiration>
-    <title>GE Fit Plus LN Smart Bluetooth Digital Scale $30 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>322</rating>
   </expiration>
   <expiration>
     <title>GVDV 5' Halloween Inflatable Pumpkin Ghost Decoration w/ 360° Rotating LED Lights $15</title>
@@ -1921,14 +1906,19 @@
     <rating>91</rating>
   </expiration>
   <expiration>
+    <title>Energy Speaker Bundle: 2x RC-70 Floors + RC-LCR Center + 2x RC-10 Bookshelf $749 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>125</rating>
+  </expiration>
+  <expiration>
+    <title>3-Pk Artmarry Halloween Flameless LED Pillar Candles w/ 10-Key Remote $5</title>
+    <expired>false</expired>
+    <rating>88</rating>
+  </expiration>
+  <expiration>
     <title>2-ct 20-pk 1.52-oz Lance ToastChee Peanut Butter Sandwich Crackers Snack Packs $8.55 w/ S&amp;S</title>
     <expired>false</expired>
     <rating>82</rating>
-  </expiration>
-  <expiration>
-    <title>10,000mAh LISEN 2-Port up to 45W Compact Power Bank $23</title>
-    <expired>false</expired>
-    <rating>650</rating>
   </expiration>
   <expiration>
     <title>ThermoMaven Wireless Meat Thermometer: G4 4-Probe $110, G2 2-Probe $50 + Free S&amp;H</title>
@@ -1936,34 +1926,24 @@
     <rating>54</rating>
   </expiration>
   <expiration>
-    <title>Select Locations: 120-ct &amp; 140-ct Glad ForceFlex 13-Gallon Trash Bags (various) $11</title>
-    <expired>false</expired>
-    <rating>60</rating>
-  </expiration>
-  <expiration>
-    <title>Alien 6-Film Collection: Alien, Aliens, Alien 3 &amp; More (Blu-ray + Digital HD) $24.95</title>
-    <expired>false</expired>
-    <rating>37</rating>
-  </expiration>
-  <expiration>
-    <title>G Gradual Men's UPF 50+ Long Sleeve Rash Guard Shirt (various) $10</title>
-    <expired>false</expired>
-    <rating>143</rating>
-  </expiration>
-  <expiration>
-    <title>FDJ Transforming Remote Control Police Car to Robot Toy $9.50</title>
-    <expired>false</expired>
-    <rating>48</rating>
-  </expiration>
-  <expiration>
     <title>Woot!: Milwaukee Tools &amp; Accessories Extra 10% Off + Free S&amp;H w/ Prime</title>
     <expired>false</expired>
     <rating>93</rating>
   </expiration>
   <expiration>
-    <title>8Bitdo Ultimate 3-Mode Controller for Xbox Series X|S &amp; Xbox One (White) $37.80 + Free S&amp;H</title>
+    <title>GE Fit Plus LN Smart Bluetooth Digital Scale $30 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>88</rating>
+    <rating>322</rating>
+  </expiration>
+  <expiration>
+    <title>51.3mm Casio Men's AE1500WH Series Illuminator Digital Sport Watch (Green) $21.55</title>
+    <expired>false</expired>
+    <rating>73</rating>
+  </expiration>
+  <expiration>
+    <title>Select Locations: 120-ct &amp; 140-ct Glad ForceFlex 13-Gallon Trash Bags (various) $11</title>
+    <expired>false</expired>
+    <rating>60</rating>
   </expiration>
   <expiration>
     <title>Casio Men's F108WH Series Digital Illuminator Sport Watch (Black Resin) $16.15</title>
@@ -1971,34 +1951,24 @@
     <rating>42</rating>
   </expiration>
   <expiration>
+    <title>FDJ Transforming Remote Control Police Car to Robot Toy $9.50</title>
+    <expired>false</expired>
+    <rating>48</rating>
+  </expiration>
+  <expiration>
+    <title>10,000mAh LISEN 2-Port up to 45W Compact Power Bank $23</title>
+    <expired>false</expired>
+    <rating>650</rating>
+  </expiration>
+  <expiration>
+    <title>G Gradual Men's UPF 50+ Long Sleeve Rash Guard Shirt (various) $10</title>
+    <expired>false</expired>
+    <rating>144</rating>
+  </expiration>
+  <expiration>
     <title>Iron &amp; Wine: Our Endless Numbered Days (Vinyl) $15</title>
     <expired>false</expired>
     <rating>46</rating>
-  </expiration>
-  <expiration>
-    <title>13.5-Oz Chex Mix Bold Garlic &amp; Herb Snack Mix $2.75 w/ S&amp;S</title>
-    <expired>false</expired>
-    <rating>90</rating>
-  </expiration>
-  <expiration>
-    <title>42mm Casio MTPS120L Series Unisex Analog Watch $86.35 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>33</rating>
-  </expiration>
-  <expiration>
-    <title>Lenovo Tab Plus Gen 2: 12.1" 2.5K 120Hz, Dimensity 7400, 8GB RAM, 256GB UFS $270 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>81</rating>
-  </expiration>
-  <expiration>
-    <title>Nirvana Men's Smiley Graphic Crewneck Sweatshirt $6.80</title>
-    <expired>false</expired>
-    <rating>57</rating>
-  </expiration>
-  <expiration>
-    <title>2-Pk 20-Ct 0.9-Oz Lotus Biscoff Caramelized Biscuit Cookies $9.50</title>
-    <expired>false</expired>
-    <rating>78</rating>
   </expiration>
   <expiration>
     <title>1.01-oz medicube Exosome Shot PDRN Pink Collagen 7,500 PPM Spicule Facial Serum $15.10 w/ S&amp;S</title>
@@ -2006,9 +1976,54 @@
     <rating>26</rating>
   </expiration>
   <expiration>
+    <title>2-Pk 20-Ct 0.9-Oz Lotus Biscoff Caramelized Biscuit Cookies $9.50</title>
+    <expired>false</expired>
+    <rating>78</rating>
+  </expiration>
+  <expiration>
+    <title>8Bitdo Ultimate 3-Mode Controller for Xbox Series X|S &amp; Xbox One (White) $37.80 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>88</rating>
+  </expiration>
+  <expiration>
+    <title>42mm Casio MTPS120L Series Unisex Analog Watch $86.35 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>33</rating>
+  </expiration>
+  <expiration>
+    <title>Nirvana Men's Smiley Graphic Crewneck Sweatshirt $6.80</title>
+    <expired>false</expired>
+    <rating>57</rating>
+  </expiration>
+  <expiration>
     <title>WOLFBOX 4000A 12V 24000mAh Portable Car Jump Starter w/ 65W Quick Charger $60 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>219</rating>
+    <rating>222</rating>
+  </expiration>
+  <expiration>
+    <title>Alien 6-Film Collection: Alien, Aliens, Alien 3 &amp; More (Blu-ray + Digital HD) $24.95</title>
+    <expired>false</expired>
+    <rating>37</rating>
+  </expiration>
+  <expiration>
+    <title>Lenovo Tab Plus Gen 2: 12.1" 2.5K 120Hz, Dimensity 7400, 8GB RAM, 256GB UFS $270 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>81</rating>
+  </expiration>
+  <expiration>
+    <title>13.5-Oz Chex Mix Bold Garlic &amp; Herb Snack Mix $2.75 w/ S&amp;S</title>
+    <expired>false</expired>
+    <rating>90</rating>
+  </expiration>
+  <expiration>
+    <title>36L Uoxfill Folding Bread Proofing Box w/ Temp Control &amp; 48H Timer $25 + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>47</rating>
+  </expiration>
+  <expiration>
+    <title>5000mAh LISEN Wireless Qi2 15W Ultra Slim MagSafe Power Bank (Ice Grey) $17</title>
+    <expired>false</expired>
+    <rating>101</rating>
   </expiration>
   <expiration>
     <title>XTEINK X4 Classic 4.3" E-Ink Display 16-GB Ultra-Light Pocket eReader $67.15 + Free S&amp;H</title>
@@ -2016,9 +2031,14 @@
     <rating>88</rating>
   </expiration>
   <expiration>
-    <title>36L Uoxfill Folding Bread Proofing Box w/ Temp Control &amp; 48H Timer $25 + Free S&amp;H</title>
+    <title>The Beatles: Abbey Road (Anniversary Edition 180g Vinyl LP) $20.70</title>
     <expired>false</expired>
-    <rating>47</rating>
+    <rating>25</rating>
+  </expiration>
+  <expiration>
+    <title>2' 4-Port UGREEN USB-C to USB-A 3.0 Expander Hub $9</title>
+    <expired>false</expired>
+    <rating>75</rating>
   </expiration>
   <expiration>
     <title>Owala FreeSip Stainless Steel Water Bottle: 40-Oz $20, 32-Oz $17.50 + Free Pickup</title>
@@ -2029,26 +2049,6 @@
     <title>UPGO 25.3'' Fluted Wooden 5-Drawer Dresser (brown) $75 + Free S&amp;H</title>
     <expired>false</expired>
     <rating>37</rating>
-  </expiration>
-  <expiration>
-    <title>5000mAh LISEN Wireless Qi2 15W Ultra Slim MagSafe Power Bank (Ice Grey) $17</title>
-    <expired>false</expired>
-    <rating>101</rating>
-  </expiration>
-  <expiration>
-    <title>2' 4-Port UGREEN USB-C to USB-A 3.0 Expander Hub $9</title>
-    <expired>false</expired>
-    <rating>75</rating>
-  </expiration>
-  <expiration>
-    <title>6-Pc Yasonic Shower Caddy Organizers w/ Hooks (Black) $10.20</title>
-    <expired>false</expired>
-    <rating>136</rating>
-  </expiration>
-  <expiration>
-    <title>The Beatles: Abbey Road (Anniversary Edition 180g Vinyl LP) $20.70</title>
-    <expired>false</expired>
-    <rating>25</rating>
   </expiration>
   <expiration>
     <title>18" House Again Bristle-Free Stainless Steel BBQ Grill Brush w/ Scraper (Various) from $10</title>
@@ -2066,9 +2066,9 @@
     <rating>38</rating>
   </expiration>
   <expiration>
-    <title>5.5-Qt Lodge Enameled Cast Iron Dutch Oven (Red or Blue) $39.95 + Free S&amp;H</title>
+    <title>CRKD Nitro Deck 2 Handheld Grip &amp; Pro Controller for Switch/Switch 2/OLED (various) $80 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>54</rating>
+    <rating>58</rating>
   </expiration>
   <expiration>
     <title>SEESII 20V Cordless Drill &amp; Home Tool Kit w/ 2000mAh Battery &amp; Charger $32.40 + Free S&amp;H</title>
@@ -2076,19 +2076,9 @@
     <rating>214</rating>
   </expiration>
   <expiration>
-    <title>Nike Adult Dri-FIT Club Structured Golf Hat (Soft Yellow/Black) $9 + Free S&amp;H $49+</title>
+    <title>6-Pc Yasonic Shower Caddy Organizers w/ Hooks (Black) $10.20</title>
     <expired>false</expired>
-    <rating>34</rating>
-  </expiration>
-  <expiration>
-    <title>CRKD Nitro Deck 2 Handheld Grip &amp; Pro Controller for Switch/Switch 2/OLED (various) $80 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>58</rating>
-  </expiration>
-  <expiration>
-    <title>Obla Men's UPF 50+ Printed Golf Polo Shirt (Various) $14</title>
-    <expired>false</expired>
-    <rating>22</rating>
+    <rating>136</rating>
   </expiration>
   <expiration>
     <title>L LOHAS LED Treasure Chest Galaxy &amp; Northern Lights Projector w/ Bluetooth Speaker $10</title>
@@ -2096,14 +2086,19 @@
     <rating>29</rating>
   </expiration>
   <expiration>
+    <title>Nike Adult Dri-FIT Club Structured Golf Hat (Soft Yellow/Black) $9 + Free S&amp;H $49+</title>
+    <expired>false</expired>
+    <rating>34</rating>
+  </expiration>
+  <expiration>
+    <title>Obla Men's UPF 50+ Printed Golf Polo Shirt (Various) $14</title>
+    <expired>false</expired>
+    <rating>22</rating>
+  </expiration>
+  <expiration>
     <title>2-Pack 66' Slyuexu Solar String Lights Outdoor w/ 200 LED (Orange &amp; Purple) $9</title>
     <expired>false</expired>
     <rating>28</rating>
-  </expiration>
-  <expiration>
-    <title>Acer 6-in-1 up to 25W Wireless Fast Charging Station $46.90 + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>307</rating>
   </expiration>
   <expiration>
     <title>5" Mulwark Spring Loaded Center Punch Set w/ Spare Tips &amp; Springs $5.40</title>
@@ -2111,24 +2106,9 @@
     <rating>41</rating>
   </expiration>
   <expiration>
-    <title>The Fellowship of the Ring: Collector's Edition Book (Hardcover) $12.95</title>
+    <title>Acer 6-in-1 up to 25W Wireless Fast Charging Station $46.90 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>44</rating>
-  </expiration>
-  <expiration>
-    <title>LSLCQW 16-in-1 Vegetable Chopper $14</title>
-    <expired>false</expired>
-    <rating>31</rating>
-  </expiration>
-  <expiration>
-    <title>Dreamegg D1 Nova White Noise Sound Machine (Black) $13</title>
-    <expired>false</expired>
-    <rating>313</rating>
-  </expiration>
-  <expiration>
-    <title>Toro Flex-Force 60V 605-CFM 120-MPH Battery Handheld Leaf Blower $50 &amp; More + Free S&amp;H</title>
-    <expired>false</expired>
-    <rating>52</rating>
+    <rating>307</rating>
   </expiration>
   <expiration>
     <title>Dowerme Women's Long Sleeve Crewneck Eyelet A-Line Maxi Dress (Various) $20 + Free S/H</title>
@@ -2136,13 +2116,23 @@
     <rating>28</rating>
   </expiration>
   <expiration>
-    <title>COMHOMA Big &amp; Tall Gaming Chair w/ Footrest &amp; Lumbar Support (Jet Black) $130 + Free S&amp;H</title>
+    <title>5.5-Qt Lodge Enameled Cast Iron Dutch Oven (Red or Blue) $39.95 + Free S&amp;H</title>
     <expired>false</expired>
-    <rating>143</rating>
+    <rating>54</rating>
   </expiration>
   <expiration>
-    <title>(Open Box Pristine) Apple Magic Keyboard Case for 13" iPad Pro (M4 &amp; M5) $199 &amp; More + Free S&amp;H w/ Prime</title>
+    <title>The Fellowship of the Ring: Collector's Edition Book (Hardcover) $12.95</title>
     <expired>false</expired>
-    <rating>47</rating>
+    <rating>44</rating>
+  </expiration>
+  <expiration>
+    <title>Dreamegg D1 Nova White Noise Sound Machine (Black) $13</title>
+    <expired>false</expired>
+    <rating>315</rating>
+  </expiration>
+  <expiration>
+    <title>Toro Flex-Force 60V 605-CFM 120-MPH Battery Handheld Leaf Blower $50 &amp; More + Free S&amp;H</title>
+    <expired>false</expired>
+    <rating>52</rating>
   </expiration>
 </expirations>
