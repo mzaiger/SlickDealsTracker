@@ -376,6 +376,17 @@
   .meta .go {
     color: var(--blue);
   }
+  /* View deal: boxed button, centered under the date, with the Slickdeals favicon */
+  .meta { flex-direction: column; gap: 10px; }
+  .meta .go {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; height: 40px; box-sizing: border-box;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+    font-size: 13px; font-weight: 600;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .go-ico { width: 22px; height: 22px; border-radius: 4px; flex: none; display: block; }
+  .card:hover .meta .go { border-color: var(--blue); background: var(--bg); }
 
   .archived-tag {
     color: var(--text-dim);
@@ -940,7 +951,7 @@ function cardHtml(d, opts = {}) {
         <p class="title">${d.title}</p>
         <div class="meta">
           <span>${relativeTime(d.pubDateIso)}${opts.archived ? ' · <span class="archived-tag">saved</span>' : ''}</span>
-          <span class="go">View deal ↗</span>
+          <span class="go"><img class="go-ico" src="https://www.google.com/s2/favicons?domain=slickdeals.net&sz=64" alt="" width="22" height="22" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"><span>View deal ↗</span></span>
         </div>
       </div>
     </a>
