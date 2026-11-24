@@ -1,3 +1,4 @@
+
 name: Pull Slickdeals Hot Deals
 
 on:
@@ -10,12 +11,14 @@ on:
 # deal's page concurrently (see MAX_WORKERS in pull_slickexpiration.py)
 # and finishes in a couple of minutes, so it comfortably fits inside a
 # single run -- no need for a second workflow/trigger to keep it separate
-# anymore. cancel-in-progress: true is safe here: if a run ever does take
-# too long and gets cancelled, nothing has been committed yet (the commit
-# step is last), so the next run just starts clean.
+# anymore.
+#
+# Keep runs queued instead of cancelling an active run. This prevents
+# overlapping runs from competing to commit deals.xml and expired.xml.
+# Each run finishes its commit/push before the next run starts.
 concurrency:
   group: pull-slickdeals
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -50,6 +53,11 @@ jobs:
             echo "No changes to deals.xml or expired.xml -- skipping commit."
           else
             git commit -m "Update deals.xml and expired.xml [skip ci]"
-            git pull --rebase origin "$(git rev-parse --abbrev-ref HEAD)"
+
+            # Rebase onto the latest GitHub version.
+            # If the generated XML conflicts with remote changes,
+            # favor the newly generated files from this workflow.
+            git pull --rebase -X theirs origin "$(git rev-parse --abbrev-ref HEAD)"
+
             git push
           fi
